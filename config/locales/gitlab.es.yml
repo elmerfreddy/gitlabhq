@@ -1,0 +1,18 @@
+es:
+  devise:
+    sessions:
+      new:
+        did_not_receive_confirmation_email: "¿No recibió el correo electrónico de confirmación?"
+        send_again: "Enviar otra vez"
+        sign_in: "Iniciar Sesión"
+      new_base:
+        forgot_your_password: "¿Olvidaste tu contraseña?"
+        password: "Contraseña"
+        remember_me: "Recordarme"
+        username_or_email: "Usuario o Email"
+  layouts:
+    devise:
+      gitlab_open_source_software: "GitLab es un software de código abierto para colaborar en código."
+      or_browse_for: "o navega por"
+      public_projects: "los proyectos públicos"
+      sign_in: "Inicia sesión"

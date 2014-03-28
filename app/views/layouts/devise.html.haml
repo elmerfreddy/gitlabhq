@@ -8,9 +8,9 @@
         %center
           %h1 GitLab
           %p.light
-            GitLab is open source software to collaborate on code.
+            = t('.gitlab_open_source_software')
             %br
-            #{link_to "Sign in", new_user_session_path} or browse for #{link_to "public projects", public_projects_path}.
+            #{link_to t('.sign_in'), new_user_session_path} #{t('.or_browse_for')} #{link_to t('.public_projects'), public_projects_path}.
     %hr
     .container
       .content
