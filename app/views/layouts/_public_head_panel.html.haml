@@ -9,7 +9,7 @@
       %h1.title= title
 
       .pull-right
-        = link_to "Sign in", new_session_path(:user), class: 'btn btn-sign-in btn-new'
+        = link_to t('sign_in', scope: 'devise.passwords.new'), new_session_path(:user), class: 'btn btn-sign-in btn-new'
 
       %ul.nav.navbar-nav
         %li

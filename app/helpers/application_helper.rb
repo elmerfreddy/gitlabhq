@@ -179,11 +179,11 @@ module ApplicationHelper
 
   def search_placeholder
     if @project && @project.persisted?
-      "Search in this project"
+      t('general.search_in_this_project')
     elsif @group && @group.persisted?
-      "Search in this group"
+      t('general.search_in_this_group')
     else
-      "Search"
+      t('general.search')
     end
   end
 

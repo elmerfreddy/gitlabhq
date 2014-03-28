@@ -20,9 +20,35 @@ es:
         username_or_email: "Usuario o Email"
   general:
     email: "Correo electrónico"
+    logout: "Cerrar sesión"
+    search_in_this_project: "Buscar en éste proyecto"
+    search_in_this_group: "Buscar en éste grupo"
+    search: "Buscar"
   layouts:
     devise:
       gitlab_open_source_software: "GitLab es un software de código abierto para colaborar en código."
       or_browse_for: "o navega por los"
       public_projects: "proyectos públicos"
       sign_in: "Inicia sesión"
+    head_panel:
+      admin_area: "Area de administración"
+      dashboard: "Tablero"
+      my_snippets: "Mis fragmentos"
+      new_project: "Nuevo proyecto"
+      profile_settings: "Configuración de perfil"
+      public_area: "Area pública"
+  public:
+    projects:
+      index:
+        empty_repository: "Repositorio vacío"
+        filter_by_name: "Filtrar por nombre"
+        last_updated: "Última actualización"
+        name: "Nombre"
+        newest: "Nuevos"
+        no_public_projects: "No hay proyectos públicos"
+        oldest: "Antiguos"
+        projects: "Proyectos"
+        recently_updated: "Actualizado recientemente"
+        search: "Buscar"
+        sort: "ordenar"
+        you_can_browse_public_projects: "Puede navegar en proyectos públicos en modo de solo lectura hasta que se haya registrado."

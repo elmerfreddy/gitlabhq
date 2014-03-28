@@ -1,11 +1,11 @@
 !!! 5
 %html{ lang: "en"}
-  = render "layouts/head", title: "Public Projects"
+  = render "layouts/head", title: t('layouts.devise.public_projects').titleize
   %body{class: "#{app_theme} application", :'data-page' => body_data_page}
     = render "layouts/broadcast"
     - if current_user
-      = render "layouts/head_panel", title: "Public Projects"
+      = render "layouts/head_panel", title: t('layouts.devise.public_projects').titleize
     - else
-      = render "layouts/public_head_panel", title: "Public Projects"
+      = render "layouts/public_head_panel", title: t('layouts.devise.public_projects').titleize
     .container.navless-container
       .content= yield
