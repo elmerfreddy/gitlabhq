@@ -21,10 +21,14 @@ es:
   general:
     all: "Todo"
     by: "por"
+    cancel: "Cancelar"
     email: "Correo electrónico"
+    example_rb: "ejemplo.rb"
     logout: "Cerrar sesión"
     private: "Privado"
     public: "Público"
+    remove: "Eliminar"
+    save: "Guardar"
     search_in_this_project: "Buscar en éste proyecto"
     search_in_this_group: "Buscar en éste grupo"
     search: "Buscar"
@@ -63,5 +67,20 @@ es:
       discover_snippets: "Descubrir Fragmentos"
       my_snippets: "Mis Fragmentos"
       share_code_pastes: "Comparte pedazos de código con otros fuera del repositorio git"
+    form:
+      are_you_sure: "El fragmento eliminado no puede ser restaurado. ¿Está seguro?"
+      create_snippet: "Crear fragmento"
+      edit_snippet: "Editar Fragmento #%{snippet}"
+      example_snippet: "Fragmento de Ejemplo"
+      gitlab_users_can_see_this_snippet: "usuarios de GitLab pueden ver éste fragmento"
+      new_snippet: "Nuevo Fragmento"
+      only_you_can_see_this_snippet: "solamente tú puedes ver éste fragmento"
     snippets:
       nothing_here: "No hay nada aquí"
+
+  activerecord:
+    attributes:
+      snippet:
+        access: "Acceso"
+        file: "Archivo"
+        title: "Título"
