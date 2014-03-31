@@ -19,11 +19,16 @@ es:
         remember_me: "Recordarme"
         username_or_email: "Usuario o Email"
   general:
+    all: "Todo"
+    by: "por"
     email: "Correo electrónico"
     logout: "Cerrar sesión"
+    private: "Privado"
+    public: "Público"
     search_in_this_project: "Buscar en éste proyecto"
     search_in_this_group: "Buscar en éste grupo"
     search: "Buscar"
+    snippets: "Fragmentos"
   layouts:
     devise:
       gitlab_open_source_software: "GitLab es un software de código abierto para colaborar en código."
@@ -52,3 +57,11 @@ es:
         search: "Buscar"
         sort: "ordenar"
         you_can_browse_public_projects: "Puede navegar en proyectos públicos en modo de solo lectura hasta que se haya registrado."
+  snippets:
+    current_user_index:
+      add_new_snippet: "Crear Fragmento"
+      discover_snippets: "Descubrir Fragmentos"
+      my_snippets: "Mis Fragmentos"
+      share_code_pastes: "Comparte pedazos de código con otros fuera del repositorio git"
+    snippets:
+      nothing_here: "No hay nada aquí"

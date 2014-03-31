@@ -107,6 +107,6 @@ class SnippetsController < ApplicationController
   end
 
   def set_title
-    @title = 'Snippets'
+    @title = t('general.snippets')
   end
 end
