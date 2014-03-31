@@ -75,6 +75,10 @@ es:
       gitlab_users_can_see_this_snippet: "usuarios de GitLab pueden ver éste fragmento"
       new_snippet: "Nuevo Fragmento"
       only_you_can_see_this_snippet: "solamente tú puedes ver éste fragmento"
+    index:
+      add_new_snippet: "Adicionar nuevo fragmento"
+      public_snippets: "Fragmentos públicos"
+      public_snippets_created_by_you: "Fragmentos públicos creados por usted y otros usuarios son listados aquí"
     snippets:
       nothing_here: "No hay nada aquí"
 

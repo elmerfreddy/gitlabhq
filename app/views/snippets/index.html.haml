@@ -1,14 +1,14 @@
 %h3.page-title
-  Public snippets
+  = t('.public_snippets')
 
   .pull-right
-    = link_to new_snippet_path, class: "btn btn-new btn-grouped", title: "New Snippet" do
-      Add new snippet
+    = link_to new_snippet_path, class: "btn btn-new btn-grouped", title: t('new_snippet', scope: 'snippets.form') do
+      = t('.add_new_snippet')
     = link_to user_snippets_path(current_user), class: "btn btn-grouped"  do
-      My snippets
+      = t('my_snippets', scope: 'layouts.head_panel')
 
 %p.light
-  Public snippets created by you and other users are listed here
+  = t('.public_snippets_created_by_you')
 
 %hr
 = render 'snippets'
