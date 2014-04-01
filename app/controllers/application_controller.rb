@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
   before_filter :default_headers
   before_filter :add_gon_variables
   before_filter :configure_permitted_parameters, if: :devise_controller?
+  before_action :set_locale
 
   protect_from_forgery
 
@@ -59,6 +60,10 @@ class ApplicationController < ActionController::Base
     ensure
       Thread.current[:current_user] = nil
     end
+  end
+
+  def set_locale
+    I18n.locale = params[:locale] || I18n.default_locale
   end
 
   def abilities

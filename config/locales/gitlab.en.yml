@@ -1,0 +1,116 @@
+en:
+  admin:
+    dashboard:
+      index:
+        admin_area: "Admin Area"
+        background_jobs: "Background Jobs"
+        components: "Components"
+        features: "Características"
+        forks: "Forks"
+        groups: "Groups"
+        hooks: "Hooks"
+        issues: "Issues"
+        latest_groups: "Latest groups"
+        latest_projects: "Latest projects"
+        latest_users: "Latest users"
+        logs: "Logs"
+        messages: "Messages"
+        merge_requests: "Merge Requests"
+        milestones: "Milestones"
+        new_group: "New group"
+        new_user: "New user"
+        notes: "Notes"
+        sign_up: "Sign up"
+        ssh_keys: "SSH keys"
+        stats: "Stats"
+        users: "Users"
+        you_can_manage_projects: "You can manage projects, users and other GitLab data from here."
+  devise:
+    confirmations:
+      new:
+        resend_confirmation_instructions: "Resend confirmation instructions"
+    passwords:
+      new:
+        already_have_login_and_password: "Already have login and password?"
+        reset_password: "Reset Password"
+        sign_in: "Sign in"
+    sessions:
+      new:
+        did_not_receive_confirmation_email: "Did not receive confirmation email?"
+        send_again: "Send again"
+        sign_in: "Sign In"
+      new_base:
+        forgot_your_password: "Forgot your password?"
+        password: "Password"
+        remember_me: "Remember me"
+        username_or_email: "Username or Email"
+  general:
+    all: "All"
+    by: "by"
+    cancel: "Cancel"
+    email: "Email"
+    example_rb: "example.rb"
+    logout: "Logout"
+    private: "Private"
+    public: "Public"
+    remove: "Remove"
+    save: "Save"
+    search_in_this_project: "Search in this project"
+    search_in_this_group: "Search in this group"
+    search: "Search"
+    snippets: "Snippets"
+  layouts:
+    devise:
+      gitlab_open_source_software: "GitLab is open source software to collaborate on code."
+      or_browse_for: "or browse for"
+      public_projects: "public projects"
+      sign_in: "Sign in"
+    head_panel:
+      admin_area: "Admin area"
+      dashboard: "Dashboard"
+      my_snippets: "My snippets"
+      new_project: "New project"
+      profile_settings: "Profile settings"
+      public_area: "Public area"
+  public:
+    projects:
+      index:
+        empty_repository: "Empty repository"
+        filter_by_name: "Filter by name"
+        last_updated: "Last updated"
+        name: "Name"
+        newest: "Newest"
+        no_public_projects: "No public projects"
+        oldest: "Oldest"
+        projects: "Projects"
+        recently_updated: "Recently updated"
+        search: "Search"
+        sort: "sort"
+        you_can_browse_public_projects: "You can browse public projects in read-only mode until signed in."
+  snippets:
+    current_user_index:
+      add_new_snippet: "Add New Snippet"
+      discover_snippets: "Discover Snippets"
+      my_snippets: "My Snippets"
+      share_code_pastes: "Share code pastes with others out of git repository"
+    form:
+      are_you_sure: "Removed snippet cannot be restored! Are you sure?"
+      create_snippet: "Create snippet"
+      edit_snippet: "Edit Snippet #%{snippet}"
+      example_snippet: "Example Snippet"
+      gitlab_users_can_see_this_snippet: "GitLab users can see this snippet"
+      new_snippet: "New Snippet"
+      only_you_can_see_this_snippet: "only you can see this snippet"
+    index:
+      add_new_snippet: "Add new snippet"
+      public_snippets: "Public snippets"
+      public_snippets_created_by_you: "Public snippets created by you and other users are listed here"
+    snippets:
+      nothing_here: "Nothing here"
+
+  activerecord:
+    attributes:
+      snippet:
+        access: "Access"
+        file: "File"
+        title: "Title"
