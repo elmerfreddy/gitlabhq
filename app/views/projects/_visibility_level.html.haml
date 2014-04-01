@@ -1,6 +1,6 @@
 .form-group.project-visibility-level-holder
   = f.label :visibility_level, class: 'control-label' do
-    Visibility Level
+    = t('visibility_level', scope: 'admin.projects.index')
     = link_to "(?)", help_public_access_path
   .col-sm-10
     - if can_change_visibility_level
@@ -11,7 +11,7 @@
           = label :project_visibility_level, level do
             = visibility_level_icon(level)
             .option-title
-              = visibility_level_label(level)
+              = t(visibility_level_label(level).underscore, scope: 'general')
             .option-descr
               = visibility_level_description(level)
       - unless restricted_visibility_levels.empty?

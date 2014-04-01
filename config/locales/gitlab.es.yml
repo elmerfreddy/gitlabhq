@@ -64,6 +64,7 @@ es:
     internal: "Interno"
     logout: "Cerrar sesión"
     not_empty: "No vacío"
+    optional: "opcional"
     private: "Privado"
     public: "Público"
     remove: "Eliminar"
@@ -87,6 +88,25 @@ es:
       new_project: "Nuevo proyecto"
       profile_settings: "Configuración de perfil"
       public_area: "Area pública"
+  projects:
+    new:
+      any_logged_in_user: "algún usuario conectado."
+      authentication: "autentificación."
+      awesome_project: "Increíble proyecto"
+      create_a_group: "Crear un grupo"
+      create_project: "Crear proyecto"
+      creating_project_and_repository: "Creando proyecto &amp; repositorio."
+      customize_repository_name: "¿Personalizar nombre del repositorio?"
+      example_project: "Proyecto de Ejemplo"
+      import_existing_repository: "¿Importar repositorio existente?"
+      import_will_time_out_after_2_minutes: "La importación expirará después de 2 minutos. Para los grandes repositorios, use una combinación de clone/push."
+      need_a_group_for_several_dependent_projects: "¿Necesitas un grupo para varios proyectos dependientes?"
+      please_wait_a_moment: "Espere un momento por favor, esta página se actualizará automáticamente cuando esté listo."
+      project_access_must_be_granted: "El acceso al proyecto se debe conceder de forma explícita para cada usuario."
+      the_project_can_be_cloned: "El proyecto se puede clonar"
+      the_project_can_be_cloned_by: "El proyecto puede ser clonado por"
+      url_publicly_accessible: "La url tiene que ser público o puede agregar un nombre de usuario y contraseña: https://usuario:contraseña@gitlab.com/compañia/proyecto.git."
+      without_any: "sin ninguna"
   public:
     projects:
       index:
@@ -126,8 +146,13 @@ es:
   activerecord:
     attributes:
       project:
+        description: "Descripción"
+        import_existing_repo: "Importar repo existente"
         name: "Nombre"
+        namespace: "Espacio de nombres"
         owner: "Dueño"
+        project_name: "Nombre de proyecto"
+        repository_name: "Nombre de repositorio"
       snippet:
         access: "Acceso"
         file: "Archivo"

@@ -64,6 +64,7 @@ en:
     internal: "Internal"
     logout: "Logout"
     not_empty: "Not empty"
+    optional: "optional"
     private: "Private"
     public: "Public"
     remove: "Remove"
@@ -87,6 +88,25 @@ en:
       new_project: "New project"
       profile_settings: "Profile settings"
       public_area: "Public area"
+  projects:
+    new:
+      any_logged_in_user: "any logged in user."
+      authentication: "authentication."
+      awesome_project: "Awesome project"
+      create_a_group: "Create a group"
+      create_project: "Create project"
+      creating_project_and_repository: "Creating project &amp; repository."
+      customize_repository_name: "Customize repository name?"
+      example_project: "Example Project"
+      import_existing_repository: "Import existing repository?"
+      import_will_time_out_after_2_minutes: "The import will time out after 2 minutes. For big repositories, use a clone/push combination."
+      need_a_group_for_several_dependent_projects: "Need a group for several dependent projects?"
+      please_wait_a_moment: "Please wait a moment, this page will automatically refresh when ready."
+      project_access_must_be_granted: "Project access must be granted explicitly for each user."
+      the_project_can_be_cloned: "The project can be cloned"
+      the_project_can_be_cloned_by: "The project can be cloned by"
+      url_publicly_accessible: "This url must be publicly accessible or you can add a username and password like this: https://username:password@gitlab.com/company/project.git."
+      without_any: "without any"
   public:
     projects:
       index:
@@ -126,8 +146,13 @@ en:
   activerecord:
     attributes:
       project:
+        description: "Description"
+        import_existing_repo: "Import existing repo"
         name: "Name"
+        namespace: "Namespace"
         owner: "Owner"
+        project_name: "Project name"
+        repository_name: "Repository name"
       snippet:
         access: "Access"
         file: "File"

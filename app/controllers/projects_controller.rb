@@ -156,7 +156,7 @@ class ProjectsController < ApplicationController
   private
 
   def set_title
-    @title = 'New Project'
+    @title = t('new_project', scope: 'layouts.head_panel').titleize
   end
 
   def user_layout
