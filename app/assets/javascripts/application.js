@@ -20,6 +20,7 @@
 //= require bootstrap
 //= require modernizr
 //= require select2
+//= require select2_locale_es
 //= require raphael
 //= require g.raphael-min
 //= require g.bar-min

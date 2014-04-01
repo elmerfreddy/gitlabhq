@@ -53,7 +53,7 @@ module ProjectsHelper
   end
 
   def remove_project_message(project)
-    "You are going to remove #{project.name_with_namespace}.\n Removed project CANNOT be restored!\n Are you ABSOLUTELY sure?"
+    t('.you_are_going_to_remove_project', project: project.name_with_namespace)
   end
 
   def project_nav_tabs
@@ -168,7 +168,7 @@ module ProjectsHelper
     # In order to prevent 500 error
     # when application cannot allocate memory
     # to calculate repo size - just show 'Unknown'
-    'unknown'
+    t('general.unknown')
   end
 
   def project_head_title

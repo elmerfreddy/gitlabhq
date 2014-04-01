@@ -25,6 +25,14 @@ es:
         stats: "Estadísticas"
         users: "Usuarios"
         you_can_manage_projects: "Usted puede manejar proyectos, usuarios y otros datos de GitLab desde aquí"
+    projects:
+      index:
+        0_projects_matches: "0 proyectos coincidentes"
+        no_activity_over_6_month: "No hay actividad hace más de 6 meses"
+        projects_with_push_events: "Proyectos con eventos de inserción"
+        search_for_a_user: "Búsqueda de un usuario"
+        visibility_level: "Nivel de visibilidad"
+        you_are_going_to_remove_project: "Usted va a eliminar %{project}.\n ¡Un proyecto eliminado NO puede ser restaurado!\n ¿Está ABSOLUTAMENTE seguro?"
   devise:
     confirmations:
       new:
@@ -45,20 +53,27 @@ es:
         remember_me: "Recordarme"
         username_or_email: "Usuario o Email"
   general:
+    abandoned: "Abandonado"
     all: "Todo"
     by: "por"
     cancel: "Cancelar"
+    destroy: "Eliminar"
+    edit: "Editar"
     email: "Correo electrónico"
     example_rb: "ejemplo.rb"
+    internal: "Interno"
     logout: "Cerrar sesión"
+    not_empty: "No vacío"
     private: "Privado"
     public: "Público"
     remove: "Eliminar"
+    reset: "Reiniciar"
     save: "Guardar"
     search_in_this_project: "Buscar en éste proyecto"
     search_in_this_group: "Buscar en éste grupo"
     search: "Buscar"
     snippets: "Fragmentos"
+    unknown: "desconocido"
   layouts:
     devise:
       gitlab_open_source_software: "GitLab es un software de código abierto para colaborar en código."
@@ -110,6 +125,9 @@ es:
 
   activerecord:
     attributes:
+      project:
+        name: "Nombre"
+        owner: "Dueño"
       snippet:
         access: "Acceso"
         file: "Archivo"

@@ -4,8 +4,9 @@ module SelectsHelper
     css_class << "multiselect " if opts[:multiple]
     css_class << (opts[:class] || '')
     value = opts[:selected] || ''
+    placeholder = opts[:placeholder] || 'Select user'
 
-    hidden_field_tag(id, value, class: css_class)
+    hidden_field_tag(id, value, class: css_class, 'data-placeholder' => placeholder)
   end
 
   def project_users_select_tag(id, opts = {})

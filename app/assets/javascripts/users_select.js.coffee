@@ -20,7 +20,7 @@ $ ->
 
   $('.ajax-users-select').each (i, select) ->
     $(select).select2
-      placeholder: "Search for a user"
+      placeholder: $(select).data('placeholder') || "Search for a user"
       multiple: $(select).hasClass('multiselect')
       minimumInputLength: 0
       query: (query) ->

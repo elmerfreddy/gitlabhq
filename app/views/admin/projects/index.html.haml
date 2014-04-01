@@ -3,26 +3,26 @@
     .admin-filter
       = form_tag admin_projects_path, method: :get, class: '' do
         .form-group
-          = label_tag :name, 'Name:'
+          = label_tag :name, "#{Project.human_attribute_name('name')}:"
           = text_field_tag :name, params[:name], class: "form-control"
 
         .form-group
-          = label_tag :owner_id, 'Owner:'
+          = label_tag :owner_id, "#{Project.human_attribute_name('owner')}:"
           %div
-            = users_select_tag :owner_id, selected: params[:owner_id], class: 'input-large input-clamp'
+            = users_select_tag :owner_id, selected: params[:owner_id], class: 'input-large input-clamp', placeholder: t('.search_for_a_user')
         .checkbox
-          = label_tag :with_push, 'Not empty'
+          = label_tag :with_push, t('general.not_empty')
           = check_box_tag :with_push, 1, params[:with_push]
           &nbsp;
-          %span.light Projects with push events
+          %span.light= t('.projects_with_push_events')
         .checkbox
-          = label_tag :abandoned, 'Abandoned'
+          = label_tag :abandoned, t('general.abandoned')
           = check_box_tag :abandoned, 1, params[:abandoned]
           &nbsp;
-          %span.light No activity over 6 month
+          %span.light= t('.no_activity_over_6_month')
 
         %fieldset
-          %strong Visibility level:
+          %strong #{t('.visibility_level')}:
           .visibility-levels
             - Project.visibility_levels.each do |label, level|
               .checkbox
@@ -30,17 +30,17 @@
                   = check_box_tag 'visibility_levels[]', level, params[:visibility_levels].present? && params[:visibility_levels].include?(level.to_s)
                   %span.descr
                     = visibility_level_icon(level)
-                    = label
+                    = t(label.underscore, scope: 'general')
         .form-actions
-          = submit_tag "Search", class: "btn submit btn-primary"
-          = link_to "Reset", admin_projects_path, class: "btn"
+          = submit_tag t('search', scope: 'public.projects.index'), class: "btn submit btn-primary"
+          = link_to t('general.reset'), admin_projects_path, class: "btn"
 
   .col-md-8
     .ui-box
       .title
-        Projects (#{@projects.total_count})
+        #{t('projects', scope: 'public.projects.index')} (#{@projects.total_count})
         .pull-right
-          = link_to 'New Project', new_project_path, class: "btn btn-new"
+          = link_to t('new_project', scope: 'layouts.head_panel').titleize, new_project_path, class: "btn btn-new"
       %ul.well-list
         - @projects.each do |project|
           %li
@@ -50,8 +50,8 @@
             .pull-right
               %span.label.label-gray
                 = repository_size(project)
-              = link_to 'Edit', edit_project_path(project), id: "edit_#{dom_id(project)}", class: "btn btn-small"
-              = link_to 'Destroy', [project], data: { confirm: remove_project_message(project) }, method: :delete, class: "btn btn-small btn-remove"
+              = link_to t('general.edit'), edit_project_path(project), id: "edit_#{dom_id(project)}", class: "btn btn-small"
+              = link_to t('general.destroy'), [project], data: { confirm: remove_project_message(project) }, method: :delete, class: "btn btn-small btn-remove"
         - if @projects.blank?
-          .nothing-here-block 0 projects matches
+          .nothing-here-block= t('.0_projects_matches')
     = paginate @projects, theme: "gitlab"
