@@ -1,38 +1,38 @@
 %h3.page-title
-  Admin area
+  = t('.admin_area')
 %p.light
-  You can manage projects, users and other GitLab data from here.
+  = t('.you_can_manage_projects')
 %hr
 .admin-dashboard
   .row
     .col-sm-4
       .light-well
-        %h4 Projects
+        %h4= t('projects', scope: 'public.projects.index')
         .data
           = link_to admin_projects_path do
             %h1= Project.count
           %hr
-          = link_to 'New Project', new_project_path, class: "btn btn-new"
+          = link_to t('new_project', scope: 'layouts.head_panel').titleize, new_project_path, class: "btn btn-new"
     .col-sm-4
       .light-well
-        %h4 Users
+        %h4= t('.users')
         .data
           = link_to admin_users_path do
             %h1= User.count
           %hr
-          = link_to 'New User', new_admin_user_path, class: "btn btn-new"
+          = link_to t('.new_user').titleize, new_admin_user_path, class: "btn btn-new"
     .col-sm-4
       .light-well
-        %h4 Groups
+        %h4= t('.groups')
         .data
           = link_to admin_groups_path do
             %h1= Group.count
           %hr
-          = link_to 'New Group', new_admin_group_path, class: "btn btn-new"
+          = link_to t('.new_group').titleize, new_admin_group_path, class: "btn btn-new"
 
   .row.prepend-top-10
     .col-md-4
-      %h4 Latest projects
+      %h4= t('.latest_projects')
       %hr
       - @projects.each do |project|
         %p
@@ -41,7 +41,7 @@
             #{time_ago_with_tooltip(project.created_at)}
 
     .col-md-4
-      %h4 Latest users
+      %h4= t('.latest_users')
       %hr
       - @users.each do |user|
         %p
@@ -51,7 +51,7 @@
             #{time_ago_with_tooltip(user.created_at)}
 
     .col-md-4
-      %h4 Latest groups
+      %h4= t('.latest_groups')
       %hr
       - @groups.each do |group|
         %p
@@ -63,42 +63,42 @@
   %br
   .row
     .col-md-4
-      %h4 Stats
+      %h4= t('.stats')
       %hr
       %p
-        Forks
+        = t('.forks')
         %span.light.pull-right
           = ForkedProjectLink.count
       %p
-        Issues
+        = t('.issues')
         %span.light.pull-right
           = Issue.count
       %p
-        Merge Requests
+        = t('.merge_requests')
         %span.light.pull-right
           = MergeRequest.count
       %p
-        Notes
+        = t('.notes')
         %span.light.pull-right
           = Note.count
       %p
-        Snippets
+        = t('general.snippets')
         %span.light.pull-right
           = Snippet.count
       %p
-        SSH Keys
+        = t('.ssh_keys')
         %span.light.pull-right
           = Key.count
       %p
-        Milestones
+        = t('.milestones')
         %span.light.pull-right
           = Milestone.count
     .col-md-4
       %h4
-        Features
+        = t('.features')
       %hr
       %p
-        Sign up
+        = t('.sign_up')
         %span.light.pull-right
           = boolean_to_icon gitlab_config.signup_enabled
       %p
@@ -114,7 +114,8 @@
         %span.light.pull-right
           = boolean_to_icon Gitlab.config.omniauth.enabled
     .col-md-4
-      %h4 Components
+      %h4
+        = t('.components')
       %hr
       %p
         GitLab

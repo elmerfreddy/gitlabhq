@@ -1,4 +1,30 @@
 es:
+  admin:
+    dashboard:
+      index:
+        admin_area: "Área de Administración"
+        background_jobs: "Background Jobs"
+        components: "Componentes"
+        features: "Características"
+        forks: "Bifurcaciones"
+        groups: "Grupos"
+        hooks: "Hooks"
+        issues: "Errores"
+        latest_groups: "Últimos grupos"
+        latest_projects: "Últimos proyectos"
+        latest_users: "Últimos usuarios"
+        logs: "Histórico"
+        messages: "Mensajes"
+        merge_requests: "Fusionar Solicitudes"
+        milestones: "Hitos"
+        new_group: "Nuevo grupo"
+        new_user: "Nuevo usuario"
+        notes: "Notas"
+        sign_up: "Registro de usuarios"
+        ssh_keys: "Llaves SSH"
+        stats: "Estadísticas"
+        users: "Usuarios"
+        you_can_manage_projects: "Usted puede manejar proyectos, usuarios y otros datos de GitLab desde aquí"
   devise:
     confirmations:
       new:
