@@ -53,7 +53,7 @@ module ProjectsHelper
   end
 
   def remove_project_message(project)
-    t('.you_are_going_to_remove_project', project: project.name_with_namespace)
+    t('admin.projects.index.you_are_going_to_remove_project', project: project.name_with_namespace)
   end
 
   def project_nav_tabs

@@ -3,29 +3,29 @@
   .project-edit-content
     %div
       %h3.page-title
-        Project settings:
-      %p.light Some settings, such as "Transfer Project", are hidden inside the danger area below
+        #{t('.project_settings')}:
+      %p.light= t('.some_settings_transfer_hidden')
       %hr
       .form-holder
         = form_for @project, remote: true, html: { class: "edit_project form-horizontal" } do |f|
           %fieldset
             .form-group.project_name_holder
               = f.label :name, class: 'control-label' do
-                Project name
+                = Project.human_attribute_name('project_name')
               .col-sm-10
-                = f.text_field :name, placeholder: "Example Project", class: "form-control"
+                = f.text_field :name, placeholder: t('example_project', scope: 'projects.new'), class: "form-control"
 
 
             .form-group
               = f.label :description, class: 'control-label' do
-                Project description
-                %span.light (optional)
+                = Project.human_attribute_name('project_description')
+                %span.light (#{t('general.optional')})
               .col-sm-10
-                = f.text_area :description, placeholder: "Awesome project", class: "form-control", rows: 3, maxlength: 250
+                = f.text_area :description, placeholder: t('awesome_project', scope: 'projects.new'), class: "form-control", rows: 3, maxlength: 250
 
             - if @project.repository.exists? && @project.repository.branch_names.any?
               .form-group
-                = f.label :default_branch, "Default Branch", class: 'control-label'
+                = f.label :default_branch, t('.default_branch'), class: 'control-label'
                 .col-sm-10= f.select(:default_branch, @repository.branch_names, {}, {class: 'select2 select-wide'})
 
 
@@ -33,63 +33,62 @@
 
           %fieldset.features
             %legend
-              Labels:
+              #{t('general.labels')}:
             .form-group
-              = f.label :label_list, "Labels", class: 'control-label'
+              = f.label :label_list, t('general.labels'), class: 'control-label'
               .col-sm-10
                 = f.text_field :label_list, maxlength: 2000, class: "form-control"
-                %p.hint Separate labels with commas.
+                %p.hint= t('.separate_labels_with_commas')
 
           %fieldset.features
             %legend
-              Features:
+              #{t('general.features')}:
             .form-group
-              = f.label :issues_enabled, "Issues", class: 'control-label'
+              = f.label :issues_enabled, t('general.issues'), class: 'control-label'
               .col-sm-10
                 .checkbox
                   = f.check_box :issues_enabled
-                  %span.descr Lightweight issue tracking system for this project
+                  %span.descr= t('.lightweight_issue_tracking')
 
             - if Project.issues_tracker.values.count > 1
               .form-group
-                = f.label :issues_tracker, "Issues tracker", class: 'control-label'
+                = f.label :issues_tracker, t('.issues_tracker'), class: 'control-label'
                 .col-sm-10= f.select(:issues_tracker, project_issues_trackers(@project.issues_tracker), {}, { disabled: !@project.issues_enabled })
 
               .form-group
-                = f.label :issues_tracker_id, "Project name or id in issues tracker", class: 'control-label'
+                = f.label :issues_tracker_id, t('.project_name_or_id'), class: 'control-label'
                 .col-sm-10= f.text_field :issues_tracker_id, disabled: !@project.can_have_issues_tracker_id?, class: 'form-control'
 
             .form-group
-              = f.label :merge_requests_enabled, "Merge Requests", class: 'control-label'
+              = f.label :merge_requests_enabled, t('general.merge_requests'), class: 'control-label'
               .col-sm-10
                 .checkbox
                   = f.check_box :merge_requests_enabled
-                  %span.descr Submit changes to be merged upstream.
+                  %span.descr= t('.submit_changes_to_be_merged_upstream')
 
             .form-group
-              = f.label :wiki_enabled, "Wiki", class: 'control-label'
+              = f.label :wiki_enabled, t('general.wiki'), class: 'control-label'
               .col-sm-10
                 .checkbox
                   = f.check_box :wiki_enabled
-                  %span.descr Pages for project documentation
+                  %span.descr= t('.pages_for_project_documentation')
 
             .form-group
-              = f.label :wall_enabled, "Wall", class: 'control-label'
+              = f.label :wall_enabled, t('general.wall'), class: 'control-label'
               .col-sm-10
                 .checkbox
                   = f.check_box :wall_enabled
-                  %span.descr Simple chat system for broadcasting inside project
+                  %span.descr= t('.simple_chat_system')
 
             .form-group
-              = f.label :snippets_enabled, "Snippets", class: 'control-label'
+              = f.label :snippets_enabled, t('general.snippets'), class: 'control-label'
               .col-sm-10
                 .checkbox
                   = f.check_box :snippets_enabled
-                  %span.descr Share code pastes with others out of git repository
-
+                  %span.descr= t('share_code_pastes', scope: 'snippets.current_user_index')
 
           .form-actions
-            = f.submit 'Save changes', class: "btn btn-save"
+            = f.submit t('general.save_changes'), class: "btn btn-save"
 
 
 
@@ -97,11 +96,11 @@
       .centered-light-block
         %h3
           %i.icon-warning-sign
-          Dangerous settings
+          = t('.dangerous_settings')
 
-        %p Project settings below may result in data loss!
+        %p= t('.project_settings_below_may_result_in_data_loss')
         = link_to '#', class: 'btn js-toggle-button' do
-          Show it to me
+          = t('.show_it_to_me')
           %i.icon-chevron-down
 
       .js-toggle-content.hide
@@ -109,83 +108,83 @@
           .ui-box.ui-box-danger
             .title
               - if @project.archived?
-                Unarchive project
+                = t('.unarchive_project')
               - else
-                Archive project
+                = t('.archive_project')
             .body
               - if @project.archived?
                 %p
-                  Unarchiving the project will mark its repository as active.
+                  = t('.unarchiving_the_project')
                   %br
-                  The project can be committed to.
+                  = t('.the_project_can_be_commited_to')
                   %br
-                  %strong Once active this project shows up in the search and on the dashboard.
-                = link_to 'Unarchive', unarchive_project_path(@project),
-                    data: { confirm: "Are you sure that you want to unarchive this project?\nWhen this project is unarchived it is active and can be comitted to again." },
+                  %strong= t('.once_active_this_project')
+                = link_to t('general.unarchive'), unarchive_project_path(@project),
+                    data: { confirm: raw(t('.are_you_sure_unarchive')) },
                     method: :post, class: "btn btn-remove"
               - else
                 %p
-                  Archiving the project will mark its repository as read-only.
+                  = t('.archiving_the_project')
                   %br
-                  It is hidden from the dashboard and doesn't show up in searches.
+                  = t('.it_is_hidden')
                   %br
-                  %strong Archived projects cannot be committed to!
-                = link_to 'Archive', archive_project_path(@project),
-                    data: { confirm: "Are you sure that you want to archive this project?\nAn archived project cannot be committed to." },
+                  %strong= t('.archived_project')
+                = link_to t('general.archive'), archive_project_path(@project),
+                    data: { confirm: t('.are_you_sure_archive') },
                     method: :post, class: "btn btn-remove"
         - else
-          .nothing-here-block Only the project owner can archive a project
+          .nothing-here-block= t('.only_project_owner')
 
         - if can?(current_user, :change_namespace, @project)
           .ui-box.ui-box-danger
-            .title Transfer project
+            .title= t('.transfer_project')
             .errors-holder
             .form-holder
               = form_for(@project, url: transfer_project_path(@project), method: :put, remote: true, html: { class: 'transfer-project form-horizontal' }) do |f|
                 .form-group
                   = f.label :namespace_id, class: 'control-label' do
-                    %span Namespace
+                    %span= Project.human_attribute_name('namespace')
                   .col-sm-10
                     .form-group
-                      = f.select :namespace_id, namespaces_options(@project.namespace_id), { prompt: 'Choose a project namespace' }, { class: 'select2' }
+                      = f.select :namespace_id, namespaces_options(@project.namespace_id), { prompt: t('.choose_a_project_namespace') }, { class: 'select2' }
                     %ul
-                      %li Be careful. Changing the project's namespace can have unintended side effects.
-                      %li You can only transfer the project to namespaces you manage.
-                      %li You will need to update your local repositories to point to the new location.
+                      %li= t('.be_careful')
+                      %li= t('.you_can_only_transfer')
+                      %li= t('.you_will_need_to_update')
                 .form-actions
-                  = f.submit 'Transfer', class: "btn btn-remove"
+                  = f.submit t('general.transfer'), class: "btn btn-remove"
         - else
-          .nothing-here-block Only the project owner can transfer a project
+          .nothing-here-block= t('.only_project_owner_transfer')
 
         .ui-box.ui-box-danger
-          .title Rename repository
+          .title= t('.rename_repository')
           .errors-holder
           .form-holder
             = form_for(@project, html: { class: 'form-horizontal' }) do |f|
               .form-group
                 = f.label :path, class: 'control-label' do
-                  %span Path
+                  %span= t('.path')
                 .col-sm-9
                   .form-group
                     .input-group
                       = f.text_field :path, class: 'form-control'
                       %span.input-group-addon .git
                   %ul
-                    %li Be careful. Renaming a project's repository can have unintended side effects.
-                    %li You will need to update your local repositories to point to the new location.
+                    %li= t('.be_careful_renaming')
+                    %li= t('.you_will_need_to_update')
               .form-actions
-                = f.submit 'Rename', class: "btn btn-remove"
+                = f.submit t('general.rename'), class: "btn btn-remove"
 
         - if can?(current_user, :remove_project, @project)
           .ui-box.ui-box-danger
-            .title Remove project
+            .title= t('.remove_project')
             .body
               %p
-                Removing the project will delete its repository and all related resources including issues, merge requests etc.
+                = t('.removing_the_project_will_delete')
                 %br
-                %strong Removed projects cannot be restored!
+                %strong= t('.removed_projects_cannot_be_restored')
 
-              = link_to 'Remove project', @project, data: { confirm: remove_project_message(@project) }, method: :delete, class: "btn btn-remove"
+              = link_to t('.remove_project'), @project, data: { confirm: remove_project_message(@project) }, method: :delete, class: "btn btn-remove"
         - else
           .nothing-here-block Only project owner can remove a project
 
