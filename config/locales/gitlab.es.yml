@@ -104,6 +104,14 @@ es:
       new_project: "Nuevo proyecto"
       profile_settings: "Configuración de perfil"
       public_area: "Area pública"
+  profiles:
+    passwords:
+      new:
+        after_successful_password_update: "Después de actualizar la contraseña correctamente se le redirigirá a la pantalla de inicio de sesión."
+        new_password: "Nueva contraseña"
+        please_set_a_new_password: "Por favor, establezca una nueva contraseña antes de continuar."
+        set_new_password: "Establecer nueva contraseña"
+        setup_new_password: "Configuración de nueva contraseña"
   projects:
     edit:
       archive_project: "Archivar proyecto"
@@ -225,3 +233,6 @@ es:
         access: "Acceso"
         file: "Archivo"
         title: "Título"
+      user:
+        password: "Contraseña"
+        password_confirmation: "Confirmar contraseña"

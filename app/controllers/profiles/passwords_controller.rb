@@ -60,7 +60,7 @@ class Profiles::PasswordsController < ApplicationController
   end
 
   def set_title
-    @title = "New password"
+    @title = t('new_password', scope: 'profiles.passwords.new')
   end
 
   def determine_layout

@@ -1,10 +1,10 @@
-%h3.page-title Setup new password
+%h3.page-title= t('.setup_new_password')
 %hr
 = form_for @user, url: profile_password_path, method: :post, html: { class: 'form-horizontal '} do |f|
   %p.slead
-    Please set a new password before proceeding.
+    = t('.please_set_a_new_password')
     %br
-    After a successful password update you will be redirected to login screen.
+    = t('.after_successful_password_update')
   -if @user.errors.any?
     .alert.alert-danger
       %ul
@@ -12,11 +12,11 @@
           %li= msg
 
   .form-group
-    = f.label :password, class: 'control-label'
+    = f.label :password, User.human_attribute_name('password'), class: 'control-label'
     .col-sm-10= f.password_field :password, required: true, class: 'form-control'
   .form-group
-    = f.label :password_confirmation, class: 'control-label'
+    = f.label :password_confirmation, User.human_attribute_name('password_confirmation'), class: 'control-label'
     .col-sm-10
       = f.password_field :password_confirmation, required: true, class: 'form-control'
   .form-actions
-    = f.submit 'Set new password', class: "btn btn-create"
+    = f.submit t('.set_new_password'), class: "btn btn-create"

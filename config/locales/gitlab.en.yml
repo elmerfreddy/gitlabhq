@@ -104,6 +104,14 @@ en:
       new_project: "New project"
       profile_settings: "Profile settings"
       public_area: "Public area"
+  profiles:
+    passwords:
+      new:
+        after_successful_password_update: "After a successful password update you will be redirected to login screen."
+        new_password: "New password"
+        please_set_a_new_password: "Please set a new password before proceeding."
+        set_new_password: "Set new password"
+        setup_new_password: "Setup new password"
   projects:
     edit:
       archive_project: "Archive project"
@@ -225,3 +233,6 @@ en:
         access: "Access"
         file: "File"
         title: "Title"
+      user:
+        password: "Password"
+        password_confirmation: "Password confirmation"
