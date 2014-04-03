@@ -18,16 +18,16 @@ module Gitlab
 
       def options
         {
-          "Guest"     => GUEST,
-          "Reporter"  => REPORTER,
-          "Developer" => DEVELOPER,
-          "Master"    => MASTER,
+          I18n.t('guest', scope: 'general.access')     => GUEST,
+          I18n.t('reporter', scope: 'general.access')  => REPORTER,
+          I18n.t('developer', scope: 'general.access') => DEVELOPER,
+          I18n.t('master', scope: 'general.access')    => MASTER,
         }
       end
 
       def options_with_owner
         options.merge(
-          "Owner" => OWNER
+          I18n.t('owner', scope: 'general.access') => OWNER
         )
       end
 

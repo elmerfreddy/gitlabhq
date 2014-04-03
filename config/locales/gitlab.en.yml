@@ -53,6 +53,12 @@ en:
         remember_me: "Remember me"
         username_or_email: "Username or Email"
   general:
+    access:
+      developer: "Developer"
+      guest: "Guest"
+      master: "Master"
+      owner: "Owner"
+      reporter: "Reporter"
     abandoned: "Abandoned"
     all: "All"
     archive: "Archive"
@@ -66,8 +72,10 @@ en:
     features: "Features"
     files: "Files"
     graphs: "Graphs"
+    here: "here"
     internal: "Internal"
     issues: "Issues"
+    its_you: "It's you"
     labels: "Labels"
     logout: "Logout"
     merge_requests: "Merge Requests"
@@ -168,6 +176,27 @@ en:
       the_project_can_be_cloned_by: "The project can be cloned by"
       url_publicly_accessible: "This url must be publicly accessible or you can add a username and password like this: https://username:password@gitlab.com/company/project.git."
       without_any: "without any"
+    team_members:
+      group_members:
+        and_group_users_count_more: "and %{group_users_count} more. For full list visit %{link_to}"
+        group_members: "group members"
+        group_members_page: "group members page"
+      index:
+        import_members: "Import members"
+        import_members_from_another_project: "Import members from another project"
+        new_project_member: "New project member"
+        read_more_about_project_permissions: "Read more about project permissions"
+        users_with_access_to_this_project: "Users with access to this project"
+      team:
+        project_members: "project members"
+      team_member:
+        remove_user_from_team: "Remove user from team"
+        you_are_going_to_remove_user: "You are going to remove %{user} from %{project} project team. Are you sure?"
+      users_group:
+        are_you_sure_leave_group: "Are you sure you want to leave \"%{group}\" group?"
+        are_you_sure_remove_user: "Are you sure you want to remove \"%{user}\" from \"%{group}\"?"
+        edit_access_level: "Edit access level"
+        remove_user_from_group: "Remove user from group"
     settings_nav:
       deploy_keys: "Deploy Keys"
       members: "Members"

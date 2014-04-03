@@ -2,7 +2,7 @@
 .ui-box
   .title
     %strong #{@group.name}
-    group members (#{group_users_count})
+    #{t('.group_members')} (#{group_users_count})
     .pull-right
       = link_to members_group_path(@group), class: 'btn btn-small' do
         %i.icon-edit
@@ -11,4 +11,4 @@
       = render 'users_groups/users_group', member: member, show_controls: false
     - if group_users_count > 20
       %li
-        and #{group_users_count - 20} more. For full list visit #{link_to 'group members page', members_group_path(@group)}
+        = raw t('.and_group_users_count_more', group_users_count: group_users_count - 20, link_to: link_to(t('.group_members_page'), members_group_path(@group)))

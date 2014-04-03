@@ -1,12 +1,12 @@
 module GroupsHelper
   def remove_user_from_group_message(group, user)
-    "Are you sure you want to remove \"#{user.name}\" from \"#{group.name}\"?"
+    t('are_you_sure_remove_user', scope: 'projects.team_members.users_group', user: user.name, group: group.name)
   end
 
   def leave_group_message(group)
-    "Are you sure you want to leave \"#{group}\" group?"
+    t('are_you_sure_leave_group', scope: 'projects.team_members.users_group', group: group)
   end
-  
+
   def should_user_see_group_roles?(user, group)
     if user
       user.is_admin? || group.members.exists?(user_id: user.id)

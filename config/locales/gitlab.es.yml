@@ -53,6 +53,12 @@ es:
         remember_me: "Recordarme"
         username_or_email: "Usuario o Email"
   general:
+    access:
+      developer: "Desarrollador"
+      guest: "Invitado"
+      master: "Maestro"
+      owner: "Dueño"
+      reporter: "Reportero"
     abandoned: "Abandonado"
     all: "Todo"
     archive: "Archivar"
@@ -66,8 +72,10 @@ es:
     features: "Características"
     files: "Archivos"
     graphs: "Gráficos"
+    here: "aquí"
     internal: "Interno"
     issues: "Problemas"
+    its_you: "Éste eres tú"
     labels: "Etiquetas"
     logout: "Cerrar sesión"
     merge_requests: "Fusionar Solicitudes"
@@ -168,6 +176,27 @@ es:
       the_project_can_be_cloned_by: "El proyecto puede ser clonado por"
       url_publicly_accessible: "La url tiene que ser público o puede agregar un nombre de usuario y contraseña: https://usuario:contraseña@gitlab.com/compañia/proyecto.git."
       without_any: "sin ninguna"
+    team_members:
+      group_members:
+        and_group_users_count_more: "y %{group_users_count} más. Para la lista completa visita %{link_to}"
+        group_members: "miembros del grupo"
+        group_members_page: "la página de los miembros del grupo"
+      index:
+        import_members: "Importar miembros"
+        import_members_from_another_project: "Importar miembros de otro proyecto"
+        new_project_member: "Nuevo miembro de proyecto"
+        read_more_about_project_permissions: "Lea más acerca de los permisos de proyectos"
+        users_with_access_to_this_project: "Usuarios con acceso a este proyecto"
+      team:
+        project_members: "miembros del proyecto"
+      team_member:
+        remove_user_from_team: "Eliminar usuario del equipo"
+        you_are_going_to_remove_user: "Usted va a quitar a %{user} del equipo del proyecto %{project}. ¿Está seguro?"
+      users_group:
+        are_you_sure_leave_group: "¿Está seguro de querer dejar el grupo \"%{group}\"?"
+        are_you_sure_remove_user: "¿Está seguro que desea eliminar \"%{user}\" de \"%{group}\"?"
+        edit_access_level: "Editar nivel de acceso"
+        remove_user_from_group: "Eliminar usuario del grupo"
     settings_nav:
       deploy_keys: "Deploy Keys"
       members: "Miembros"

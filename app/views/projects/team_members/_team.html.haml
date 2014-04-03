@@ -3,7 +3,7 @@
   .ui-box
     .title
       %strong #{@project.name}
-      project members (#{members.count})
+      #{t('.project_members')} (#{members.count})
     %ul.well-list
       - members.each do |team_member|
         = render 'team_member', member: team_member, current_user_can_admin_project: can_admin_project

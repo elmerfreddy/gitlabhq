@@ -1,6 +1,6 @@
 module ProjectsHelper
   def remove_from_project_team_message(project, user)
-    "You are going to remove #{user.name} from #{project.name} project team. Are you sure?"
+    t('you_are_going_to_remove_user', scope: 'projects.team_members.team_member', user: user.name, project: project.name)
   end
 
   def link_to_project project
