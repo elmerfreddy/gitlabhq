@@ -41,6 +41,9 @@ en:
     issues:
       list_all_issues_from_all_projects: "List all issues from all projects you have access to."
       nro_issues: "%{count} issues"
+    merge_requests:
+      list_all_merge_requests_from_projects: "List all merge requests from all projects you have access to."
+      merge_requests_total_count: "%{count} merge requests"
     projects:
       all_projects_you_have_access_to_are_listed_here: "All projects you have access to are listed here. Public projects are not included here unless you are a member"
       archived: "Archived"
@@ -214,6 +217,10 @@ en:
         assigned_to_member: "assigned to %{member}"
         closed: "CLOSED"
         updated: "updated"
+    merge_requests:
+      merge_request:
+        authored_by_member: "authored by %{member}"
+        merged: "MERGED"
     new:
       any_logged_in_user: "any logged in user."
       authentication: "authentication."
@@ -288,6 +295,8 @@ en:
       state: "State"
     issues:
       no_issues_to_show: "No issues to show"
+    merge_requests:
+      no_merge_requests_to_show: "No merge requests to show"
     no_ssh:
       add_an_ssh_key: "add an SSH key"
       add_key: "Add key"

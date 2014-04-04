@@ -5,7 +5,7 @@
     - if merge_request.merged?
       %small.pull-right
         %i.icon-ok
-        = "MERGED"
+        = t('.merged')
     - else
       %span.pull-right
         - if merge_request.for_fork?
@@ -20,7 +20,7 @@
           = merge_request.target_branch
   .merge-request-info
     - if merge_request.author
-      authored by #{link_to_member(merge_request.source_project, merge_request.author)}
+      = raw t('.authored_by_member', member: link_to_member(merge_request.source_project, merge_request.author))
     - if merge_request.votes_count > 0
       = render 'votes/votes_inline', votable: merge_request
     - if merge_request.notes.any?
@@ -34,4 +34,4 @@
 
 
     .pull-right
-      %small updated #{time_ago_with_tooltip(merge_request.updated_at, 'bottom', 'merge_request_updated_ago')}
+      %small #{t('updated', scope: 'projects.issues.issue')} #{time_ago_with_tooltip(merge_request.updated_at, 'bottom', 'merge_request_updated_ago')}

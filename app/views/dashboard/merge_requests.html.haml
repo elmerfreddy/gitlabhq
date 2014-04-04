@@ -1,10 +1,10 @@
 %h3.page-title
-  Merge Requests
-  %span.pull-right #{@merge_requests.total_count} merge requests
+  = t('general.merge_requests')
+  %span.pull-right= t('.merge_requests_total_count', count: @merge_requests.total_count)
 
 
 %p.light
-  List all merge requests from all projects you have access to.
+  = t('.list_all_merge_requests_from_projects')
 %hr
 .row
   .col-md-3

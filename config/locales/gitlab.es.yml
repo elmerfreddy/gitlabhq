@@ -41,6 +41,9 @@ es:
     issues:
       list_all_issues_from_all_projects: "Lista todos los problemas de todos los proyectos que tiene acceso."
       nro_issues: "%{count} problemas"
+    merge_requests:
+      list_all_merge_requests_from_projects: "Listar todas las peticiones para fusionar de todos los proyectos que tienes acceso."
+      merge_requests_total_count: "%{count} peticiones a fusionar"
     projects:
       all_projects_you_have_access_to_are_listed_here: "Todos los proyectos que tiene acceso son listados aquí. Los proyectos públicos no se incluyen aquí a menos que seas un miembro"
       archived: "Archivado"
@@ -214,6 +217,10 @@ es:
         assigned_to_member: "asignado a %{member}"
         closed: "CERRADO"
         updated: "actualizado"
+    merge_requests:
+      merge_request:
+        authored_by_member: "authored by %{member}"
+        merged: "FUSIONADO"
     new:
       any_logged_in_user: "algún usuario conectado."
       authentication: "autentificación."
@@ -288,6 +295,8 @@ es:
       state: "Estado"
     issues:
       no_issues_to_show: "No hay problemas para mostrar"
+    merge_requests:
+      no_merge_requests_to_show: "Ninguna petición de fusión para mostrar"
     no_ssh:
       add_an_ssh_key: "adicionar una llave SSH"
       add_key: "Adicionar llave"
