@@ -1,11 +1,11 @@
 .event-title
   %span.author_name= link_to_author event
-  %span.event_label{class: event.action_name}= event_action_name(event)
+  %span.event_label{class: event.action_name}= t(event_action_name(event).parameterize.underscore, scope: 'events.event.common')
   - if event.target
     %strong= link_to "##{event.target_iid}", [event.project, event.target]
   - else
     %strong= gfm event.target_title
-  at
+  = t('at', scope: 'events.event_last_push')
   - if event.project
     = link_to_project event.project
   - else

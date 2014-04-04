@@ -1,11 +1,11 @@
 .ui-box
   .title.clearfix
-    = search_field_tag :filter_projects, nil, placeholder: 'Filter by name', class: 'dash-filter form-control'
+    = search_field_tag :filter_projects, nil, placeholder: t('filter_by_name', scope: 'public.projects.index'), class: 'dash-filter form-control'
     - if current_user.can_create_project?
       %span.pull-right
         = link_to new_project_path, class: "btn btn-new" do
           %i.icon-plus
-          New project
+          = t('new_project_', scope: 'layouts.head_panel')
 
   %ul.well-list.dash-list
     - projects.each do |project|
@@ -14,12 +14,13 @@
 
     - if projects.blank?
       %li
-        .nothing-here-block There are no projects here.
+        .nothing-here-block= t('.there_are_no_projects_here')
     - if @projects_count > @projects_limit
       %li.bottom
         %span.light
-          #{@projects_limit} of #{pluralize(@projects_count, 'project')} displayed.
+          = t('.limit_of_count_displayed', limit: @projects_limit, count: pluralize(@projects_count, 'project'))
+
         .pull-right.append-right-10
           = link_to projects_dashboard_path do
-            Show all
+            = t('.show_all')
             %i.icon-angle-right

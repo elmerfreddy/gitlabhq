@@ -1,6 +1,6 @@
 .event-title
   %span.author_name= link_to_author event
-  %span.event_label commented on #{event_note_title_html(event)} at
+  %span.event_label= raw t('.commented_on_event_note_at', event_note: event_note_title_html(event))
   - if event.project
     = link_to_project event.project
   - else

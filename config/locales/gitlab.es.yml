@@ -33,6 +33,17 @@ es:
         search_for_a_user: "Búsqueda de un usuario"
         visibility_level: "Nivel de visibilidad"
         you_are_going_to_remove_project: "Usted va a eliminar %{project}.\n ¡Un proyecto eliminado NO puede ser restaurado!\n ¿Está ABSOLUTAMENTE seguro?"
+  dashboard:
+    activities:
+      projects_activity_will_be_displayed_here: "La actividad de proyectos se mostrará aquí"
+    groups:
+      you_have_no_groups_yet: "No tiene grupo todavía."
+    projects:
+      limit_of_count_displayed: "%{limit} de %{count} mostrados."
+      show_all: "Mostrar todo"
+      there_are_no_projects_here: "No hay proyectos aquí."
+    sidebar:
+      news_feed: "Servicio de Noticias"
   devise:
     confirmations:
       new:
@@ -52,6 +63,20 @@ es:
         password: "Contraseña"
         remember_me: "Recordarme"
         username_or_email: "Usuario o Email"
+  events:
+    event:
+      common:
+        joined_project: "se unió al proyecto"
+      note:
+        commented_on_event_note_at: "comentado %{event_note} en"
+      push:
+        and_commits_count_more_commits: "... and %{commits_count} more commits."
+        compare_commit_from_commit_to: "Comparar &rarr; %{commit_from}...%{commit_to}"
+    event_last_push:
+      at: "en"
+      create_merge_request: "Crear Solicitud de Fusión"
+      new_merge_request: "Nueva Solicitud de Fusión"
+      you_pushed_to: "Pushed a"
   general:
     access:
       developer: "Desarrollador"
@@ -76,6 +101,7 @@ es:
     internal: "Interno"
     issues: "Problemas"
     its_you: "Éste eres tú"
+    help: "Ayuda"
     labels: "Etiquetas"
     logout: "Cerrar sesión"
     merge_requests: "Fusionar Solicitudes"
@@ -110,8 +136,12 @@ es:
       dashboard: "Tablero"
       my_snippets: "Mis fragmentos"
       new_project: "Nuevo proyecto"
+      new_project_: "Nuevo proy"
       profile_settings: "Configuración de perfil"
       public_area: "Area pública"
+    nav:
+      dashboard:
+        home: "Página principal"
   profiles:
     passwords:
       new:
@@ -219,6 +249,11 @@ es:
         sort: "ordenar"
         you_can_browse_public_projects: "Puede navegar en proyectos públicos en modo de solo lectura hasta que se haya registrado."
   shared:
+    event_filter:
+      comments: "Comentarios"
+      merge_events: "Eventos de fusión"
+      push_events: "Eventos push"
+      team: "Equipo"
     no_ssh:
       add_an_ssh_key: "adicionar una llave SSH"
       add_key: "Adicionar llave"
@@ -226,6 +261,9 @@ es:
       later: "Más tarde"
       remind_later: "Recordar más tarde"
       you_wont_be_able_to_pull_or_push: "Usted no podrá realizar pull o push al código del proyecto via SSH hasta %{link} a su perfil"
+    promo:
+      blog: "Blog"
+      homepage: "Página Principal"
   snippets:
     current_user_index:
       add_new_snippet: "Crear Fragmento"

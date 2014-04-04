@@ -1,13 +1,13 @@
 - if show_last_push_widget?(event)
   .event-last-push
-    %span You pushed to
+    %span= t('.you_pushed_to')
     = link_to project_commits_path(event.project, event.ref_name) do
       %strong= truncate(event.ref_name, length: 28)
-    at
+    = t('.at')
     %strong= link_to_project event.project
     #{time_ago_with_tooltip(event.created_at)}
 
     .pull-right
-      = link_to new_mr_path_from_push_event(event), title: "New Merge Request", class: "btn btn-create btn-small" do
-        Create Merge Request
+      = link_to new_mr_path_from_push_event(event), title: t('.new_merge_request'), class: "btn btn-create btn-small" do
+        = t('.create_merge_request')
   %hr

@@ -33,6 +33,17 @@ en:
         search_for_a_user: "Search for a user"
         visibility_level: "Visibility level"
         you_are_going_to_remove_project: "You are going to remove %{project}.\n Removed project CANNOT be restored!\n Are you ABSOLUTELY sure?"
+  dashboard:
+    activities:
+      projects_activity_will_be_displayed_here: "Projects activity will be displayed here"
+    groups:
+      you_have_no_groups_yet: "You have no groups yet."
+    projects:
+      limit_of_count_displayed: "%{limit} of %{count} displayed."
+      show_all: "Show all"
+      there_are_no_projects_here: "There are no projects here."
+    sidebar:
+      news_feed: "News Feed"
   devise:
     confirmations:
       new:
@@ -52,6 +63,20 @@ en:
         password: "Password"
         remember_me: "Remember me"
         username_or_email: "Username or Email"
+  events:
+    event:
+      common:
+        joined_project: "joined project"
+      note:
+        commented_on_event_note_at: "commented on %{event_note} at"
+      push:
+        and_commits_count_more_commits: "... and %{commits_count} more commits."
+        compare_commit_from_commit_to: "Compare &rarr; %{commit_from}...%{commit_to}"
+    event_last_push:
+      at: "at"
+      create_merge_request: "Create Merge Request"
+      new_merge_request: "New Merge Request"
+      you_pushed_to: "You pushed to"
   general:
     access:
       developer: "Developer"
@@ -76,6 +101,7 @@ en:
     internal: "Internal"
     issues: "Issues"
     its_you: "It's you"
+    help: "Help"
     labels: "Labels"
     logout: "Logout"
     merge_requests: "Merge Requests"
@@ -110,8 +136,12 @@ en:
       dashboard: "Dashboard"
       my_snippets: "My snippets"
       new_project: "New project"
+      new_project_: "New project"
       profile_settings: "Profile settings"
       public_area: "Public area"
+    nav:
+      dashboard:
+        home: "Home"
   profiles:
     passwords:
       new:
@@ -219,6 +249,11 @@ en:
         sort: "sort"
         you_can_browse_public_projects: "You can browse public projects in read-only mode until signed in."
   shared:
+    event_filter:
+      comments: "Comments"
+      merge_events: "Merge events"
+      push_events: "Push events"
+      team: "Team"
     no_ssh:
       add_an_ssh_key: "add an SSH key"
       add_key: "Add key"
@@ -226,6 +261,9 @@ en:
       later: "Later"
       remind_later: "Remind later"
       you_wont_be_able_to_pull_or_push: "You won't be able to pull or push project code via SSH until you %{link} to your profile"
+    promo:
+      blog: "Blog"
+      homepage: "Homepage"
   snippets:
     current_user_index:
       add_new_snippet: "Add New Snippet"

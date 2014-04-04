@@ -6,7 +6,7 @@
   - else
     = link_to project_commits_path(event.project, event.ref_name) do
       %strong= truncate(event.ref_name, length: 30)
-  at
+  = t('at', scope: 'events.event_last_push')
   = link_to_project event.project
 
 - if event.push_with_commits?
@@ -20,6 +20,6 @@
       - if event.commits_count > 1
         %li.commits-stat
           - if event.commits_count > 2
-            %span ... and #{event.commits_count - 2} more commits.
+            %span= t('.and_commits_count_more_commits', commits_count: event.commits_count - 2)
           = link_to project_compare_path(event.project, from: event.commit_from, to: event.commit_to) do
-            %strong Compare &rarr; #{event.commit_from[0..7]}...#{event.commit_to[0..7]}
+            %strong= raw t('.compare_commit_from_commit_to', commit_from: event.commit_from[0..7], commit_to: event.commit_to[0..7])
