@@ -1,0 +1,51 @@
+%h3.page-title Bienvenido a GitLab!
+%p.light Aplicación Auto Alojado para Gestión de Git.
+%hr
+%div
+  .dashboard-intro-icon
+    %i.icon-bookmark-empty
+  %div
+    %p.slead
+      No tienes acceso a ningún proyecto en este momento.
+      %br
+      - if current_user.can_create_project?
+        Puedes crear un máximo de
+        %strong= pluralize(current_user.projects_limit, "proyecto") + "."
+        Haga clic en el botón de abajo para agregar uno nuevo
+      - else
+        Si le añaden a un proyecto, éste se mostrará aquí
+
+    - if current_user.can_create_project?
+      .link_holder
+        = link_to new_project_path, class: "btn btn-new" do
+          Nuevo proyecto »
+
+- if current_user.can_create_group?
+  %hr
+  %div
+    .dashboard-intro-icon
+      %i.icon-group
+    %div
+      %p.slead
+        Puedes crear un grupo para varios proyectos dependientes.
+        %br
+        Los grupos son la mejor manera de gestionar proyectos y miembros
+      .link_holder
+        = link_to new_group_path, class: "btn btn-new" do
+          Nuevo grupo »
+
+-if @publicish_project_count > 0
+  %hr
+  %div
+    .dashboard-intro-icon
+      %i.icon-globe
+    %div
+      %p.slead
+        Hay
+        %strong= @publicish_project_count
+        proyectos públicos en este servidor.
+        %br
+        Los proyectos públicos son una manera fácil para que todos puedan tener acceso de sólo lectura.
+      .link_holder
+        = link_to public_projects_path, class: "btn btn-new" do
+          Examinar proyectos públicos »
