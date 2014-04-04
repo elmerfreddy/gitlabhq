@@ -2,37 +2,37 @@
   %ul.nav.nav-pills.nav-stacked
     = nav_tab :scope, nil do
       = link_to projects_dashboard_filter_path(scope: nil) do
-        All
+        = t('general.all')
         %span.pull-right
           = current_user.authorized_projects.count
     = nav_tab :scope, 'personal' do
       = link_to projects_dashboard_filter_path(scope: 'personal') do
-        Personal
+        = t('general.personal')
         %span.pull-right
           = current_user.personal_projects.count
     = nav_tab :scope, 'joined' do
       = link_to projects_dashboard_filter_path(scope: 'joined') do
-        Joined
+        = t('general.joined')
         %span.pull-right
           = current_user.authorized_projects.joined(current_user).count
     = nav_tab :scope, 'owned' do
       = link_to projects_dashboard_filter_path(scope: 'owned') do
-        Owned
+        = t('general.owned')
         %span.pull-right
           = current_user.owned_projects.count
 
 %fieldset
-  %legend Visibility
+  %legend= t('.visibility')
   %ul.nav.nav-pills.nav-stacked.nav-small.visibility-filter
     - Gitlab::VisibilityLevel.values.each do |level|
       %li{ class: (level.to_s == params[:visibility_level]) ? 'active' : 'light' }
         = link_to projects_dashboard_filter_path(visibility_level: level) do
           = visibility_level_icon(level)
-          = visibility_level_label(level)
+          = t(visibility_level_label(level).underscore, scope: 'general')
 
 - if @groups.present?
   %fieldset
-    %legend Groups
+    %legend= t('groups', scope: 'admin.dashboard.index')
     %ul.nav.nav-pills.nav-stacked.nav-small
       - @groups.each do |group|
         %li{ class: (group.name == params[:group]) ? 'active' : 'light' }
@@ -46,7 +46,7 @@
 
 - if @labels.present?
   %fieldset
-    %legend Labels
+    %legend= t('general.labels')
     %ul.nav.nav-pills.nav-stacked.nav-small
       - @labels.each do |label|
         %li{ class: (label.name == params[:label]) ? 'active' : 'light' }
