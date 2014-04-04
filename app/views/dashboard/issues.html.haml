@@ -1,9 +1,9 @@
 %h3.page-title
-  Issues
-  %span.pull-right #{@issues.total_count} issues
+  = t('general.issues')
+  %span.pull-right= t('.nro_issues', count: @issues.total_count)
 
 %p.light
-  List all issues from all projects you have access to.
+  = t('.list_all_issues_from_all_projects')
 %hr
 
 .row

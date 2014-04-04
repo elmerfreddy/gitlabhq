@@ -38,6 +38,9 @@ en:
       projects_activity_will_be_displayed_here: "Projects activity will be displayed here"
     groups:
       you_have_no_groups_yet: "You have no groups yet."
+    issues:
+      list_all_issues_from_all_projects: "List all issues from all projects you have access to."
+      nro_issues: "%{count} issues"
     projects:
       all_projects_you_have_access_to_are_listed_here: "All projects you have access to are listed here. Public projects are not included here unless you are a member"
       archived: "Archived"
@@ -99,6 +102,8 @@ en:
     archive: "Archive"
     by: "by"
     cancel: "Cancel"
+    close: "Close"
+    closed: "Closed"
     commits: "Commits"
     destroy: "Destroy"
     edit: "Edit"
@@ -118,6 +123,7 @@ en:
     merge_requests: "Merge Requests"
     network: "Network"
     not_empty: "Not empty"
+    open: "Open"
     optional: "optional"
     owned: "Owned"
     personal: "Personal"
@@ -125,6 +131,7 @@ en:
     public: "Public"
     remove: "Remove"
     rename: "Rename"
+    reopen: "Reopen"
     reset: "Reset"
     save: "Save"
     save_changes: "Save changes"
@@ -135,6 +142,7 @@ en:
     snippets: "Snippets"
     transfer: "Transfer"
     unarchive: "Unarchive"
+    unassigned: "unassigned"
     unknown: "unknown"
     wall: "Wall"
     wiki: "Wiki"
@@ -201,6 +209,11 @@ en:
       unarchiving_the_project: "Unarchiving the project will mark its repository as active."
       you_can_only_transfer: "You can only transfer the project to namespaces you manage."
       you_will_need_to_update: "You will need to update your local repositories to point to the new location."
+    issues:
+      issue:
+        assigned_to_member: "assigned to %{member}"
+        closed: "CLOSED"
+        updated: "updated"
     new:
       any_logged_in_user: "any logged in user."
       authentication: "authentication."
@@ -267,6 +280,14 @@ en:
       merge_events: "Merge events"
       push_events: "Push events"
       team: "Team"
+    filter:
+      assigned_to_me: "Assigned to me"
+      clear_filter: "Clear filter"
+      created_by_me: "Created by me"
+      everyones: "Everyone's"
+      state: "State"
+    issues:
+      no_issues_to_show: "No issues to show"
     no_ssh:
       add_an_ssh_key: "add an SSH key"
       add_key: "Add key"

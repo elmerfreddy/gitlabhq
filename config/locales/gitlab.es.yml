@@ -38,6 +38,9 @@ es:
       projects_activity_will_be_displayed_here: "La actividad de proyectos se mostrará aquí"
     groups:
       you_have_no_groups_yet: "No tiene grupo todavía."
+    issues:
+      list_all_issues_from_all_projects: "Lista todos los problemas de todos los proyectos que tiene acceso."
+      nro_issues: "%{count} problemas"
     projects:
       all_projects_you_have_access_to_are_listed_here: "Todos los proyectos que tiene acceso son listados aquí. Los proyectos públicos no se incluyen aquí a menos que seas un miembro"
       archived: "Archivado"
@@ -99,6 +102,8 @@ es:
     archive: "Archivar"
     by: "por"
     cancel: "Cancelar"
+    close: "Cerrar"
+    closed: "Cerrado"
     commits: "Commits"
     destroy: "Eliminar"
     edit: "Editar"
@@ -118,6 +123,7 @@ es:
     merge_requests: "Fusionar Solicitudes"
     network: "Red"
     not_empty: "No vacío"
+    open: "Abierto"
     optional: "opcional"
     owned: "Dueño"
     personal: "Personal"
@@ -125,6 +131,7 @@ es:
     public: "Público"
     remove: "Eliminar"
     rename: "Renombrar"
+    reopen: "Reabrir"
     reset: "Reiniciar"
     save: "Guardar"
     save_changes: "Guardar cambios"
@@ -135,6 +142,7 @@ es:
     snippets: "Fragmentos"
     transfer: "Transferir"
     unarchive: "Desarchivar"
+    unassigned: "sin asignar"
     unknown: "desconocido"
     wall: "Wall"
     wiki: "Wiki"
@@ -201,6 +209,11 @@ es:
       unarchiving_the_project: "Desarchivar proyecto marcará su repositorio como activo."
       you_can_only_transfer: "Sólo puede transferir el proyecto a los espacios de nombres que administra."
       you_will_need_to_update: "Tendrá que actualizar los repositorios locales para que apunte a la nueva ubicación."
+    issues:
+      issue:
+        assigned_to_member: "asignado a %{member}"
+        closed: "CERRADO"
+        updated: "actualizado"
     new:
       any_logged_in_user: "algún usuario conectado."
       authentication: "autentificación."
@@ -267,6 +280,14 @@ es:
       merge_events: "Eventos de fusión"
       push_events: "Eventos push"
       team: "Equipo"
+    filter:
+      assigned_to_me: "Asignado a mi"
+      clear_filter: "Limpiar filtro"
+      created_by_me: "Creado por mi"
+      everyones: "De todos"
+      state: "Estado"
+    issues:
+      no_issues_to_show: "No hay problemas para mostrar"
     no_ssh:
       add_an_ssh_key: "adicionar una llave SSH"
       add_key: "Adicionar llave"
