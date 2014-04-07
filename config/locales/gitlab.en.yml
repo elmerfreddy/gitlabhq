@@ -103,14 +103,17 @@ en:
     abandoned: "Abandoned"
     all: "All"
     archive: "Archive"
+    are_you_sure: "Are you sure?"
     by: "by"
     cancel: "Cancel"
     close: "Close"
     closed: "Closed"
     commits: "Commits"
     destroy: "Destroy"
+    disable: "Disable"
     edit: "Edit"
     email: "Email"
+    enable: "Enable"
     example_rb: "example.rb"
     features: "Features"
     files: "Files"
@@ -175,6 +178,25 @@ en:
         set_new_password: "Set new password"
         setup_new_password: "Setup new password"
   projects:
+    deploy_keys:
+      deploy_key:
+        created: "Created"
+        you_are_going_to_remove_deploy_key: "You are going to remove deploy key. Are you sure?"
+      index:
+        create_a_new_deploy_key: "Create a %{link} or add an existing one"
+        deploy_keys: "Deploy keys"
+        deploy_keys_allow_read_only_access: "Deploy keys allow read-only access to the repository"
+        deploy_keys_can_be_used_for: "Deploy keys can be used for CI, staging or production servers."
+        deploy_keys_from_projects_you_have_access: "Deploy keys from projects you have access to will be displayed here"
+        enabled_deploy_keys: "Enabled deploy keys"
+        for_this_project: "for this project"
+        from_projects_available_to_you: "from projects available to you"
+        new_deploy_key: "New Deploy Key"
+        you_can_create_a_deploy_key: "You can create a deploy key or add an existing one"
+      show:
+        created_at: "created at"
+        deploy_key: "Deploy key"
+        to_keys_list: "&larr; To keys list"
     edit:
       archive_project: "Archive project"
       archived_project: "Archived projects cannot be committed to!"
