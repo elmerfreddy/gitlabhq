@@ -1,5 +1,5 @@
 %h3.page-title
-  = "New project member(s)"
+  = t('.new_project_members')
 
 = form_for @user_project_relation, as: :team_member, url: project_team_members_path(@project), html: { class: "form-horizontal users-project-form" } do |f|
   -if @user_project_relation.errors.any?
@@ -8,17 +8,17 @@
         - @user_project_relation.errors.full_messages.each do |msg|
           %li= msg
 
-  %p 1. Choose people you want in the project
+  %p 1. #{t('.choose_people_you_want_in_the_project')}
   .form-group
-    = f.label :user_ids, "People", class: 'control-label'
+    = f.label :user_ids, t('.people'), class: 'control-label'
     .col-sm-10
       = users_select_tag(:user_ids, multiple: true)
 
-  %p 2. Set access level for them
+  %p 2. #{t('.set_access_level_for_them')}
   .form-group
-    = f.label :project_access, "Project Access", class: 'control-label'
+    = f.label :project_access, t('.project_access'), class: 'control-label'
     .col-sm-10= select_tag :project_access, options_for_select(Gitlab::Access.options, @user_project_relation.project_access), class: "project-access-select select2"
 
   .form-actions
-    = f.submit 'Add users', class: "btn btn-create"
-    = link_to "Cancel", project_team_index_path(@project), class: "btn btn-cancel"
+    = f.submit t('.add_users'), class: "btn btn-create"
+    = link_to t('general.cancel'), project_team_index_path(@project), class: "btn btn-cancel"

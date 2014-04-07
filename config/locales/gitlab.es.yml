@@ -240,6 +240,13 @@ es:
       url_publicly_accessible: "La url tiene que ser público o puede agregar un nombre de usuario y contraseña: https://usuario:contraseña@gitlab.com/compañia/proyecto.git."
       without_any: "sin ninguna"
     team_members:
+      form:
+        add_users: "Adicionar usuarios"
+        choose_people_you_want_in_the_project: "Elija las personas que desee en el proyecto"
+        new_project_members: "Nuevo miembro(s) de proyecto"
+        people: "Personas"
+        project_access: "Accesos del Proyecto"
+        set_access_level_for_them: "Establezca el nivel de acceso para ellos"
       group_members:
         and_group_users_count_more: "y %{group_users_count} más. Para la lista completa visita %{link_to}"
         group_members: "miembros del grupo"
