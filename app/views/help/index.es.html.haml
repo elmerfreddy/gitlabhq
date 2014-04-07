@@ -1,0 +1,93 @@
+.jumbotron
+  %h2
+    GitLab
+    %span= Gitlab::VERSION
+    %small= Gitlab::REVISION
+  %p.slead
+    GitLab es un software de código abierto para colaborar en código.
+    %br
+    Gestionar repositorios git con los controles de acceso de granulado fino que mantienen su código de seguridad.
+    %br
+    Realizar revisiones de código y mejorar la colaboración con las solicitudes de fusión.
+    %br
+    Cada proyecto puede tener un seguimiento de problemas y una wiki.
+    %br
+    Utilizado por más de 50.000 organizaciones, GitLab es la solución más popular para gestionar repositorios git locales.
+    %br
+    Lea más sobre GitLab en #{link_to "www.gitlab.com", "https://www.gitlab.com/", target: "_blank"}.
+
+.row
+  .col-md-4
+    .ui-box
+      .title
+        Ayuda rápida
+      %ul.well-list
+        %li
+          Correo electrónico del
+          = mail_to gitlab_config.support_email, "contacto de soporte técnico"
+        %li
+          Utilice la
+          = link_to "barra de búsqueda", '#', onclick: "$('#search').focus();"
+          en la parte superior de esta página
+        %li
+          Utilice
+          = link_to "accesos directos", '#', onclick: "new Shortcuts()"
+        %li
+          Pregunte en nuestra
+          = link_to "lista de correo", "https://groups.google.com/forum/#!forum/gitlabhq"
+          o en
+          = link_to "Stack Overflow", "http://stackoverflow.com/questions/tagged/gitlab"
+        %li
+          Navegar en nuestro
+          = link_to "seguimiento de problemas", "https://gitlab.com/gitlab-org/gitlab-ce/issues"
+
+  .col-md-4
+    .ui-box
+      .title
+        Documentación de usuario
+      %ul.well-list
+        %li
+          %strong= link_to "Flujo de trabajo", help_workflow_path
+          %p Aprende a usar Git y GitLab juntos.
+
+        %li
+          %strong= link_to "Llaves SSH", help_ssh_path
+          %p Configuración de un acceso seguro a sus proyectos.
+
+        %li
+          %strong= link_to "GitLab Markdown", help_markdown_path
+          %p Aprenda lo que puede hacer con el sistema de formato avanzado de GitLab.
+
+        %li
+          %strong= link_to "Permisos", help_permissions_path
+          %p Familiarizarse con los niveles de permisos de GitLab.
+
+        %li
+          %strong= link_to "API", help_api_file_path(category: 'README')
+          %p Explore cómo se puede acceder a GitLab a través de un API sencilla y potente.
+
+        %li
+          %strong= link_to "Web Hooks", help_web_hooks_path
+          %p Deje que GitLab le notifique cuando nuevo código ha sido actualizado a su proyecto.
+
+  .col-md-4
+    .ui-box
+      .title
+        Documentación de administración
+      %ul.well-list
+
+        %li
+          %strong= link_to "Tareas Rake", help_raketasks_path
+          %p Explora lo que GitLab tiene reservado para que hagas una administración más fácil.
+
+        %li
+          %strong= link_to "Hooks del Sistema", help_system_hooks_path
+          %p Deje que GitLab le notifique cuando algunas de esas tareas deben ser llevadas a cabo.
+
+        %li
+          %strong= link_to "Acceso Público", help_public_access_path
+          %p Aprenda cómo puede permitir el acceso público a un proyecto.
+
+        %li
+          %strong= link_to "Seguridad", help_security_path
+          %p Aprenda lo que puede hacer para asegurar su instancia GitLab.
