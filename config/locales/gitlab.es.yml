@@ -239,6 +239,12 @@ es:
       the_project_can_be_cloned_by: "El proyecto puede ser clonado por"
       url_publicly_accessible: "La url tiene que ser público o puede agregar un nombre de usuario y contraseña: https://usuario:contraseña@gitlab.com/compañia/proyecto.git."
       without_any: "sin ninguna"
+    settings_nav:
+      deploy_keys: "Deploy Keys"
+      members: "Miembros"
+      project: "Proyecto"
+      services: "Servicios"
+      web_hooks: "Web Hooks"
     team_members:
       form:
         add_users: "Adicionar usuarios"
@@ -251,6 +257,10 @@ es:
         and_group_users_count_more: "y %{group_users_count} más. Para la lista completa visita %{link_to}"
         group_members: "miembros del grupo"
         group_members_page: "la página de los miembros del grupo"
+      import:
+        import_project_members: "Importar miembros del proyecto"
+        only_project_members_will_be_imported: "Se importarán sólo miembros del proyecto. Los miembros del grupo serán omitidos."
+        select_project: "Seleccionar proyecto"
       index:
         import_members: "Importar miembros"
         import_members_from_another_project: "Importar miembros de otro proyecto"
@@ -267,12 +277,6 @@ es:
         are_you_sure_remove_user: "¿Está seguro que desea eliminar \"%{user}\" de \"%{group}\"?"
         edit_access_level: "Editar nivel de acceso"
         remove_user_from_group: "Eliminar usuario del grupo"
-    settings_nav:
-      deploy_keys: "Deploy Keys"
-      members: "Miembros"
-      project: "Proyecto"
-      services: "Servicios"
-      web_hooks: "Web Hooks"
   public:
     projects:
       index:
