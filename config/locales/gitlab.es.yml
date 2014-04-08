@@ -234,6 +234,21 @@ es:
       unarchiving_the_project: "Desarchivar proyecto marcará su repositorio como activo."
       you_can_only_transfer: "Sólo puede transferir el proyecto a los espacios de nombres que administra."
       you_will_need_to_update: "Tendrá que actualizar los repositorios locales para que apunte a la nueva ubicación."
+    hooks:
+      index:
+        add_web_hook: "Adicionar Web Hook"
+        can_be_used_for_binding_events: "puede ser utilizado para eventos de enlace cuando algo está sucediendo dentro del proyecto."
+        example_com_trigger_ci: "http://ejemplo.com/trigger-ci.json"
+        issues_events: "Eventos de problemas"
+        merge_requests_events: "Eventos de Petición de Fusión"
+        push_events: "Eventos push"
+        tag_push_events: "Eventos tag push"
+        test_hook: "Probar Hook"
+        this_url_will_be_triggered_by_a_push: "Esta url será accionado por un push al repositorio"
+        this_url_will_be_triggered_when_issue_created: "Esta url será accionado cuando un problema es creado"
+        this_url_will_be_triggered_when_merge_request_created: "Esta url será accionado cuando una petición de fusión es creado"
+        this_url_will_be_triggered_when_new_tag_pushed: "Esta url será accionado cuando un nuevo tag se inserta en el repositorio"
+        web_hooks: "Web hooks"
     issues:
       issue:
         assigned_to_member: "asignado a %{member}"
@@ -372,6 +387,9 @@ es:
         project_description: "Descripción del proyecto"
         project_name: "Nombre de proyecto"
         repository_name: "Nombre de repositorio"
+      project_hook:
+        trigger: "Disparador"
+        url: "URL"
       snippet:
         access: "Acceso"
         file: "Archivo"

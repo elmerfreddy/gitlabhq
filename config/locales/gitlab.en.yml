@@ -234,6 +234,21 @@ en:
       unarchiving_the_project: "Unarchiving the project will mark its repository as active."
       you_can_only_transfer: "You can only transfer the project to namespaces you manage."
       you_will_need_to_update: "You will need to update your local repositories to point to the new location."
+    hooks:
+      index:
+        add_web_hook: "Add Web Hook"
+        can_be_used_for_binding_events: "can be used for binding events when something is happening within the project."
+        example_com_trigger_ci: "http://example.com/trigger-ci.json"
+        issues_events: "Issues events"
+        merge_request_events: "Merge Request events"
+        push_events: "Push events"
+        tag_push_events: "Tag push events"
+        test_hook: "Test Hook"
+        this_url_will_be_triggered_by_a_push: "This url will be triggered by a push to the repository"
+        this_url_will_be_triggered_when_issue_created: "This url will be triggered when an issue is created"
+        this_url_will_be_triggered_when_merge_request_created: "This url will be triggered when a merge request is created"
+        this_url_will_be_triggered_when_new_tag_pushed: "This url will be triggered when a new tag is pushed to the repository"
+        web_hooks: "Web hooks"
     issues:
       issue:
         assigned_to_member: "assigned to %{member}"
@@ -372,6 +387,9 @@ en:
         project_description: "Project description"
         project_name: "Project name"
         repository_name: "Repository name"
+      project_hook:
+        trigger: "Trigger"
+        url: "URL"
       snippet:
         access: "Access"
         file: "File"
