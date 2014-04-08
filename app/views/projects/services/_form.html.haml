@@ -6,7 +6,7 @@
 
 .back-link
   = link_to project_services_path(@project) do
-    &larr; to services
+    = raw t('.to_services')
 
 %hr
 
@@ -19,7 +19,7 @@
 
 
   .form-group
-    = f.label :active, "Active", class: "control-label"
+    = f.label :active, Service.human_attribute_name('active'), class: "control-label"
     .col-sm-10
       = f.check_box :active
 
@@ -29,7 +29,7 @@
     - placeholder = field[:placeholder]
 
     .form-group
-      = f.label name, class: "control-label"
+      = f.label name, Service.human_attribute_name(name.parameterize.underscore), class: "control-label"
       .col-sm-10
         - if type == 'text'
           = f.text_field name, class: "form-control", placeholder: placeholder
@@ -39,7 +39,7 @@
           = f.check_box name
 
   .form-actions
-    = f.submit 'Save', class: 'btn btn-save'
+    = f.submit t('general.save'), class: 'btn btn-save'
     &nbsp;
     - if @service.valid? && @service.activated? && @service.can_test?
-      = link_to 'Test settings', test_project_service_path(@project, @service.to_param), class: 'btn btn-small'
+      = link_to t('.test_settings'), test_project_service_path(@project, @service.to_param), class: 'btn btn-small'

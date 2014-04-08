@@ -240,7 +240,7 @@ en:
         can_be_used_for_binding_events: "can be used for binding events when something is happening within the project."
         example_com_trigger_ci: "http://example.com/trigger-ci.json"
         issues_events: "Issues events"
-        merge_request_events: "Merge Request events"
+        merge_requests_events: "Merge Request events"
         push_events: "Push events"
         tag_push_events: "Tag push events"
         test_hook: "Test Hook"
@@ -276,6 +276,13 @@ en:
       the_project_can_be_cloned_by: "The project can be cloned by"
       url_publicly_accessible: "This url must be publicly accessible or you can add a username and password like this: https://username:password@gitlab.com/company/project.git."
       without_any: "without any"
+    services:
+      form:
+        test_settings: "Test settings"
+        to_services: "&larr; to services"
+      index:
+        project_services: "Project services"
+        project_services_allow_integrate_with_apps: "Project services allow you to integrate GitLab with other applications"
     settings_nav:
       deploy_keys: "Deploy Keys"
       members: "Members"
@@ -390,6 +397,14 @@ en:
       project_hook:
         trigger: "Trigger"
         url: "URL"
+      service:
+        active: "Active"
+        api_key: "Api key"
+        project_url: "Project url"
+        recipients: "Recipients"
+        room: "Room"
+        subdomain: "Subdomain"
+        token: "Token"
       snippet:
         access: "Access"
         file: "File"

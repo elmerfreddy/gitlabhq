@@ -276,6 +276,13 @@ es:
       the_project_can_be_cloned_by: "El proyecto puede ser clonado por"
       url_publicly_accessible: "La url tiene que ser público o puede agregar un nombre de usuario y contraseña: https://usuario:contraseña@gitlab.com/compañia/proyecto.git."
       without_any: "sin ninguna"
+    services:
+      form:
+        test_settings: "Probar configuración"
+        to_services: "&larr; a servicios"
+      index:
+        project_services: "Servicios del proyecto"
+        project_services_allow_integrate_with_apps: "Los servicios del proyecto le permiten integrar GitLab con otras aplicaciones"
     settings_nav:
       deploy_keys: "Deploy Keys"
       members: "Miembros"
@@ -390,6 +397,14 @@ es:
       project_hook:
         trigger: "Disparador"
         url: "URL"
+      service:
+        active: "Activo"
+        api_key: "Clave de Api"
+        project_url: "Url de proyecto"
+        recipients: "Recipientes"
+        room: "Sala"
+        subdomain: "Subdominio"
+        token: "Token"
       snippet:
         access: "Acceso"
         file: "Archivo"
