@@ -102,6 +102,7 @@ en:
       reporter: "Reporter"
     abandoned: "Abandoned"
     all: "All"
+    any: "Any"
     archive: "Archive"
     are_you_sure: "Are you sure?"
     by: "by"
@@ -250,10 +251,21 @@ en:
         this_url_will_be_triggered_when_new_tag_pushed: "This url will be triggered when a new tag is pushed to the repository"
         web_hooks: "Web hooks"
     issues:
+      head:
+        browse_issues: "Browse Issues"
+        filter_by_title_or_description: "Filter by title or description"
+        new_issue: "New Issue"
       issue:
         assigned_to_member: "assigned to %{member}"
         closed: "CLOSED"
         updated: "updated"
+      issues:
+        assignee: "asignado"
+        milestone: "milestone"
+        issues_for_this_filter: "issues for this filter"
+        none_backlog: "None (backlog)"
+        status: "Status"
+        update_issues: "Update issues"
     merge_requests:
       merge_request:
         authored_by_member: "authored by %{member}"
@@ -327,6 +339,8 @@ en:
         empty_repository: "Empty repository"
         filter_by_name: "Filter by name"
         last_updated: "Last updated"
+        milestone_due_later: "Milestone due later"
+        milestone_due_soon: "Milestone due soon"
         name: "Name"
         newest: "Newest"
         no_public_projects: "No public projects"
@@ -359,6 +373,10 @@ en:
       later: "Later"
       remind_later: "Remind later"
       you_wont_be_able_to_pull_or_push: "You won't be able to pull or push project code via SSH until you %{link} to your profile"
+    project_filter:
+      add_first_label_to_your_issues: "Add first label to your issues"
+      generate: "generate"
+      or_link_default_set_of_labels: "or %{link} default set of labels"
     promo:
       blog: "Blog"
       homepage: "Homepage"

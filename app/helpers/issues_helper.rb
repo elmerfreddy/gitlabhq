@@ -70,7 +70,7 @@ module IssuesHelper
   end
 
   def bulk_update_milestone_options
-    options_for_select(["None (backlog)"]) + options_from_collection_for_select(project_active_milestones, "id", "title", params[:milestone_id])
+    options_for_select([[t('none_backlog', scope: 'projects.issues.issues'), "None (backlog)"]]) + options_from_collection_for_select(project_active_milestones, "id", "title", params[:milestone_id])
   end
 
   def bulk_update_assignee_options

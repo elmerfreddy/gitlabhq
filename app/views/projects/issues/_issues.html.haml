@@ -5,20 +5,20 @@
     .dropdown.inline
       %a.dropdown-toggle.btn{href: '#', "data-toggle" => "dropdown"}
         %i.icon-user
-        %span.light assignee:
+        %span.light #{t('.assignee')}:
         - if @assignee.present?
           %strong= @assignee.name
         - elsif params[:assignee_id] == "0"
-          Unassigned
+          = t('general.unassigned').titleize
         - else
-          Any
+          = t('general.any')
         %b.caret
       %ul.dropdown-menu
         %li
           = link_to project_filter_path(assignee_id: nil) do
-            Any
+            = t('general.any')
           = link_to project_filter_path(assignee_id: 0) do
-            Unassigned
+            = t('general.unassigned').titleize
         - @assignees.sort_by(&:name).each do |user|
           %li
             = link_to project_filter_path(assignee_id: user.id) do
@@ -28,20 +28,20 @@
     .dropdown.inline.prepend-left-10
       %a.dropdown-toggle.btn{href: '#', "data-toggle" => "dropdown"}
         %i.icon-time
-        %span.light milestone:
+        %span.light #{t('.milestone')}:
         - if @milestone.present?
           %strong= @milestone.title
         - elsif params[:milestone_id] == "0"
-          None (backlog)
+          = t('.none_backlog')
         - else
-          Any
+          = t('general.any')
         %b.caret
       %ul.dropdown-menu
         %li
           = link_to project_filter_path(milestone_id: nil) do
-            Any
+            = t('general.any')
           = link_to project_filter_path(milestone_id: 0) do
-            None (backlog)
+            = t('.none_backlog')
         - project_active_milestones.each do |milestone|
           %li
             = link_to project_filter_path(milestone_id: milestone.id) do
@@ -54,23 +54,23 @@
   .clearfix
     .issues_bulk_update.hide
       = form_tag bulk_update_project_issues_path(@project), method: :post  do
-        = select_tag('update[status]', options_for_select(['Open', 'Closed']), prompt: "Status")
-        = project_users_select_tag('update[assignee_id]', placeholder: 'Assignee')
-        = select_tag('update[milestone_id]', bulk_update_milestone_options, prompt: "Milestone")
+        = select_tag('update[status]', options_for_select([[t('general.open'), 'Open'], [t('general.closed'), 'Closed']]), prompt: t('.status'))
+        = project_users_select_tag('update[assignee_id]', placeholder: t('.assignee').titleize)
+        = select_tag('update[milestone_id]', bulk_update_milestone_options, prompt: t('.milestone').titleize)
         = hidden_field_tag 'update[issues_ids]', []
         = hidden_field_tag :status, params[:status]
-        = button_tag "Update issues", class: "btn update_selected_issues btn-save"
+        = button_tag t('.update_issues'), class: "btn update_selected_issues btn-save"
 
 .ui-box
   %ul.well-list.issues-list
     = render @issues
     - if @issues.blank?
       %li
-        .nothing-here-block No issues to show
+        .nothing-here-block= t('no_issues_to_show', scope: 'shared.issues')
 
 - if @issues.present?
   .pull-right
     %span.issue_counter #{@issues.total_count}
-    issues for this filter
+    = t('.issues_for_this_filter')
 
   = paginate @issues, theme: "gitlab"

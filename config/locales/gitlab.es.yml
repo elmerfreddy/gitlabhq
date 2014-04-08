@@ -102,6 +102,7 @@ es:
       reporter: "Reportero"
     abandoned: "Abandonado"
     all: "Todo"
+    any: "Cualquiera"
     archive: "Archivar"
     are_you_sure: "¿Está seguro?"
     by: "por"
@@ -250,10 +251,21 @@ es:
         this_url_will_be_triggered_when_new_tag_pushed: "Esta url será accionado cuando un nuevo tag se inserta en el repositorio"
         web_hooks: "Web hooks"
     issues:
+      head:
+        browse_issues: "Ver Problemas"
+        filter_by_title_or_description: "Filtrar por título o descripción"
+        new_issue: "Nuevo Problema"
       issue:
         assigned_to_member: "asignado a %{member}"
         closed: "CERRADO"
         updated: "actualizado"
+      issues:
+        assignee: "asignado"
+        issues_for_this_filter: "problemas para este filtro"
+        milestone: "hito"
+        none_backlog: "Ninguno (atrasado)"
+        status: "Estado"
+        update_issues: "Actualizar problemas"
     merge_requests:
       merge_request:
         authored_by_member: "authored by %{member}"
@@ -327,6 +339,8 @@ es:
         empty_repository: "Repositorio vacío"
         filter_by_name: "Filtrar por nombre"
         last_updated: "Última actualización"
+        milestone_due_later: "Hito previsto"
+        milestone_due_soon: "Hito próximo"
         name: "Nombre"
         newest: "Nuevos"
         no_public_projects: "No hay proyectos públicos"
@@ -359,6 +373,10 @@ es:
       later: "Más tarde"
       remind_later: "Recordar más tarde"
       you_wont_be_able_to_pull_or_push: "Usted no podrá realizar pull o push al código del proyecto via SSH hasta %{link} a su perfil"
+    project_filter:
+      add_first_label_to_your_issues: "Añadir etiquetas a los problemas"
+      generate: "generar"
+      or_link_default_set_of_labels: "o %{link} un conjunto de etiquetas por defecto"
     promo:
       blog: "Blog"
       homepage: "Página Principal"

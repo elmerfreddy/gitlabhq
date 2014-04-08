@@ -12,9 +12,9 @@
             data = { results: users }
 
             nullUser = {
-              name: 'Unassigned',
+              name: 'Sin asignar',
               avatar: null,
-              username: 'none',
+              username: 'ninguno',
               id: ''
             }
 
