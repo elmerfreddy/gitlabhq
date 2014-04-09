@@ -7,4 +7,6 @@
 
 - else
   .light-well
-    .nothing-here-block Add first label to your issues or #{link_to 'generate', generate_project_labels_path(@project), method: :post} default set of labels
+    .nothing-here-block
+      = t('add_first_label_to_your_issues', scope: 'shared.project_filter')
+      = raw t('or_link_default_set_of_labels', scope: 'shared.project_filter', link: link_to(t('generate', scope: 'shared.project_filter'), generate_project_labels_path(@project), method: :post))
