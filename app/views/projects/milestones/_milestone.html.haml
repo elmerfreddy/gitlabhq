@@ -3,25 +3,25 @@
     - if can?(current_user, :admin_milestone, milestone.project) and milestone.active?
       = link_to edit_project_milestone_path(milestone.project, milestone), class: "btn btn-small edit-milestone-link btn-grouped" do
         %i.icon-edit
-        Edit
-      = link_to 'Close Milestone', project_milestone_path(@project, milestone, milestone: {state_event: :close }), method: :put, remote: true, class: "btn btn-small btn-remove"
+        = t('general.edit')
+      = link_to t('.close_milestone'), project_milestone_path(@project, milestone, milestone: {state_event: :close }), method: :put, remote: true, class: "btn btn-small btn-remove"
   %h4
     = link_to_gfm truncate(milestone.title, length: 100), project_milestone_path(milestone.project, milestone)
     - if milestone.expired? and not milestone.closed?
-      %span.cred (Expired)
+      %span.cred (#{t('general.expired')})
     %small
       = milestone.expires_at
   - if milestone.is_empty?
-    %span.muted Empty
+    %span.muted= t('general.empty')
   - else
     %div
       %div
         = link_to project_issues_path(milestone.project, milestone_id: milestone.id) do
-          = pluralize milestone.issues.count, 'Issue'
+          = pluralize milestone.issues.count, t('.issue')
         &nbsp;
         = link_to project_merge_requests_path(milestone.project, milestone_id: milestone.id) do
-          = pluralize milestone.merge_requests.count, 'Merge Request'
+          = pluralize milestone.merge_requests.count, t('.merge_request')
         &nbsp;
-        %span.light #{milestone.percent_complete}% complete
+        %span.light #{milestone.percent_complete}% #{t('general.complete')}
       .progress.progress-info
         .progress-bar{style: "width: #{milestone.percent_complete}%;"}

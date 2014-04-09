@@ -101,6 +101,7 @@ es:
       owner: "Dueño"
       reporter: "Reportero"
     abandoned: "Abandonado"
+    active: "Activo"
     all: "Todo"
     any: "Cualquiera"
     archive: "Archivar"
@@ -110,12 +111,15 @@ es:
     close: "Cerrar"
     closed: "Cerrado"
     commits: "Commits"
+    complete: "complete"
     destroy: "Eliminar"
     disable: "Deshabilitar"
     edit: "Editar"
     email: "Correo electrónico"
+    empty: "Vacío"
     enable: "Habilitar"
     example_rb: "ejemplo.rb"
+    expired: "Expirado"
     features: "Características"
     files: "Archivos"
     graphs: "Gráficos"
@@ -270,6 +274,16 @@ es:
       merge_request:
         authored_by_member: "authored by %{member}"
         merged: "FUSIONADO"
+    milestones:
+      index:
+        new_milestone: "Nuevo Hito"
+        no_milestones_to_show: "Ningún hito para mostrar"
+      milestone:
+        close_milestone: "Cerrar Hito"
+        expired_at: "expirado en"
+        expires_at: "expira en"
+        issue: "Problema"
+        merge_request: "Solicitud de Fusión"
     new:
       any_logged_in_user: "algún usuario conectado."
       authentication: "autentificación."

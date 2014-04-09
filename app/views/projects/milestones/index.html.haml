@@ -1,24 +1,24 @@
 = render "projects/issues/head"
 .milestones_content
   %h3.page-title
-    Milestones
+    = t('milestones', scope: 'admin.dashboard.index')
     - if can? current_user, :admin_milestone, @project
-      = link_to new_project_milestone_path(@project), class: "pull-right btn btn-new", title: "New Milestone" do
+      = link_to new_project_milestone_path(@project), class: "pull-right btn btn-new", title: t('.new_milestone') do
         %i.icon-plus
-        New Milestone
+        = t('.new_milestone')
 
   .row
     .col-md-3.hidden-sm
       %ul.nav.nav-pills.nav-stacked
         %li{class: ("active" if (params[:f] == "active" || !params[:f]))}
           = link_to project_milestones_path(@project, f: "active") do
-            Active
+            = t('general.active')
         %li{class: ("active" if params[:f] == "closed")}
           = link_to project_milestones_path(@project, f: "closed") do
-            Closed
+            = t('general.closed')
         %li{class: ("active" if params[:f] == "all")}
           = link_to project_milestones_path(@project, f: "all") do
-            All
+            = t('general.all')
     .col-md-9
       .ui-box
         %ul.well-list
@@ -26,6 +26,6 @@
 
           - if @milestones.blank?
             %li
-              .nothing-here-block No milestones to show
+              .nothing-here-block= t('.no_milestones_to_show')
 
       = paginate @milestones, theme: "gitlab"

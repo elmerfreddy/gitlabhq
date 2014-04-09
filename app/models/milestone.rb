@@ -73,9 +73,9 @@ class Milestone < ActiveRecord::Base
   def expires_at
     if due_date
       if due_date.past?
-        "expired at #{due_date.stamp("Aug 21, 2011")}"
+        "#{I18n.t('expired_at', scope: 'projects.milestones.milestone')} #{due_date.stamp("Aug 21, 2011")}"
       else
-        "expires at #{due_date.stamp("Aug 21, 2011")}"
+        "#{I18n.t('expires_at', scope: 'projects.milestones.milestone')} #{due_date.stamp("Aug 21, 2011")}"
       end
     end
   end

@@ -101,6 +101,7 @@ en:
       owner: "Owner"
       reporter: "Reporter"
     abandoned: "Abandoned"
+    active: "Active"
     all: "All"
     any: "Any"
     archive: "Archive"
@@ -110,12 +111,15 @@ en:
     close: "Close"
     closed: "Closed"
     commits: "Commits"
+    complete: "complete"
     destroy: "Destroy"
     disable: "Disable"
     edit: "Edit"
     email: "Email"
+    empty: "Empty"
     enable: "Enable"
     example_rb: "example.rb"
+    expired: "Expired"
     features: "Features"
     files: "Files"
     graphs: "Graphs"
@@ -270,6 +274,16 @@ en:
       merge_request:
         authored_by_member: "authored by %{member}"
         merged: "MERGED"
+    milestones:
+      index:
+        new_milestone: "New Milestone"
+        no_milestones_to_show: "No milestones to show"
+      milestone:
+        close_milestone: "Close Milestone"
+        expired_at: "expired at"
+        expires_at: "expires at"
+        issue: "Issue"
+        merge_request: "Merge Request"
     new:
       any_logged_in_user: "any logged in user."
       authentication: "authentication."
