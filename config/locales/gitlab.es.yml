@@ -143,6 +143,7 @@ es:
     remove: "Eliminar"
     rename: "Renombrar"
     reopen: "Reabrir"
+    required: "Requerido"
     reset: "Reiniciar"
     save: "Guardar"
     save_changes: "Guardar cambios"
@@ -275,6 +276,12 @@ es:
         authored_by_member: "authored by %{member}"
         merged: "FUSIONADO"
     milestones:
+      form:
+        create_milestone: "Crear hito"
+        edit_milestone: "Editar Hito"
+        gitlab_flavored_markdown: "GitLab Flavored Markdown"
+        milestones_are_parsed_with: "Hitos son analizados con %{link}."
+        to_milestones: "&larr; A hitos"
       index:
         new_milestone: "Nuevo Hito"
         no_milestones_to_show: "Ningún hito para mostrar"
@@ -417,6 +424,10 @@ es:
 
   activerecord:
     attributes:
+      milestone:
+        description: "Descripción"
+        due_date: "Fecha de Vencimiento"
+        title: "Título"
       project:
         description: "Descripción"
         import_existing_repo: "Importar repo existente"

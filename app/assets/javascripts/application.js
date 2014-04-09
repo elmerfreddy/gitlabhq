@@ -6,6 +6,7 @@
 //
 //= require jquery
 //= require jquery.ui.all
+//= require jquery.ui.datepicker-es
 //= require jquery_ujs
 //= require jquery.cookie
 //= require jquery.endless-scroll

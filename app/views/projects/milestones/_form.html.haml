@@ -1,7 +1,7 @@
-%h3.page-title= @milestone.new_record? ? "New Milestone" : "Edit Milestone ##{@milestone.iid}"
+%h3.page-title= @milestone.new_record? ? t('new_milestone', scope: 'projects.milestones.index') : "#{t('.edit_milestone')} ##{@milestone.iid}"
 .back-link
   = link_to project_milestones_path(@project) do
-    &larr; To milestones
+    = raw t('.to_milestones')
 
 %hr
 
@@ -14,29 +14,29 @@
   .row
     .col-md-6
       .form-group
-        = f.label :title, "Title", class: "control-label"
+        = f.label :title, Milestone.human_attribute_name('title'), class: "control-label"
         .col-sm-10
           = f.text_field :title, maxlength: 255, class: "form-control"
-          %p.hint Required
+          %p.hint= t('general.required')
       .form-group
-        = f.label :description, "Description", class: "control-label"
+        = f.label :description, Milestone.human_attribute_name('description'), class: "control-label"
         .col-sm-10
           = f.text_area :description, maxlength: 2000, class: "form-control", rows: 10
-          %p.hint Milestones are parsed with #{link_to "GitLab Flavored Markdown", help_markdown_path, target: '_blank'}.
+          %p.hint= raw t('.milestones_are_parsed_with', link: link_to(t('.gitlab_flavored_markdown'), help_markdown_path, target: '_blank'))
     .col-md-6
       .form-group
-        = f.label :due_date, "Due Date", class: "control-label"
+        = f.label :due_date, Milestone.human_attribute_name('due_date'), class: "control-label"
         .col-sm-10= f.hidden_field :due_date
         .col-sm-10
           .datepicker
 
   .form-actions
     - if @milestone.new_record?
-      = f.submit 'Create milestone', class: "btn-create btn"
-      = link_to "Cancel", project_milestones_path(@project), class: "btn btn-cancel"
+      = f.submit t('.create_milestone'), class: "btn-create btn"
+      = link_to t('general.cancel'), project_milestones_path(@project), class: "btn btn-cancel"
     -else
-      = f.submit 'Save changes', class: "btn-save btn"
-      = link_to "Cancel", project_milestone_path(@project, @milestone), class: "btn btn-cancel"
+      = f.submit t('general.save_changes'), class: "btn-save btn"
+      = link_to t('general.cancel'), project_milestone_path(@project, @milestone), class: "btn btn-cancel"
 
 
 :javascript
