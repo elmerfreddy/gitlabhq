@@ -137,6 +137,7 @@ es:
     open: "Abierto"
     optional: "opcional"
     owned: "Dueño"
+    participants: "Participantes"
     personal: "Personal"
     private: "Privado"
     public: "Público"
@@ -291,6 +292,14 @@ es:
         expires_at: "expira en"
         issue: "Problema"
         merge_request: "Solicitud de Fusión"
+      show:
+        all_issues_for_this_milestone_are_closed: "Todos los problemas para este hito están cerrados. Puedes cerrar el hito ahora."
+        completed_issues: "Problemas completados (cerrado)"
+        ongoing_issues: "Problemas en curso (abierto y asignado)"
+        progress: "Progreso"
+        reopen_milestone: "Reabrir Hito"
+        to_milestones_list: "&larr; A la lista de hitos"
+        unstarted_issues: "Problemas sin comenzar (abierto y sin asignar)"
     new:
       any_logged_in_user: "algún usuario conectado."
       authentication: "autentificación."

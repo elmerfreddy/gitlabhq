@@ -137,6 +137,7 @@ en:
     open: "Open"
     optional: "optional"
     owned: "Owned"
+    participants: "Participants"
     personal: "Personal"
     private: "Private"
     public: "Public"
@@ -291,6 +292,14 @@ en:
         expires_at: "expires at"
         issue: "Issue"
         merge_request: "Merge Request"
+      show:
+        all_issues_for_this_milestone_are_closed: "All issues for this milestone are closed. You may close milestone now."
+        completed_issues: "Completed Issues (closed)"
+        ongoing_issues: "Ongoing Issues (open and assigned)"
+        progress: "Progress"
+        reopen_milestone: "Reopen Milestone"
+        to_milestones_list: "&larr; To milestones list"
+        unstarted_issues: "Unstarted Issues (open and unassigned)"
     new:
       any_logged_in_user: "any logged in user."
       authentication: "authentication."
