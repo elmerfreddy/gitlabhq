@@ -126,6 +126,7 @@ es:
     help: "Ayuda"
     here: "aquí"
     internal: "Interno"
+    internal_project: "Proyecto interno"
     issues: "Problemas"
     its_you: "Éste eres tú"
     joined: "Unido"
@@ -140,7 +141,9 @@ es:
     participants: "Participantes"
     personal: "Personal"
     private: "Privado"
+    private_project: "Proyecto privado"
     public: "Público"
+    public_project: "Proyecto público"
     remove: "Eliminar"
     rename: "Renombrar"
     reopen: "Reabrir"
@@ -241,6 +244,11 @@ es:
       unarchiving_the_project: "Desarchivar proyecto marcará su repositorio como activo."
       you_can_only_transfer: "Sólo puede transferir el proyecto a los espacios de nombres que administra."
       you_will_need_to_update: "Tendrá que actualizar los repositorios locales para que apunte a la nueva ubicación."
+    empty:
+      create_repository: "Crear Repositorio"
+      existing_git_repo: "¿Repositorio Git Existente?"
+      first_commit: "primer commit"
+      git_global_setup: "Configuración global de Git"
     hooks:
       index:
         add_web_hook: "Adicionar Web Hook"

@@ -1,6 +1,6 @@
 - empty_repo = @project.empty_repo?
 .project-home-panel{:class => ("empty-project" if empty_repo)}
-  .visibility-level-label.has_tooltip{'data-title' => "#{visibility_level_label(@project.visibility_level)} project" }
+  .visibility-level-label.has_tooltip{'data-title' => t("#{visibility_level_label(@project.visibility_level)} project".parameterize.underscore, scope: 'general') }
     = visibility_level_icon(@project.visibility_level)
   .row
     .col-sm-6
@@ -20,7 +20,7 @@
           = @project.description
         - if can?(current_user, :admin_project, @project)
           &ndash;
-          %strong= link_to 'Edit', edit_project_path
+          %strong= link_to t('general.edit'), edit_project_path
 
     - unless empty_repo
       .col-md-4

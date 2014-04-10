@@ -126,6 +126,7 @@ en:
     help: "Help"
     here: "here"
     internal: "Internal"
+    internal_project: "Internal project"
     issues: "Issues"
     its_you: "It's you"
     joined: "Joined"
@@ -140,7 +141,9 @@ en:
     participants: "Participants"
     personal: "Personal"
     private: "Private"
+    private_project: "Private project"
     public: "Public"
+    public_project: "Public project"
     remove: "Remove"
     rename: "Rename"
     reopen: "Reopen"
@@ -241,6 +244,11 @@ en:
       unarchiving_the_project: "Unarchiving the project will mark its repository as active."
       you_can_only_transfer: "You can only transfer the project to namespaces you manage."
       you_will_need_to_update: "You will need to update your local repositories to point to the new location."
+    empty:
+      create_repository: "Create Repository"
+      existing_git_repo: "Existing Git Repo?"
+      first_commit: "first commit"
+      git_global_setup: "Git global setup"
     hooks:
       index:
         add_web_hook: "Add Web Hook"
