@@ -1,14 +1,14 @@
 = form_for [@project, @wiki], method: @wiki.persisted? ? :put : :post, html: { class: 'form-horizontal' } do |f|
   -if @wiki.errors.any?
     #error_explanation
-      %h2= "#{pluralize(@wiki.errors.count, "error")} prohibited this wiki from being saved:"
+      %h2= t('.error_prohibited_this_wiki_saved', pluralize: pluralize(@wiki.errors.count, t('.error'), t('.errors')))
       %ul
         - @wiki.errors.full_messages.each do |msg|
           %li= msg
 
   = f.hidden_field :title, value: @wiki.title
   .form-group
-    = f.label :format, class: 'control-label'
+    = f.label :format, t('format', scope: 'activerecord.attributes.wiki_page'), class: 'control-label'
     .col-sm-10
       = f.select :format, options_for_select(GollumWiki::MARKUPS, {selected: @wiki.format}), {}, class: "form-control"
 
@@ -16,24 +16,24 @@
     .col-sm-2
     .col-sm-10
       %p.cgray
-        Wiki content is parsed with #{link_to "GitLab Flavored Markdown", help_markdown_path, target: '_blank'}.
-        To link to a (new) page you can just type
-        %code [Link Title](page-slug)
+        = raw t('.wiki_content_is_parsed_with_link', link: link_to(t('gitlab_flavored_markdown', scope: 'milestones.form'), help_markdown_path, target: '_blank'))
+        = t('.to_link_to_a_new_page_type')
+        %code= t('.link_title_page_slug')
         \.
 
   .form-group
-    = f.label :content, class: 'control-label'
+    = f.label :content, t('content', scope: 'activerecord.attributes.wiki_page'), class: 'control-label'
     .col-sm-10
       = f.text_area :content, class: 'form-control js-gfm-input', rows: 18
 
   .form-group
-    = f.label :commit_message, class: 'control-label'
+    = f.label :commit_message, t('commit_message', scope: 'activerecord.attributes.wiki_page'), class: 'control-label'
     .col-sm-10= f.text_field :message, class: 'form-control', rows: 18
 
   .form-actions
     - if @wiki && @wiki.persisted?
-      = f.submit 'Save changes', class: "btn-save btn"
-      = link_to "Cancel", project_wiki_path(@project, @wiki), class: "btn btn-cancel"
+      = f.submit t('general.save_changes'), class: "btn-save btn"
+      = link_to t('general.cancel'), project_wiki_path(@project, @wiki), class: "btn btn-cancel"
     - else
-      = f.submit 'Create page', class: "btn-create btn"
-      = link_to "Cancel", project_wiki_path(@project, :home), class: "btn btn-cancel"
+      = f.submit t('.create_page'), class: "btn-create btn"
+      = link_to t('general.cancel'), project_wiki_path(@project, :home), class: "btn btn-cancel"

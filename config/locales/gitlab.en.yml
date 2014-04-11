@@ -371,6 +371,37 @@ en:
         are_you_sure_remove_user: "Are you sure you want to remove \"%{user}\" from \"%{group}\"?"
         edit_access_level: "Edit access level"
         remove_user_from_group: "Remove user from group"
+    wikis:
+      edit:
+        are_you_sure_you_want_to_delete_this_page: "Are you sure you want to delete this page?"
+        delete_this_page: "Delete this page"
+        editing: "Editing"
+      form:
+        create_page: "Create page"
+        error: "error"
+        errors: "errors"
+        error_prohibited_this_wiki_saved: "%{pluralize} prohibited this wiki from being saved:"
+        link_title_page_slug: "[Link Title](page-slug)"
+        to_link_to_a_new_page_type: "To link to a (new) page you can just type"
+        wiki_content_is_parsed_with_link: "Wiki content is parsed with %{link}."
+      main_links:
+        page_history: "Page History"
+      nav:
+        git_access: "Git Access"
+        new_page: "New Page"
+        pages: "Pages"
+      new:
+        build: "Build"
+        how_to_setup: "how-to-setup"
+        new_wiki_page: "New Wiki Page"
+        page_slug: "Page slug"
+        please_dont_use_spaces_and_slashes: "Please don't use spaces and slashes"
+      show:
+        history: "history"
+        last_edited_by: "Last edited by %{author} %{time}"
+        most_recent_version: "most recent version"
+        this_is_an_old_version_of_this_page: "This is an old version of this page."
+        you_can_view_the_link_or_browse: "You can view the %{recent} or browse the %{history}."
   public:
     projects:
       index:
@@ -472,3 +503,7 @@ en:
       user:
         password: "Password"
         password_confirmation: "Password confirmation"
+      wiki_page:
+        commit_message: "Commit message"
+        content: "Content"
+        format: "Format"

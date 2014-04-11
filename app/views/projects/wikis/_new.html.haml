@@ -3,12 +3,12 @@
     .modal-content
       .modal-header
         %a.close{href: "#", "data-dismiss" => "modal"} ×
-        %h3.page-title New Wiki Page
+        %h3.page-title= t('.new_wiki_page')
       .modal-body
         = label_tag :new_wiki_path do
-          %span Page slug
-        = text_field_tag :new_wiki_path, nil, placeholder: 'how-to-setup', class: 'form-control', required: true, :'data-wikis-path' => project_wikis_path(@project)
+          %span= t('.page_slug')
+        = text_field_tag :new_wiki_path, nil, placeholder: t('.how_to_setup'), class: 'form-control', required: true, :'data-wikis-path' => project_wikis_path(@project)
         %p.hint
-          Please don't use spaces and slashes
+          = t('.please_dont_use_spaces_and_slashes')
       .modal-footer
-        = link_to 'Build', '#', class: 'build-new-wiki btn btn-create'
+        = link_to t('.build'), '#', class: 'build-new-wiki btn btn-create'

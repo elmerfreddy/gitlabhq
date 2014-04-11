@@ -4,8 +4,8 @@
   = render 'main_links'
 - if @wiki.historical?
   .warning_message
-    This is an old version of this page.
-    You can view the #{link_to "most recent version", project_wiki_path(@project, @wiki)} or browse the #{link_to "history", history_project_wiki_path(@project, @wiki)}.
+    = t('.this_is_an_old_version_of_this_page')
+    = raw t('.you_can_view_the_link_or_browse', recent: link_to(t('.most_recent_version'), project_wiki_path(@project, @wiki)), history: link_to(t('.history'), history_project_wiki_path(@project, @wiki)))
 
 %hr
 
@@ -17,4 +17,4 @@
 %hr
 
 .wiki-last-edit-by
-  Last edited by #{commit_author_link(@wiki.commit, avatar: true, size: 16)} #{time_ago_with_tooltip(@wiki.commit.created_at)}
+  = raw t('.last_edited_by', author: commit_author_link(@wiki.commit, avatar: true, size: 16), time: time_ago_with_tooltip(@wiki.commit.created_at))

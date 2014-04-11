@@ -371,6 +371,37 @@ es:
         are_you_sure_remove_user: "¿Está seguro que desea eliminar \"%{user}\" de \"%{group}\"?"
         edit_access_level: "Editar nivel de acceso"
         remove_user_from_group: "Eliminar usuario del grupo"
+    wikis:
+      edit:
+        are_you_sure_you_want_to_delete_this_page: "¿Está seguro de que desea eliminar esta página?"
+        delete_this_page: "Eliminar esta página"
+        editing: "Editando"
+      form:
+        create_page: "Crear página"
+        error: "error"
+        errors: "errores"
+        error_prohibited_this_wiki_saved: "%{pluralize} prohibido para que esta wiki se guarde:"
+        link_title_page_slug: "[Link Título](slug-de-página)"
+        to_link_to_a_new_page_type: "Para un link a (nueva) ṕagina puedes escribir"
+        wiki_content_is_parsed_with_link: "El contenido de la Wiki es analizado con %{link}."
+      main_links:
+        page_history: "Historial de la Página"
+      nav:
+        git_access: "Acceso Git"
+        new_page: "Nueva Página"
+        pages: "Páginas"
+      new:
+        build: "Construir"
+        how_to_setup: "como-configurar"
+        new_wiki_page: "Nueva Página de la Wiki"
+        page_slug: "Slug de página"
+        please_dont_use_spaces_and_slashes: "Por favor, no use espacios y barras"
+      show:
+        history: "histórico"
+        last_edited_by: "Última edición por %{author} %{time}"
+        most_recent_version: "versión más reciente"
+        this_is_an_old_version_of_this_page: "Se trata de una versión antigua de esta página."
+        you_can_view_the_link_or_browse: "Puedes ver la %{recent} o navegar en el %{history}."
   public:
     projects:
       index:
@@ -472,3 +503,7 @@ es:
       user:
         password: "Contraseña"
         password_confirmation: "Confirmar contraseña"
+      wiki_page:
+        commit_message: "Mensaje de commit"
+        content: "Contenido"
+        format: "Formato"
