@@ -1,33 +1,31 @@
 %h3.page-title
-  My email addresses
+  = t('.my_email_addresses')
 %p.light
-  Your
-  %b Primary Email
-  will be used for account notifications, avatar detection and web based operations, such as edits and merges.
+  = raw t('.your_primary_email')
   %br
-  All email addresses will be used to identify your commits.
+  = t('.all_email_addresses_will_be_used')
 
 %hr
 
 .ui-box
   .title
-    Emails (#{@emails.count + 1})
+    #{t('.emails')} (#{@emails.count + 1})
   %ul.well-list#emails-table
     %li
       %strong= @primary
-      %span.label.label-success Primary Email
+      %span.label.label-success= t('.primary_email')
     - @emails.each do |email|
       %li
         %strong= email.email
         %span.cgray
-          added #{time_ago_with_tooltip(email.created_at)}
-        = link_to 'Remove', profile_email_path(email), data: { confirm: 'Are you sure?'}, method: :delete, class: 'btn btn-small btn-remove pull-right'
+          #{t('.added')} #{time_ago_with_tooltip(email.created_at)}
+        = link_to t('general.remove'), profile_email_path(email), data: { confirm: t('general.are_you_sure') }, method: :delete, class: 'btn btn-small btn-remove pull-right'
 
-%h4 Add email address
+%h4= t('.add_email_address')
 = form_for 'email', url: profile_emails_path, html: { class: 'form-horizontal' } do |f|
   .form-group
-    = f.label :email, class: 'control-label'
+    = f.label :email, User.human_attribute_name('email'), class: 'control-label'
     .col-sm-10
       = f.text_field :email, class: 'form-control'
   .form-actions
-    = f.submit 'Add', class: 'btn btn-create'
+    = f.submit t('general.add'), class: 'btn btn-create'

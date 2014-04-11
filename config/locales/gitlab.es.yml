@@ -102,6 +102,7 @@ es:
       reporter: "Reportero"
     abandoned: "Abandonado"
     active: "Activo"
+    add: "Adicionar"
     all: "Todo"
     any: "Cualquiera"
     archive: "Archivar"
@@ -445,6 +446,15 @@ es:
         you_can_change_your_username: "Puedes cambiar tu nombre de usuario y el token privado aquí."
         you_dont_have_one_yet: "Usted no tiene uno todavía. Haga clic en generar para arreglarlo."
         your_private_token_is_used_for: "Tu token privado es usado para acceder a los recursos de la aplicación sin necesidad de autenticación."
+    emails:
+      index:
+        added: "adicionado"
+        add_email_address: "Adicionar dirección de correo electrónico"
+        all_email_addresses_will_be_used: "Todas las direcciones de correo electrónico se utilizará para identificar sus commits."
+        emails: "Correos Electrónicos"
+        my_email_addresses: "Mis direcciones de correo electrónico"
+        primary_email: "Email Primario "
+        your_primary_email: "Su <b>Email Primario</b> se utilizará para notificaciones de la cuenta, detección de avatar y operaciones basadas en la web, tales como cambios y fusiones."
     show:
       avatar_will_be_removed: "El avatar será eliminado. ¿Estás seguro?"
       choose_file: "Elegir archivo ..."

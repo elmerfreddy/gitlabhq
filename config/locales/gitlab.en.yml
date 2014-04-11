@@ -102,6 +102,7 @@ en:
       reporter: "Reporter"
     abandoned: "Abandoned"
     active: "Active"
+    add: "Add"
     all: "All"
     any: "Any"
     archive: "Archive"
@@ -445,6 +446,15 @@ en:
         you_can_change_your_username: "You can change your username and private token here."
         you_dont_have_one_yet: "You don`t have one yet. Click generate to fix it."
         your_private_token_is_used_for: "Your private token is used to access application resources without authentication."
+    emails:
+      index:
+        added: "added"
+        add_email_address: "Add email address"
+        all_email_addresses_will_be_used: "All email addresses will be used to identify your commits."
+        emails: "Emails"
+        my_email_addresses: "My email addresses"
+        primary_email: "Primary Email"
+        your_primary_email: "Your <b>Primary Email</b> will be used for account notifications, avatar detection and web based operations, such as edits and merges."
     show:
       avatar_will_be_removed: "Avatar will be removed. Are you sure?"
       choose_file: "Choose File ..."
