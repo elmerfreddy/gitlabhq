@@ -384,6 +384,11 @@ es:
         link_title_page_slug: "[Título del Link](slug-de-página)"
         to_link_to_a_new_page_type: "Para un link a (nueva) ṕagina puedes escribir"
         wiki_content_is_parsed_with_link: "El contenido de la Wiki es analizado con %{link}."
+      git_access:
+        clone_your_wiki: "Clonar tu Wiki"
+        git_access_for: "Acceso Git para"
+        install_gollum: "Instalar Gollum"
+        start_gollum_and_edit_locally: "Inicia Gollum Y Editar Localmente"
       history:
         history_for: "Historial para"
       main_links:

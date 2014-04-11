@@ -2,7 +2,7 @@
 .row
   .col-sm-6
     %h3.page-title
-      Git access for
+      = t('.git_access_for')
       %strong= @gollum_wiki.path_with_namespace
 
   .col-sm-6
@@ -10,18 +10,18 @@
 
 .git-empty
   %fieldset
-    %legend Install Gollum:
+    %legend #{t('.install_gollum')}:
     %pre.dark
       :preserve
         gem install gollum
 
-    %legend Clone Your Wiki:
+    %legend #{t('.clone_your_wiki')}:
     %pre.dark
       :preserve
         git clone #{ content_tag(:span, default_url_to_repo(@gollum_wiki), class: 'clone')}
         cd #{@gollum_wiki.path}
 
-    %legend Start Gollum And Edit Locally:
+    %legend #{t('.start_gollum_and_edit_locally')}:
     %pre.dark
       :preserve
         gollum
