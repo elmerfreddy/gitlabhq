@@ -179,6 +179,14 @@ en:
     nav:
       dashboard:
         home: "Home"
+      profile:
+        account: "Account"
+        design: "Design"
+        emails: "Emails"
+        notifications: "Notifications"
+        ssh_keys: "SSH Keys"
+    profile:
+      profile: "Profile"
   profiles:
     passwords:
       new:
@@ -413,6 +421,30 @@ en:
         this_is_an_old_version_of_this_page: "This is an old version of this page."
         you_can_view_the_link_or_browse: "You can view the %{recent} or browse the %{history}."
   profiles:
+    accounts:
+      show:
+        account_settings: "Account settings"
+        all_user_content_will_be_removed: "All user content like authored issues, snippets, comments will be removed"
+        changing_your_username_change_all_projects: "Changing your username will change path to all personal projects!"
+        click_on_icon_to_activate_signin: "Click on icon to activate signin with one of the following services"
+        delete_account: "Delete account"
+        deleting_an_account_has_the_effects: "Deleting an account has the following effects"
+        keep_it_secret: "Keep it secret!"
+        personal_project: "personal project"
+        personal_projects: "personal projects"
+        private_token: "Private token"
+        it_can_be_used_for_atom_feeds_or_api: "It can be used for atom feeds or the API."
+        remove_account: "Remove account"
+        remove_user_are_you_sure: "REMOVE %{name}? Are you sure?"
+        save_username: "Save username"
+        saving_new_username: "Saving new username"
+        social_accounts: "Social Accounts"
+        the_following_groups_will_be_abandoned: "The following groups will be abandoned. You should transfer or remove them"
+        username: "Username"
+        will_be_removed: "%{pluralize} will be removed and cannot be restored"
+        you_can_change_your_username: "You can change your username and private token here."
+        you_dont_have_one_yet: "You don`t have one yet. Click generate to fix it."
+        your_private_token_is_used_for: "Your private token is used to access application resources without authentication."
     show:
       avatar_will_be_removed: "Avatar will be removed. Are you sure?"
       choose_file: "Choose File ..."

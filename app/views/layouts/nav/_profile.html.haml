@@ -1,26 +1,26 @@
 %ul
   = nav_link(path: 'profiles#show', html_options: {class: 'home'}) do
-    = link_to profile_path, title: "Profile" do
+    = link_to profile_path, title: t('profile', scope: 'layouts.profile') do
       %i.icon-home
   = nav_link(controller: :accounts) do
-    = link_to "Account", profile_account_path
+    = link_to t('.account'), profile_account_path
   = nav_link(controller: :emails) do
     = link_to profile_emails_path do
-      Emails
+      = t('.emails')
       %span.count= current_user.emails.count + 1
   - unless current_user.ldap_user?
     = nav_link(controller: :passwords) do
-      = link_to "Password", edit_profile_password_path
+      = link_to t('password', scope: 'devise.sessions.new_base'), edit_profile_password_path
   = nav_link(controller: :notifications) do
-    = link_to "Notifications", profile_notifications_path
+    = link_to t('.notifications'), profile_notifications_path
   = nav_link(controller: :keys) do
     = link_to profile_keys_path do
-      SSH Keys
+      = t('.ssh_keys')
       %span.count= current_user.keys.count
   = nav_link(path: 'profiles#design') do
-    = link_to "Design", design_profile_path
+    = link_to t('.design'), design_profile_path
   = nav_link(controller: :groups) do
-    = link_to "Groups", profile_groups_path
+    = link_to t('groups', scope: 'admin.dashboard.index'), profile_groups_path
   = nav_link(path: 'profiles#history') do
-    = link_to "History", history_profile_path
+    = link_to t('history', scope: 'projects.wikis.show').titleize, history_profile_path
 

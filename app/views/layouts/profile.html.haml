@@ -3,7 +3,7 @@
   = render "layouts/head", title: "Profile"
   %body{class: "#{app_theme} profile", :'data-page' => body_data_page}
     = render "layouts/broadcast"
-    = render "layouts/head_panel", title: "Profile"
+    = render "layouts/head_panel", title: t('.profile')
     = render "layouts/flash"
     %nav.main-nav.navbar-collapse.collapse
       .container= render 'layouts/nav/profile'

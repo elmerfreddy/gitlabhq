@@ -1,41 +1,41 @@
 %h3.page-title
-  Account settings
+  = t('.account_settings')
 %p.light
-  You can change your username and private token here.
+  = t('.you_can_change_your_username')
   - if current_user.ldap_user?
-    Some options are unavailable for LDAP accounts
+    = t('some_option_are_unavailable_for_ldap', scope: 'profiles.show')
 %hr
 
 
 .account-page
   %fieldset.update-token
     %legend
-      Private token
+      = t('.private_token')
     %div
       = form_for @user, url: reset_private_token_profile_path, method: :put do |f|
         .data
           %p
-            Your private token is used to access application resources without authentication.
+            = t('.your_private_token_is_used_for')
             %br
-            It can be used for atom feeds or the API.
+            = t('.it_can_be_used_for_atom_feeds_or_api')
             %span.cred
-              Keep it secret!
+              = t('.keep_it_secret')
 
           %p.cgray
             - if current_user.private_token
               = text_field_tag "token", current_user.private_token, class: "form-control"
               %div
-                = f.submit 'Reset', data: { confirm: "Are you sure?" }, class: "btn btn-primary btn-build-token"
+                = f.submit t('general.reset'), data: { confirm: t('general.are_you_sure') }, class: "btn btn-primary btn-build-token"
             - else
-              %span You don`t have one yet. Click generate to fix it.
-              = f.submit 'Generate', class: "btn success btn-build-token"
+              %span= t('.you_dont_have_one_yet')
+              = f.submit t('generate', scope: 'shared.project_filter'), class: "btn success btn-build-token"
 
 
   - if show_profile_social_tab?
     %fieldset
-      %legend Social Accounts
+      %legend= t('.social_accounts')
       .oauth_select_holder.append-bottom-10
-        %p Click on icon to activate signin with one of the following services
+        %p= t('.click_on_icon_to_activate_signin')
         - enabled_social_providers.each do |provider|
           %span{class: oauth_active_class(provider) }
             = link_to authbutton(provider, 32), omniauth_authorize_path(User, provider)
@@ -43,35 +43,35 @@
   - if show_profile_username_tab?
     %fieldset.update-username
       %legend
-        Username
+        = t('.username')
       = form_for @user, url: update_username_profile_path,  method: :put, remote: true do |f|
         %p
-          Changing your username will change path to all personal projects!
+          = t('.changing_your_username_change_all_projects')
         %div
           = f.text_field :username, required: true, class: 'form-control'
           &nbsp;
         .loading-gif.hide
           %p
             %i.icon-spinner.icon-spin
-            Saving new username
+            = t('.saving_new_username')
         %p.light
           = user_url(@user)
         %div
-          = f.submit 'Save username', class: "btn btn-save"
+          = f.submit t('.save_username'), class: "btn btn-save"
 
   - if show_profile_remove_tab?
     %fieldset.remove-account
       %legend
-        Remove account
+        = t('.remove_account')
       %div
-        %p Deleting an account has the following effects:
+        %p #{t('.deleting_an_account_has_the_effects')}:
         %ul
-          %li All user content like authored issues, snippets, comments will be removed
+          %li= t('.all_user_content_will_be_removed')
           - rp = current_user.personal_projects.count
           - unless rp.zero?
-            %li #{pluralize rp, 'personal project'} will be removed and cannot be restored
+            %li= t('.will_be_removed', pluralize: pluralize(rp, t('.personal_project'), t('.personal_projects')))
           - if current_user.solo_owned_groups.present?
             %li
-              The following groups will be abandoned. You should transfer or remove them:
+              #{t('.the_following_groups_will_be_abandoned')}:
               %strong #{current_user.solo_owned_groups.map(&:name).join(', ')}
-        = link_to 'Delete account', user_registration_path, data: { confirm: "REMOVE #{current_user.name}? Are you sure?" }, method: :delete, class: "btn btn-remove"
+        = link_to t('.delete_account'), user_registration_path, data: { confirm: t('.remove_user_are_you_sure', name: current_user.name) }, method: :delete, class: "btn btn-remove"

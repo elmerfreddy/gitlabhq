@@ -179,6 +179,14 @@ es:
     nav:
       dashboard:
         home: "Página principal"
+      profile:
+        account: "Cuenta"
+        design: "Diseño"
+        emails: "Emails"
+        notifications: "Notificaciones"
+        ssh_keys: "Llaves SSH"
+    profile:
+      profile: "Perfil"
   profiles:
     passwords:
       new:
@@ -407,12 +415,36 @@ es:
         all_pages: "Todas Las Páginas"
         last_edited: "Última edición %{time}"
       show:
-        history: "histórico"
+        history: "historial"
         last_edited_by: "Última edición por %{author} %{time}"
         most_recent_version: "versión más reciente"
         this_is_an_old_version_of_this_page: "Se trata de una versión antigua de esta página."
         you_can_view_the_link_or_browse: "Puedes ver la %{recent} o navegar en el %{history}."
   profiles:
+    accounts:
+      show:
+        account_settings: "Configuración de la cuenta"
+        all_user_content_will_be_removed: "Todo el contenido de usuario como problemas creados, fragmentos, comentarios se eliminarán"
+        changing_your_username_change_all_projects: "Cambiar su nombre de usuario cambiará la ruta a todos los proyectos personales!"
+        click_on_icon_to_activate_signin: "Haga clic en el icono para activar el inicio de sesión con uno de los siguientes servicios"
+        delete_account: "Eliminar cuenta"
+        deleting_an_account_has_the_effects: "Eliminar una cuenta tiene los siguientes efectos"
+        keep_it_secret: "Mantener en secreto!"
+        personal_project: "proyecto personal"
+        personal_projects: "proyectos personales"
+        private_token: "Token privado"
+        it_can_be_used_for_atom_feeds_or_api: "Se puede utilizar para atom feeds o la API."
+        remove_account: "Eliminar cuenta"
+        remove_user_are_you_sure: "¿ELIMINAR %{name}? ¿Estás seguro?"
+        save_username: "Guardar nombre de usuario"
+        saving_new_username: "Guardando nuevo nombre de usuario"
+        social_accounts: "Cuentas Sociales"
+        the_following_groups_will_be_abandoned: "Se abandonarán los siguientes grupos. Usted debe transferirlos o eliminarlos"
+        username: "Nombre de Usuario"
+        will_be_removed: "%{pluralize} serán eliminados y no se podrán recuperar"
+        you_can_change_your_username: "Puedes cambiar tu nombre de usuario y el token privado aquí."
+        you_dont_have_one_yet: "Usted no tiene uno todavía. Haga clic en generar para arreglarlo."
+        your_private_token_is_used_for: "Tu token privado es usado para acceder a los recursos de la aplicación sin necesidad de autenticación."
     show:
       avatar_will_be_removed: "El avatar será eliminado. ¿Estás seguro?"
       choose_file: "Elegir archivo ..."
