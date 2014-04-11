@@ -398,6 +398,9 @@ es:
         new_wiki_page: "Nueva Página de la Wiki"
         page_slug: "Slug de página"
         please_dont_use_spaces_and_slashes: "Por favor, no use espacios y barras"
+      pages:
+        all_pages: "Todas Las Páginas"
+        last_edited: "Última edición %{time}"
       show:
         history: "histórico"
         last_edited_by: "Última edición por %{author} %{time}"

@@ -398,6 +398,9 @@ en:
         new_wiki_page: "New Wiki Page"
         page_slug: "Page slug"
         please_dont_use_spaces_and_slashes: "Please don't use spaces and slashes"
+      pages:
+        all_pages: "All Pages"
+        last_edited: "Last edited %{time}"
       show:
         history: "history"
         last_edited_by: "Last edited by %{author} %{time}"

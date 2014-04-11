@@ -1,6 +1,6 @@
 = render 'nav'
 %h3.page-title
-  All Pages
+  = t('.all_pages')
 %ul.bordered-list
   - @wiki_pages.each do |wiki_page|
     %li
@@ -8,4 +8,4 @@
         = link_to wiki_page.title.titleize, project_wiki_path(@project, wiki_page)
         %small (#{wiki_page.format})
         .pull-right
-          %small Last edited #{time_ago_with_tooltip(wiki_page.commit.created_at)}
+          %small= raw t('.last_edited', time: time_ago_with_tooltip(wiki_page.commit.created_at))
