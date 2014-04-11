@@ -1,16 +1,16 @@
 = render 'nav'
 %h3.page-title
-  %span.light History for
+  %span.light= t('.history_for')
   = link_to @wiki.title.titleize, project_wiki_path(@project, @wiki)
 
 %table.table
   %thead
     %tr
-      %th Page version
-      %th Author
-      %th Commit Message
-      %th Last updated
-      %th Format
+      %th= t('page_version', scope: 'activerecord.attributes.wiki_page')
+      %th= t('author', scope: 'activerecord.attributes.wiki_page')
+      %th= t('commit_message', scope: 'activerecord.attributes.wiki_page')
+      %th= t('last_updated', scope: 'activerecord.attributes.wiki_page')
+      %th= t('format', scope: 'activerecord.attributes.wiki_page')
   %tbody
     - @wiki.versions.each do |version|
       - commit = version

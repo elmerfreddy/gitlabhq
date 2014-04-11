@@ -381,9 +381,11 @@ es:
         error: "error"
         errors: "errores"
         error_prohibited_this_wiki_saved: "%{pluralize} prohibido para que esta wiki se guarde:"
-        link_title_page_slug: "[Link Título](slug-de-página)"
+        link_title_page_slug: "[Título del Link](slug-de-página)"
         to_link_to_a_new_page_type: "Para un link a (nueva) ṕagina puedes escribir"
         wiki_content_is_parsed_with_link: "El contenido de la Wiki es analizado con %{link}."
+      history:
+        history_for: "Historial para"
       main_links:
         page_history: "Historial de la Página"
       nav:
@@ -504,6 +506,9 @@ es:
         password: "Contraseña"
         password_confirmation: "Confirmar contraseña"
       wiki_page:
+        author: "Autor"
         commit_message: "Mensaje de commit"
         content: "Contenido"
         format: "Formato"
+        last_updated: "Última actualización"
+        page_version: "Versión de página"

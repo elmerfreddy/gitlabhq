@@ -384,6 +384,8 @@ en:
         link_title_page_slug: "[Link Title](page-slug)"
         to_link_to_a_new_page_type: "To link to a (new) page you can just type"
         wiki_content_is_parsed_with_link: "Wiki content is parsed with %{link}."
+      history:
+        history_for: "History for"
       main_links:
         page_history: "Page History"
       nav:
@@ -504,6 +506,9 @@ en:
         password: "Password"
         password_confirmation: "Password confirmation"
       wiki_page:
+        author: "Author"
         commit_message: "Commit message"
         content: "Content"
         format: "Format"
+        last_updated: "Last updated"
+        page_version: "Page version"
