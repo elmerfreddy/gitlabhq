@@ -412,6 +412,25 @@ en:
         most_recent_version: "most recent version"
         this_is_an_old_version_of_this_page: "This is an old version of this page."
         you_can_view_the_link_or_browse: "You can view the %{recent} or browse the %{history}."
+  profiles:
+    show:
+      avatar_will_be_removed: "Avatar will be removed. Are you sure?"
+      choose_file: "Choose File ..."
+      email_is_read_only_for_ldap: "Email is read-only for LDAP user"
+      enter_your_name: "Enter your name, so people you know can recognize you."
+      file_name: "File name..."
+      or_change_it_at: "or change it at %{link}"
+      or_remove_the_current_avatar: "or remove the current avatar to revert to %{link}"
+      profile_settings: "Profile settings"
+      remove_avatar: "Remove avatar"
+      some_option_are_unavailable_for_ldap: "Some options are unavailable for LDAP accounts"
+      tell_us_about_yourself: "Tell us about yourself in fewer than 250 characters."
+      the_maximum_file_size: "The maximum file size allowed is 100KB."
+      this_information_appears_on_your_profile: "This information appears on your profile."
+      we_also_use_email_for_avatar: "We also use email for avatar detection if no avatar is uploaded."
+      we_sent_confirmation_email_to: "We sent confirmation email to"
+      you_can_change_your_avatar_here: "You can change your avatar here"
+      you_can_upload_an_avatar_here: "You can upload an avatar here"
   public:
     projects:
       index:
@@ -511,8 +530,12 @@ en:
         file: "File"
         title: "Title"
       user:
+        bio: "Bio"
+        email: "Email"
+        name: "Name"
         password: "Password"
         password_confirmation: "Password confirmation"
+        website_url: "Website"
       wiki_page:
         author: "Author"
         commit_message: "Commit message"

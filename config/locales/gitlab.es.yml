@@ -412,6 +412,25 @@ es:
         most_recent_version: "versión más reciente"
         this_is_an_old_version_of_this_page: "Se trata de una versión antigua de esta página."
         you_can_view_the_link_or_browse: "Puedes ver la %{recent} o navegar en el %{history}."
+  profiles:
+    show:
+      avatar_will_be_removed: "El avatar será eliminado. ¿Estás seguro?"
+      choose_file: "Elegir archivo ..."
+      email_is_read_only_for_ldap: "Email es de sólo lectura para usuarios de LDAP"
+      enter_your_name: "Introduce tu nombre, para que así la gente que te conoce pueda reconocerte."
+      file_name: "Nombre de archivo..."
+      or_change_it_at: "o cambialo en %{link}"
+      or_remove_the_current_avatar: "o elimina el avatar actual para revertir a %{link}"
+      profile_settings: "Configuración del perfil"
+      remove_avatar: "Eliminar avatar"
+      some_option_are_unavailable_for_ldap: "Algunas opciones no están disponibles para las cuentas LDAP"
+      tell_us_about_yourself: "Cuéntanos acerca de ti en menos de 250 caracteres."
+      the_maximum_file_size: "El máximo tamaño de archivo permitido es 100KB."
+      this_information_appears_on_your_profile: "Esta información aparece en tu perfil."
+      we_also_use_email_for_avatar: "Utilizamos el correo electrónico para detectar el avatar si no se cargó un avatar."
+      we_sent_confirmation_email_to: "Enviamos un correo electrónico de confirmación a"
+      you_can_change_your_avatar_here: "Puedes cambiar tu avatar aquí"
+      you_can_upload_an_avatar_here: "Puedes subir un avatar aquí"
   public:
     projects:
       index:
@@ -511,8 +530,12 @@ es:
         file: "Archivo"
         title: "Título"
       user:
+        bio: "Biografía"
+        email: "Correo Electrónico"
+        name: "Nombre"
         password: "Contraseña"
         password_confirmation: "Confirmar contraseña"
+        website_url: "Sitio Web"
       wiki_page:
         author: "Autor"
         commit_message: "Mensaje de commit"

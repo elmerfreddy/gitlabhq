@@ -1,9 +1,9 @@
 %h3.page-title
-  Profile settings
+  = t('.profile_settings')
 %p.light
-  This information appears on your profile.
+  = t('.this_information_appears_on_your_profile')
   - if current_user.ldap_user?
-    Some options are unavailable for LDAP accounts
+    = t('.some_option_are_unavailable_for_ldap')
 %hr
 
 
@@ -17,26 +17,26 @@
   .row
     .col-md-7
       .form-group
-        = f.label :name, class: "control-label"
+        = f.label :name, User.human_attribute_name('name'), class: "control-label"
         .col-sm-10
           = f.text_field :name, class: "form-control", required: true
-          %span.help-block Enter your name, so people you know can recognize you.
+          %span.help-block= t('.enter_your_name')
 
       .form-group
-        = f.label :email, class: "control-label"
+        = f.label :email, User.human_attribute_name('email'), class: "control-label"
         .col-sm-10
           - if @user.ldap_user?
             = f.text_field :email, class: "form-control", required: true, readonly: true
             %span.help-block.light
-              Email is read-only for LDAP user
+              = t('.email_is_read_only_for_ldap')
           - else
             = f.text_field :email, class: "form-control", required: true
             - if @user.unconfirmed_email.present?
               %span.help-block
-                We sent confirmation email to
+                = t('.we_sent_confirmation_email_to')
                 %strong #{@user.unconfirmed_email}
             - else
-              %span.help-block We also use email for avatar detection if no avatar is uploaded.
+              %span.help-block= t('.we_also_use_email_for_avatar')
       .form-group
         = f.label :skype, class: "control-label"
         .col-sm-10= f.text_field :skype, class: "form-control"
@@ -47,13 +47,13 @@
         = f.label :twitter, class: "control-label"
         .col-sm-10= f.text_field :twitter, class: "form-control"
       .form-group
-        = f.label :website_url, 'Website', class: "control-label"
+        = f.label :website_url, User.human_attribute_name('website_url'), class: "control-label"
         .col-sm-10= f.text_field :website_url, class: "form-control"
       .form-group
-        = f.label :bio, class: "control-label"
+        = f.label :bio, User.human_attribute_name('bio'), class: "control-label"
         .col-sm-10
           = f.text_area :bio, rows: 6, class: "form-control", maxlength: 250
-          %span.help-block Tell us about yourself in fewer than 250 characters.
+          %span.help-block= t('.tell_us_about_yourself')
 
     .col-md-5
       .light-well
@@ -63,24 +63,24 @@
           .profile-avatar-form-option
             %p.light
               - if @user.avatar?
-                You can change your avatar here
+                = t('.you_can_change_your_avatar_here')
                 %br
-                or remove the current avatar to revert to #{link_to "gravatar.com", "http://gravatar.com"}
+                = raw t('.or_remove_the_current_avatar', link: link_to("gravatar.com", "http://gravatar.com"))
               - else
-                You can upload an avatar here
+                = t('.you_can_upload_an_avatar_here')
                 %br
-                or change it at #{link_to "gravatar.com", "http://gravatar.com"}
+                = raw t('.or_change_it_at', link: link_to("gravatar.com", "http://gravatar.com"))
             %hr
             %a.choose-btn.btn.btn-small.js-choose-user-avatar-button
               %i.icon-paper-clip
-              %span Choose File ...
+              %span= t('.choose_file')
             &nbsp;
-            %span.file_name.js-avatar-filename File name...
+            %span.file_name.js-avatar-filename= t('.file_name')
             = f.file_field :avatar, class: "js-user-avatar-input hidden"
-            .light The maximum file size allowed is 100KB.
+            .light= t('.the_maximum_file_size')
             - if @user.avatar?
               %hr
-              = link_to 'Remove avatar', profile_avatar_path, data: { confirm: "Avatar will be removed. Are you sure?"}, method: :delete, class: "btn btn-remove btn-small remove-avatar"
+              = link_to t('.remove_avatar'), profile_avatar_path, data: { confirm: t('.avatar_will_be_removed')}, method: :delete, class: "btn btn-remove btn-small remove-avatar"
 
   .form-actions
-    = f.submit 'Save changes', class: "btn btn-save"
+    = f.submit t('general.save_changes'), class: "btn btn-save"
