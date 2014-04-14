@@ -227,6 +227,14 @@ en:
         my_email_addresses: "My email addresses"
         primary_email: "Primary Email"
         your_primary_email: "Your <b>Primary Email</b> will be used for account notifications, avatar detection and web based operations, such as edits and merges."
+    keys:
+      index:
+        add_ssh_key: "Add SSH Key"
+        before_you_can_add_an_ssh_you_need_generate: "Before you can add an SSH key you need to %{generate}"
+        generate_it: "generate it"
+        my_ssh_keys: "My SSH keys"
+        ssh_keys_allow_you_to_establish_secure_connection: "SSH keys allow you to establish a secure connection between your computer and GitLab"
+        there_are_no_ssh_keys: "There are no SSH keys with access to your account."
     notifications:
       show:
         by_default_all_projects_and_groups: "By default all projects and groups uses notification level set above"

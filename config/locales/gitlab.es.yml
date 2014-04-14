@@ -227,6 +227,14 @@ es:
         my_email_addresses: "Mis direcciones de correo electrónico"
         primary_email: "Email Primario "
         your_primary_email: "Su <b>Email Primario</b> se utilizará para notificaciones de la cuenta, detección de avatar y operaciones basadas en la web, tales como cambios y fusiones."
+    keys:
+      index:
+        add_ssh_key: "Adicionar llave SSH"
+        before_you_can_add_an_ssh_you_need_generate: "Antes de agregar una llave SSH necesitas %{generate}"
+        generate_it: "generar uno"
+        my_ssh_keys: "Mis llaves SSH"
+        ssh_keys_allow_you_to_establish_secure_connection: "Las llaves SSH le permiten establecer una conexión segura entre su computadora y GitLab"
+        there_are_no_ssh_keys: "No hay llaves SSH con acceso a su cuenta."
     notifications:
       show:
         by_default_all_projects_and_groups: "Por defecto todos los proyectos y los grupos utilizan el nivel de notificación que figura más arriba"
