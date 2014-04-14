@@ -19,13 +19,13 @@ module GroupsHelper
     title = @group.name
 
     title = if current_action?(:issues)
-              "Issues - " + title
+              "#{I18n.t('issues', scope: 'admin.dashboard.index')} - " + title
             elsif current_action?(:merge_requests)
-              "Merge requests - " + title
+              "#{I18n.t('merge_requests', scope: 'admin.dashboard.index')} - " + title
             elsif current_action?(:members)
-              "Members - " + title
+              "#{I18n.t('members', scope: 'projects.settings_nav')} - " + title
             elsif current_action?(:edit)
-              "Settings - " + title
+              "#{I18n.t('general.settings')} - " + title
             else
               title
             end

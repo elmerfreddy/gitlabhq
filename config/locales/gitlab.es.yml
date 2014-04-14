@@ -169,6 +169,19 @@ es:
     wall: "Wall"
     wiki: "Wiki"
   groups:
+    edit:
+      group: "Grupo"
+      group_avatar_will_be_removed: "Se eliminará el avatar de grupo. ¿Está seguro?"
+      group_settings: "configuración del grupo"
+      new_project: "Proyecto Nuevo"
+      remove_group: "Eliminar grupo"
+      removed_group_can_not_be_restored: "Eliminar grupo no puede ser restaurado!"
+      removed_group_can_not_be_restored_sure: "Eliminar grupo no puede ser restaurado! ¿Está seguro?"
+      removing_group_will_removed_resources: "Eliminar el grupo hará que todos los proyectos y recursos dependientes se eliminen."
+      save_group: "Guardar grupo"
+      this_group_has_no_projects_yet: "Este grupo no tiene proyectos aún"
+      you_can_change_your_group_avatar: "Puedes cambiar tu avatar de grupo aquí"
+      you_can_upload_an_avatar_here: "Puedes subir un avatar de grupo aquí"
     new:
       a_group_is_a_collection_of_several_projects: "Un grupo es un conjunto de varios proyectos"
       create_group: "Crear grupo"
