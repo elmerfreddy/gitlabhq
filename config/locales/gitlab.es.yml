@@ -241,6 +241,16 @@ es:
         my_email_addresses: "Mis direcciones de correo electrónico"
         primary_email: "Email Primario "
         your_primary_email: "Su <b>Email Primario</b> se utilizará para notificaciones de la cuenta, detección de avatar y operaciones basadas en la web, tales como cambios y fusiones."
+    groups:
+      index:
+        as: "como"
+        group_members_have_access_to_all: "Los miembros del grupo tienen acceso a todos los proyectos de un grupo"
+        group_membership: "Miembros de grupo"
+        new_group: "Nuevo Grupo"
+        project: "proyecto"
+        projects: "proyectos"
+        user: "usuario"
+        users: "usuarios"
     keys:
       index:
         add_ssh_key: "Adicionar llave SSH"

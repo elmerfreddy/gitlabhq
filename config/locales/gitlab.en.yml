@@ -241,6 +241,16 @@ en:
         my_email_addresses: "My email addresses"
         primary_email: "Primary Email"
         your_primary_email: "Your <b>Primary Email</b> will be used for account notifications, avatar detection and web based operations, such as edits and merges."
+    groups:
+      index:
+        as: "as"
+        group_members_have_access_to_all: "Group members have access to all a group's projects"
+        group_membership: "Group membership"
+        new_group: "New Group"
+        project: "project"
+        projects: "projects"
+        user: "user"
+        users: "users"
     keys:
       index:
         add_ssh_key: "Add SSH Key"
