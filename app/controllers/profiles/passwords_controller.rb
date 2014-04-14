@@ -36,12 +36,12 @@ class Profiles::PasswordsController < ApplicationController
     end
 
     unless @user.valid_password?(params[:user][:current_password])
-      redirect_to edit_profile_password_path, alert: 'You must provide a valid current password'
+      redirect_to edit_profile_password_path, alert: I18n.t('you_must_provide_valid_password', scope: 'profiles.passwords.edit')
       return
     end
 
     if @user.update_attributes(password_attributes)
-      flash[:notice] = "Password was successfully updated. Please login with it"
+      flash[:notice] = I18n.t('password_was_successfully_updated', scope: 'profiles.passwords.edit')
       redirect_to new_user_session_path
     else
       render 'edit'
@@ -50,7 +50,7 @@ class Profiles::PasswordsController < ApplicationController
 
   def reset
     current_user.send_reset_password_instructions
-    redirect_to edit_profile_password_path, notice: 'We sent you an email with reset password instructions'
+    redirect_to edit_profile_password_path, notice: I18n.t('we_sent_you_an_email_with_reset_password_institutions', scope: 'profiles.passwords.edit')
   end
 
   private
