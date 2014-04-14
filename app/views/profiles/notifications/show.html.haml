@@ -1,50 +1,50 @@
 %h3.page-title
-  Notifications settings
+  = t('.notifications_settings')
 %p.light
-  GitLab uses the email specified in your profile for notifications
+  = t('.gitlab_uses_the_email_specified_in_your_profile')
 %hr
 = form_tag profile_notifications_path, method: :put, remote: true, class: 'update-notifications form-horizontal global-notifications-form' do
   = hidden_field_tag :notification_type, 'global'
 
-  = label_tag :notification_level, 'Notification level', class: 'control-label'
+  = label_tag :notification_level, t('.notification_level'), class: 'control-label'
   .col-sm-10
     .radio
       = label_tag nil, class: '' do
         = radio_button_tag :notification_level, Notification::N_DISABLED, @notification.disabled?, class: 'trigger-submit'
         .level-title
-          Disabled
-        %p You will not get any notifications via email
+          = t('disabled', scope: 'general.notifications').titleize
+        %p= t('.you_will_not_get_any_notifications')
 
     .radio
       = label_tag nil, class: '' do
         = radio_button_tag :notification_level, Notification::N_PARTICIPATING, @notification.participating?, class: 'trigger-submit'
         .level-title
-          Participating
-        %p You will only receive notifications from related resources (e.g. from your commits or assigned issues)
+          = t('participating', scope: 'general.notifications').titleize
+        %p= t('.you_will_only_receive_related_resources')
 
     .radio
       = label_tag nil, class: '' do
         = radio_button_tag :notification_level, Notification::N_WATCH, @notification.watch?, class: 'trigger-submit'
         .level-title
-          Watch
-        %p You will receive all notifications from projects in which you participate
+          = t('watch', scope: 'general.notifications').titleize
+        %p= t('.you_will_receive_from_all_projects')
 
 .clearfix
   %hr
   %p
-    You can also specify notification level per group or per project
+    = t('.you_can_also_specify_notification_level')
     %br
-    By default all projects and groups uses notification level set above
+    = t('.by_default_all_projects_and_groups')
 .row.all-notifications
   .col-md-6
-    %h4 Groups:
+    %h4 #{t('groups', scope: 'admin.dashboard.index')}:
     %ul.bordered-list
       - @users_groups.each do |users_group|
         - notification = Notification.new(users_group)
         = render 'settings', type: 'group', membership: users_group, notification: notification
 
   .col-md-6
-    %h4 Projects:
+    %h4 #{t('projects', scope: 'public.projects.index')}:
     %ul.bordered-list
       - @users_projects.each do |users_project|
         - notification = Notification.new(users_project)

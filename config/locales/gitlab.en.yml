@@ -136,6 +136,11 @@ en:
     merge_requests: "Merge Requests"
     network: "Network"
     not_empty: "Not empty"
+    notifications:
+      disabled: "disabled"
+      global: "global"
+      participating: "participating"
+      watch: "watch"
     open: "Open"
     optional: "optional"
     owned: "Owned"
@@ -222,6 +227,16 @@ en:
         my_email_addresses: "My email addresses"
         primary_email: "Primary Email"
         your_primary_email: "Your <b>Primary Email</b> will be used for account notifications, avatar detection and web based operations, such as edits and merges."
+    notifications:
+      show:
+        by_default_all_projects_and_groups: "By default all projects and groups uses notification level set above"
+        gitlab_uses_the_email_specified_in_your_profile: "GitLab uses the email specified in your profile for notifications"
+        notification_level: "Notification level"
+        notifications_settings: "Notifications settings"
+        you_can_also_specify_notification_level: "You can also specify notification level per group or per project"
+        you_will_only_receive_related_resources: "You will only receive notifications from related resources (e.g. from your commits or assigned issues)"
+        you_will_not_get_any_notifications: "You will not get any notifications via email"
+        you_will_receive_from_all_projects: "You will receive all notifications from projects in which you participate"
     passwords:
       edit:
         after_a_successful_password_update: "After a successful password update you will be redirected to login page where you should login with your new password"

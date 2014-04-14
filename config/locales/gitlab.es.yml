@@ -136,6 +136,11 @@ es:
     merge_requests: "Fusionar Solicitudes"
     network: "Red"
     not_empty: "No vacío"
+    notifications:
+      disabled: "deshabilitado"
+      global: "global"
+      participating: "participando"
+      watch: "observando"
     open: "Abierto"
     optional: "opcional"
     owned: "Dueño"
@@ -222,6 +227,16 @@ es:
         my_email_addresses: "Mis direcciones de correo electrónico"
         primary_email: "Email Primario "
         your_primary_email: "Su <b>Email Primario</b> se utilizará para notificaciones de la cuenta, detección de avatar y operaciones basadas en la web, tales como cambios y fusiones."
+    notifications:
+      show:
+        by_default_all_projects_and_groups: "Por defecto todos los proyectos y los grupos utilizan el nivel de notificación que figura más arriba"
+        gitlab_uses_the_email_specified_in_your_profile: "GitLab utiliza el correo electrónico especificado en su perfil para notificaciones"
+        notification_level: "Nivel de notificación"
+        notifications_settings: "Configuración de notificaciones"
+        you_can_also_specify_notification_level: "Puedes especificar el nivel de notificación por grupo o por proyecto"
+        you_will_only_receive_related_resources: "Sólo recibirá las notificaciones de los recursos relacionados (por ejemplo, de sus commits o problemas asignados)"
+        you_will_not_get_any_notifications: "Usted no recibirá notificaciones por correo electrónico"
+        you_will_receive_from_all_projects: "Recibirá todas las notificaciones de los proyectos en los que participas"
     passwords:
       edit:
         after_a_successful_password_update: "Después de una actualización de la contraseña serás redirigido a la página de acceso donde debe ingresar con su nueva contraseña"

@@ -16,10 +16,10 @@ class Notification
 
     def options_with_labels
       {
-        disabled: N_DISABLED,
-        participating: N_PARTICIPATING,
-        watch: N_WATCH,
-        global: N_GLOBAL
+        I18n.t('disabled', scope: 'general.notifications') => N_DISABLED,
+        I18n.t('participating', scope: 'general.notifications') => N_PARTICIPATING,
+        I18n.t('watch', scope: 'general.notifications') => N_WATCH,
+        I18n.t('global', scope: 'general.notifications') => N_GLOBAL
       }
     end
 
