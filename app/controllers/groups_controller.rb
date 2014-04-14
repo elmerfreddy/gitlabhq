@@ -131,7 +131,7 @@ class GroupsController < ApplicationController
   end
 
   def set_title
-    @title = 'New Group'
+    @title = t('new_group', scope: 'groups.new')
   end
 
   def determine_layout

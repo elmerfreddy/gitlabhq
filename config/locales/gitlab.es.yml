@@ -168,6 +168,16 @@ es:
     unknown: "desconocido"
     wall: "Wall"
     wiki: "Wiki"
+  groups:
+    new:
+      a_group_is_a_collection_of_several_projects: "Un grupo es un conjunto de varios proyectos"
+      create_group: "Crear grupo"
+      ex_opensource: "Ej. CódigoAbierto"
+      existing_projects_may_be_moved_into_group: "Los proyectos existentes pueden moverse en un grupo"
+      group_project_urls_are_prefixed: "Las URLs de los proyecto del grupo tienen el prefijo del espacio de nombres del grupo"
+      groups_are_private_by_default: "Los grupos son privados por defecto"
+      members_of_a_group_may_only_view: "Miembros de un grupo sólo podrán ver los proyectos que tienen permiso para acceder "
+      new_group: "Nuevo Grupo"
   layouts:
     devise:
       gitlab_open_source_software: "GitLab es un software de código abierto para colaborar en código."
@@ -600,6 +610,9 @@ es:
 
   activerecord:
     attributes:
+      group:
+        details: "Detalles"
+        group_name: "Nombre de grupo"
       milestone:
         description: "Descripción"
         due_date: "Fecha de Vencimiento"

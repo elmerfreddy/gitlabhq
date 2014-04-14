@@ -168,6 +168,16 @@ en:
     unknown: "unknown"
     wall: "Wall"
     wiki: "Wiki"
+  groups:
+    new:
+      a_group_is_a_collection_of_several_projects: "A group is a collection of several projects"
+      create_group: "Create group"
+      ex_opensource: "Ex. OpenSource"
+      existing_projects_may_be_moved_into_group: "Existing projects may be moved into a group"
+      group_project_urls_are_prefixed: "Group project URLs are prefixed with the group namespace"
+      groups_are_private_by_default: "Groups are private by default"
+      members_of_a_group_may_only_view: "Members of a group may only view projects they have permission to access"
+      new_group: "New Group"
   layouts:
     devise:
       gitlab_open_source_software: "GitLab is open source software to collaborate on code."
@@ -600,6 +610,9 @@ en:
 
   activerecord:
     attributes:
+      group:
+        details: "Details"
+        group_name: "Group name"
       milestone:
         description: "Description"
         due_date: "Due Date"
