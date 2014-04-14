@@ -218,6 +218,20 @@ es:
         you_can_change_your_username: "Puedes cambiar tu nombre de usuario y el token privado aquí."
         you_dont_have_one_yet: "Usted no tiene uno todavía. Haga clic en generar para arreglarlo."
         your_private_token_is_used_for: "Tu token privado es usado para acceder a los recursos de la aplicación sin necesidad de autenticación."
+    design:
+      appearance_settings_saved_to_your_profile: "Las configuraciones de apariencia se guardarán en su perfil y disponibles en todos los dispositivos"
+      application_theme: "Tema de la aplicación"
+      classic: "Clásico"
+      code_preview_theme: "Tema previsualización del código"
+      dark: "Oscuro"
+      default: "Por defecto"
+      gray: "Gris"
+      modern: "Moderno"
+      monokai: "Monokai"
+      my_appearance_settings: "Mis configuraciones de apariencia"
+      solarized_dark: "Solarizado oscuro"
+      vilet: "Violeta"
+      white: "Blanco"
     emails:
       index:
         added: "adicionado"
