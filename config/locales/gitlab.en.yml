@@ -181,7 +181,7 @@ en:
       save_group: "Save group"
       this_group_has_no_projects_yet: "This group has no projects yet"
       you_can_change_your_group_avatar: "You can change your group avatar here"
-      you_can_upload_an_avatar_here: "You can upload an group avatar here"
+      you_can_upload_an_group_avatar: "You can upload an group avatar here"
     new:
       a_group_is_a_collection_of_several_projects: "A group is a collection of several projects"
       create_group: "Create group"
@@ -191,6 +191,11 @@ en:
       groups_are_private_by_default: "Groups are private by default"
       members_of_a_group_may_only_view: "Members of a group may only view projects they have permission to access"
       new_group: "New Group"
+    show:
+      feed: "Feed"
+      project_activity_will_be_displayed: "Project activity will be displayed here"
+      to_dashboard: "&larr; To dashboard"
+      you_will_only_see_events_from_projects_in_this_group: "You will only see events from projects in this group"
   layouts:
     devise:
       gitlab_open_source_software: "GitLab is open source software to collaborate on code."

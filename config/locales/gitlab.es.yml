@@ -181,7 +181,7 @@ es:
       save_group: "Guardar grupo"
       this_group_has_no_projects_yet: "Este grupo no tiene proyectos aún"
       you_can_change_your_group_avatar: "Puedes cambiar tu avatar de grupo aquí"
-      you_can_upload_an_avatar_here: "Puedes subir un avatar de grupo aquí"
+      you_can_upload_an_group_avatar: "Puedes subir un avatar de grupo aquí"
     new:
       a_group_is_a_collection_of_several_projects: "Un grupo es un conjunto de varios proyectos"
       create_group: "Crear grupo"
@@ -191,6 +191,11 @@ es:
       groups_are_private_by_default: "Los grupos son privados por defecto"
       members_of_a_group_may_only_view: "Miembros de un grupo sólo podrán ver los proyectos que tienen permiso para acceder "
       new_group: "Nuevo Grupo"
+    show:
+      feed: "Servicio"
+      project_activity_will_be_displayed: "Actividad del proyecto aparecerá aquí"
+      to_dashboard: "&larr; Al tablero"
+      you_will_only_see_events_from_projects_in_this_group: "Sólo verá los eventos de los proyectos de este grupo"
   layouts:
     devise:
       gitlab_open_source_software: "GitLab es un software de código abierto para colaborar en código."

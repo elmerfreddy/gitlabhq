@@ -1,11 +1,11 @@
 .ui-box
   .title
-    Projects (#{projects.count})
+    #{t('projects', scope: 'public.projects.index')} (#{projects.count})
     - if can? current_user, :manage_group, @group
       %span.pull-right
         = link_to new_project_path(namespace_id: @group.id), class: "btn btn-new" do
           %i.icon-plus
-          New project
+          = t('new_project', scope: 'layouts.head_panel')
   %ul.well-list
     - if projects.blank?
       .nothing-here-block This groups has no projects yet

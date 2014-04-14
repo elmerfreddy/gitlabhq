@@ -3,15 +3,15 @@
     - if current_user
       = render "events/event_last_push", event: @last_push
       = link_to dashboard_path, class: 'btn btn-tiny' do
-        &larr; To dashboard
+        = raw t('.to_dashboard')
       &nbsp;
-    %span.cgray You will only see events from projects in this group
+    %span.cgray= t('.you_will_only_see_events_from_projects_in_this_group')
     %hr
     = render 'shared/event_filter'
     - if @events.any?
       .content_list
     - else
-      .nothing-here-block Project activity will be displayed here
+      .nothing-here-block= t('.project_activity_will_be_displayed')
     = spinner
   .side.col-md-4
     .light-well.append-bottom-20
@@ -24,10 +24,10 @@
     = render "projects", projects: @projects
     - if current_user
       .prepend-top-20
-        = link_to group_path(@group, { format: :atom, private_token: current_user.private_token }), title: "Feed" do
+        = link_to group_path(@group, { format: :atom, private_token: current_user.private_token }), title: t('.feed') do
           %strong
             %i.icon-rss
-            News Feed
+            = t('news_feed', scope: 'dashboard.sidebar')
 
     %hr
     = render 'shared/promo'
