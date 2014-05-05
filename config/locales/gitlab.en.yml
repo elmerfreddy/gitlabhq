@@ -182,6 +182,9 @@ en:
       this_group_has_no_projects_yet: "This group has no projects yet"
       you_can_change_your_group_avatar: "You can change your group avatar here"
       you_can_upload_an_group_avatar: "You can upload an group avatar here"
+    issues:
+      only_issues_from_group_are_listed_here: "Only issues from <strong>%{group}</strong> group are listed here."
+      to_see_all_issues_you_visit: "To see all issues you should visit %{link} page."
     new:
       a_group_is_a_collection_of_several_projects: "A group is a collection of several projects"
       create_group: "Create group"

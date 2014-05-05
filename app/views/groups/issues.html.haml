@@ -1,13 +1,11 @@
 %h3.page-title
-  Issues
-  %span.pull-right #{@issues.total_count} issues
+  = t('general.issues')
+  %span.pull-right= t('nro_issues', scope: 'dashboard.issues', count: @issues.total_count)
 
 %p.light
-  Only issues from
-  %strong #{@group.name}
-  group are listed here.
+  = raw t('.only_issues_from_group_are_listed_here', group: @group.name)
   - if current_user
-    To see all issues you should visit #{link_to 'dashboard', issues_dashboard_path} page.
+    = raw t('.to_see_all_issues_you_visit', link: link_to( t('dashboard', scope: 'layouts.head_panel').downcase, issues_dashboard_path))
 %hr
 
 .row
