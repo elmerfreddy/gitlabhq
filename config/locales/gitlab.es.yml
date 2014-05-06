@@ -295,6 +295,9 @@ es:
         projects: "proyectos"
         user: "usuario"
         users: "usuarios"
+    history:
+      account_history: "Historial de la cuenta"
+      all_events_created_are_listed_here: "Todos los eventos creados por su cuenta son listados aquí"
     keys:
       index:
         add_ssh_key: "Adicionar llave SSH"
