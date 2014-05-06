@@ -185,6 +185,9 @@ es:
     issues:
       only_issues_from_group_are_listed_here: "Sólo los problemas del grupo <strong>%{group}</strong> son listados aquí."
       to_see_all_issues_you_visit: "Para ver todos los problemas debes visitar la página del %{link}."
+    merge_requests:
+      only_merge_requests_from_group_are_listed_here: "Sólo las peticiones de fusión del grupo <strong>%{group}</strong> son listados aquí."
+      to_see_all_merge_requests_you_visit: "Para ver todas las peticiones de fusión debes visitar la página del %{link}."
     new:
       a_group_is_a_collection_of_several_projects: "Un grupo es un conjunto de varios proyectos"
       create_group: "Crear grupo"

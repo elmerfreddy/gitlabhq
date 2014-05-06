@@ -1,13 +1,11 @@
 %h3.page-title
-  Merge Requests
-  %span.pull-right #{@merge_requests.total_count} merge requests
+  = t('general.merge_requests')
+  %span.pull-right= t('merge_requests_total_count', scope: 'dashboard.merge_requests', count: @merge_requests.total_count)
 
 %p.light
-  Only merge requests from
-  %strong #{@group.name}
-  group are listed here.
+  = raw t('.only_merge_requests_from_group_are_listed_here', group: @group.name)
   - if current_user
-    To see all merge requests you should visit #{link_to 'dashboard', merge_requests_dashboard_path} page.
+    = raw t('.to_see_all_merge_requests_you_visit', link: link_to( t('dashboard', scope: 'layouts.head_panel').downcase, issues_dashboard_path))
 %hr
 .row
   .col-md-3
