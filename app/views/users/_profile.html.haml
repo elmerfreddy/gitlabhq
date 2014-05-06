@@ -1,9 +1,9 @@
 .ui-box
   .title
-    Profile
+    = t('profile', scope: 'layouts.profile')
   %ul.well-list
     %li
-      %span.light Member since
+      %span.light= t('member_since', scope: 'users.show').capitalize
       %strong= user.created_at.stamp("Aug 21, 2011")
     - unless user.skype.blank?
       %li
@@ -19,9 +19,9 @@
         %strong= link_to user.twitter, "http://www.twitter.com/#{user.twitter}"
     - unless user.website_url.blank?
       %li
-        %span.light Website:
+        %span.light #{t('.website')}:
         %strong= link_to user.short_website_url, user.full_website_url
     - unless user.bio.blank?
       %li
-        %span.light Bio:
+        %span.light #{t('.bio')}:
         %span= user.bio

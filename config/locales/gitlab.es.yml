@@ -654,6 +654,14 @@ es:
     show:
       discover_snippets: "&larr; descubrir fragmentos"
       my_snippets: "&larr; mis fragmentos"
+  users:
+    profile:
+      bio: "Bio"
+      website: "Sitio web"
+    show:
+      edit_profile_settings: "Editar configuraciones del Perfil"
+      member_since: "miembro desde"
+      user_activity: "Actividad del Usuario"
 
   activerecord:
     attributes:

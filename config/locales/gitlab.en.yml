@@ -654,6 +654,14 @@ en:
     show:
       discover_snippets: "&larr; discover snippets"
       my_snippets: "&larr; my snippets"
+  users:
+    profile:
+      bio: "Bio"
+      website: "Website"
+    show:
+      edit_profile_settings: "Edit Profile settings"
+      member_since: "member since"
+      user_activity: "User Activity"
 
   activerecord:
     attributes:
