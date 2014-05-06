@@ -4,18 +4,18 @@
   - if @snippet.private?
     %span.label.label-success
       %i.icon-lock
-      private
+      = t('general.private').downcase
 
   .pull-right
     = link_to new_snippet_path, class: "btn btn-new btn-small", title: "New Snippet" do
-      Add new snippet
+      = t('add_new_snippet', scope: 'snippets.index')
 
 
 .append-bottom-20
   .pull-right
     = "##{@snippet.id}"
     %span.light
-      by
+      = t('general.by')
       = link_to user_snippets_path(@snippet.author) do
         = image_tag avatar_icon(@snippet.author_email), class: "avatar avatar-inline s16"
         = @snippet.author_name
@@ -23,9 +23,9 @@
   .back-link
     - if @snippet.author == current_user
       = link_to user_snippets_path(current_user) do
-        &larr; my snippets
+        = raw t('.my_snippets')
     - else
       = link_to snippets_path do
-        &larr; discover snippets
+        = raw t('.discover_snippets')
 
 %div= render 'blob'

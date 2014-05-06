@@ -113,6 +113,7 @@ en:
     closed: "Closed"
     commits: "Commits"
     complete: "complete"
+    delete: "Delete"
     destroy: "Destroy"
     disable: "Disable"
     edit: "Edit"
@@ -150,6 +151,7 @@ en:
     private_project: "Private project"
     public: "Public"
     public_project: "Public project"
+    raw: "Raw"
     remove: "Remove"
     rename: "Rename"
     reopen: "Reopen"
@@ -625,6 +627,11 @@ en:
       blog: "Blog"
       homepage: "Homepage"
   snippets:
+    blob:
+      delete_snippet: "Delete Snippet"
+      edit_snippet: "Edit Snippet"
+    blob_content:
+      empty_file: "Empty file"
     current_user_index:
       add_new_snippet: "Add New Snippet"
       discover_snippets: "Discover Snippets"
@@ -644,6 +651,9 @@ en:
       public_snippets_created_by_you: "Public snippets created by you and other users are listed here"
     snippets:
       nothing_here: "Nothing here"
+    show:
+      discover_snippets: "&larr; discover snippets"
+      my_snippets: "&larr; my snippets"
 
   activerecord:
     attributes:

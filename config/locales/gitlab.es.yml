@@ -113,6 +113,7 @@ es:
     closed: "Cerrado"
     commits: "Commits"
     complete: "complete"
+    delete: "Eliminar"
     destroy: "Eliminar"
     disable: "Deshabilitar"
     edit: "Editar"
@@ -150,6 +151,7 @@ es:
     private_project: "Proyecto privado"
     public: "Público"
     public_project: "Proyecto público"
+    raw: "Crudo"
     remove: "Eliminar"
     rename: "Renombrar"
     reopen: "Reabrir"
@@ -625,6 +627,11 @@ es:
       blog: "Blog"
       homepage: "Página Principal"
   snippets:
+    blob:
+      delete_snippet: "Eliminar Fragmento"
+      edit_snippet: "Editar Fragmento"
+    blob_content:
+      empty_file: "Archivo vacío"
     current_user_index:
       add_new_snippet: "Crear Fragmento"
       discover_snippets: "Descubrir Fragmentos"
@@ -644,6 +651,9 @@ es:
       public_snippets_created_by_you: "Fragmentos públicos creados por usted y otros usuarios son listados aquí"
     snippets:
       nothing_here: "No hay nada aquí"
+    show:
+      discover_snippets: "&larr; descubrir fragmentos"
+      my_snippets: "&larr; mis fragmentos"
 
   activerecord:
     attributes:
