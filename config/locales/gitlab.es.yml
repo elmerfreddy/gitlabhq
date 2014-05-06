@@ -185,6 +185,12 @@ es:
     issues:
       only_issues_from_group_are_listed_here: "Sólo los problemas del grupo <strong>%{group}</strong> son listados aquí."
       to_see_all_issues_you_visit: "Para ver todos los problemas debes visitar la página del %{link}."
+    members:
+      add_members: "Adicionar miembros"
+      find_member_by_name: "Buscar miembro por nombre"
+      group_members: "Miembros de grupo"
+      members_have_access_all_projects: "Los miembros del grupo tienen acceso a todos los proyectos del grupo."
+      read_more_about_permissions: "Lea más acerca de los permisos"
     merge_requests:
       only_merge_requests_from_group_are_listed_here: "Sólo las peticiones de fusión del grupo <strong>%{group}</strong> son listados aquí."
       to_see_all_merge_requests_you_visit: "Para ver todas las peticiones de fusión debes visitar la página del %{link}."
@@ -197,6 +203,10 @@ es:
       groups_are_private_by_default: "Los grupos son privados por defecto"
       members_of_a_group_may_only_view: "Miembros de un grupo sólo podrán ver los proyectos que tienen permiso para acceder "
       new_group: "Nuevo Grupo"
+    new_group_member:
+      add_users_into_group: "Adicionar usuarios al grupo"
+      group_access: "Acceso de Grupo"
+      select_user: "Seleccionar usuario"
     show:
       feed: "Servicio"
       project_activity_will_be_displayed: "Actividad del proyecto aparecerá aquí"

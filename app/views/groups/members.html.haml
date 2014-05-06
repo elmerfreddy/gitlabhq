@@ -1,24 +1,24 @@
 - show_roles = should_user_see_group_roles?(current_user, @group)
 %h3.page-title
-  Group members
+  = t('.group_members')
 - if show_roles
   %p.light
-    Members of group have access to all group projects.
-    Read more about permissions
-    %strong= link_to "here", help_permissions_path, class: "vlink"
+    = t('.members_have_access_all_projects')
+    = t('.read_more_about_permissions')
+    %strong= link_to t('general.here'), help_permissions_path, class: "vlink"
 
 %hr
 
 .clearfix.js-toggle-container
   = form_tag members_group_path(@group), method: :get, class: 'form-inline member-search-form'  do
     .form-group
-      = search_field_tag :search, params[:search], { placeholder: 'Find member by name', class: 'form-control search-text-input input-mn-300' }
-    = submit_tag 'Search', class: 'btn'
+      = search_field_tag :search, params[:search], { placeholder: t('.find_member_by_name'), class: 'form-control search-text-input input-mn-300' }
+    = submit_tag t('general.search'), class: 'btn'
 
   - if current_user && current_user.can?(:manage_group, @group)
     .pull-right
       = link_to '#', class: 'btn btn-new js-toggle-button' do
-        Add members
+        = t('.add_members')
         %i.icon-chevron-down
 
     .js-toggle-content.hide.new-group-member-holder
@@ -27,7 +27,7 @@
 .ui-box.prepend-top-20
   .title
     %strong #{@group.name}
-    group members
+    = t('group_members', scope: 'projects.team_members.group_members')
     %small
       (#{@members.total_count})
   %ul.well-list

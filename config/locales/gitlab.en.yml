@@ -185,6 +185,12 @@ en:
     issues:
       only_issues_from_group_are_listed_here: "Only issues from <strong>%{group}</strong> group are listed here."
       to_see_all_issues_you_visit: "To see all issues you should visit %{link} page."
+    members:
+      add_members: "Add members"
+      find_member_by_name: "Find member by name"
+      group_members: "Group members"
+      members_have_access_all_projects: "Members of group have access to all group projects."
+      read_more_about_permissions: "Read more about permissions"
     merge_requests:
       only_merge_requests_from_group_are_listed_here: "Only merge requests from <strong>%{group}</strong> group are listed here."
       to_see_all_merge_requests_you_visit: "To see all issues you should visit %{link} page."
@@ -197,6 +203,10 @@ en:
       groups_are_private_by_default: "Groups are private by default"
       members_of_a_group_may_only_view: "Members of a group may only view projects they have permission to access"
       new_group: "New Group"
+    new_group_member:
+      add_users_into_group: "Add users into group"
+      group_access: "Group Access"
+      select_user: "Select user"
     show:
       feed: "Feed"
       project_activity_will_be_displayed: "Project activity will be displayed here"
