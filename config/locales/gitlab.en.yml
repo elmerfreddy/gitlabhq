@@ -25,6 +25,17 @@ en:
         stats: "Stats"
         users: "Users"
         you_can_manage_projects: "You can manage projects, users and other GitLab data from here."
+    groups:
+      index:
+        group_allows_you_to_keep_projects_organized: "Group allows you to keep projects organized."
+        member:
+          one: "%{count} member"
+          other: "%{count} members"
+        project:
+          one: "%{count} project"
+          other: "%{count} projects"
+        remove_group_are_you_sure: "REMOVE %{group}? Are you sure?"
+        use_groups_for_uniting_related_projects: "Use groups for uniting related projects."
     projects:
       index:
         0_projects_matches: "0 projects matches"
@@ -82,7 +93,11 @@ en:
   events:
     event:
       common:
+        closed_issue: "closed issue"
+        closed_milestone: "closed milestone"
         joined_project: "joined project"
+        opened_issue: "opened issue"
+        opened_milestone: "opened milestone"
       note:
         commented_on_event_note_at: "commented on %{event_note} at"
       push:
