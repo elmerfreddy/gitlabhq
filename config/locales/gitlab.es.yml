@@ -52,6 +52,11 @@ es:
         search_for_a_user: "Búsqueda de un usuario"
         visibility_level: "Nivel de visibilidad"
         you_are_going_to_remove_project: "Usted va a eliminar %{project}.\n ¡Un proyecto eliminado NO puede ser restaurado!\n ¿Está ABSOLUTAMENTE seguro?"
+    users:
+      index:
+        new_user: "Nuevo Usuario"
+        user_name_will_be_removed: "EL USUARIO %{user} SERÁ ELIMINADO! Todas las entradas vinculadas a este usuario también serán eliminados! ¿Puede bloquear al usuario en su lugar? ¿Está seguro?"
+        user_will_be_blocked: "EL USUARIO SERÁ BLOQUEADO! ¿Está seguro?"
   dashboard:
     activities:
       projects_activity_will_be_displayed_here: "La actividad de proyectos se mostrará aquí"
@@ -126,10 +131,13 @@ es:
     abandoned: "Abandonado"
     active: "Activo"
     add: "Adicionar"
+    admins: "Administradores"
     all: "Todo"
     any: "Cualquiera"
     archive: "Archivar"
     are_you_sure: "¿Está seguro?"
+    block: "Bloquear"
+    blocked: "Bloqueados"
     by: "por"
     cancel: "Cancelar"
     close: "Cerrar"
@@ -158,6 +166,7 @@ es:
     labels: "Etiquetas"
     logout: "Cerrar sesión"
     merge_requests: "Fusionar Solicitudes"
+    name_email_or_username: "Nombre, email o nombre de usuario"
     network: "Red"
     not_empty: "No vacío"
     notifications:
@@ -190,9 +199,11 @@ es:
     transfer: "Transferir"
     unarchive: "Desarchivar"
     unassigned: "sin asignar"
+    unblock: "Desbloquear"
     unknown: "desconocido"
     wall: "Wall"
     wiki: "Wiki"
+    without_projects: "Sin proyectos"
   groups:
     edit:
       group: "Grupo"

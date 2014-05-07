@@ -52,6 +52,11 @@ en:
         search_for_a_user: "Search for a user"
         visibility_level: "Visibility level"
         you_are_going_to_remove_project: "You are going to remove %{project}.\n Removed project CANNOT be restored!\n Are you ABSOLUTELY sure?"
+    users:
+      index:
+        new_user: "New User"
+        user_name_will_be_removed: "USER %{user} WILL BE REMOVED! All tickets linked to this user will also be removed! Maybe block the user instead? Are you sure?"
+        user_will_be_blocked: "USER WILL BE BLOCKED! Are you sure?"
   dashboard:
     activities:
       projects_activity_will_be_displayed_here: "Projects activity will be displayed here"
@@ -126,10 +131,13 @@ en:
     abandoned: "Abandoned"
     active: "Active"
     add: "Add"
+    admins: "Admins"
     all: "All"
     any: "Any"
     archive: "Archive"
     are_you_sure: "Are you sure?"
+    block: "Block"
+    blocked: "Blocked"
     by: "by"
     cancel: "Cancel"
     close: "Close"
@@ -158,6 +166,7 @@ en:
     labels: "Labels"
     logout: "Logout"
     merge_requests: "Merge Requests"
+    name_email_or_username: "Name, email or username"
     network: "Network"
     not_empty: "Not empty"
     notifications:
@@ -190,9 +199,11 @@ en:
     transfer: "Transfer"
     unarchive: "Unarchive"
     unassigned: "unassigned"
+    unblock: "Unblock"
     unknown: "unknown"
     wall: "Wall"
     wiki: "Wiki"
+    without_projects: "Without projects"
   groups:
     edit:
       group: "Group"
