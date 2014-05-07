@@ -683,6 +683,7 @@ es:
       group:
         details: "Detalles"
         group_name: "Nombre de grupo"
+        name: "Nombre"
       milestone:
         description: "Descripción"
         due_date: "Fecha de Vencimiento"

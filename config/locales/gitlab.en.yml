@@ -683,6 +683,7 @@ en:
       group:
         details: "Details"
         group_name: "Group name"
+        name: "Name"
       milestone:
         description: "Description"
         due_date: "Due Date"
