@@ -1,4 +1,4 @@
-%h3.page-title Edit Group
+%h3.page-title= t('.edit_group')
 %hr
 = form_for [:admin, @group], html: { class: "form-horizontal" } do |f|
   - if @group.errors.any?
@@ -6,26 +6,26 @@
       %span= @group.errors.full_messages.first
   .form-group.group_name_holder
     = f.label :name, class: 'control-label' do
-      Group name
+      = Group.human_attribute_name('group_name')
     .col-sm-10
-      = f.text_field :name, placeholder: "Example Group", class: "form-control"
+      = f.text_field :name, placeholder: t('.example_group'), class: "form-control"
 
   .form-group.group-description-holder
-    = f.label :description, "Details", class: 'control-label'
+    = f.label :description, Group.human_attribute_name('details'), class: 'control-label'
     .col-sm-10
       = f.text_area :description, maxlength: 250, class: "form-control js-gfm-input", rows: 4
 
   .form-group.group_name_holder
     = f.label :path, class: 'control-label' do
-      %span.cred Group path
+      %span.cred= Group.human_attribute_name('group_path')
     .col-sm-10
-      = f.text_field :path, placeholder: "example-group", class: "form-control danger"
+      = f.text_field :path, placeholder: t('.example_group_path'), class: "form-control danger"
       %ul.cred
-        %li Changing group path can have unintended side effects.
-        %li Renaming group path will rename directory for all related projects
-        %li It will change web url for access group and group projects.
-        %li It will change the git path to repositories under this group.
+        %li= t('.changing_group_path_unintended_effects')
+        %li= t('.renaming_group_path_will_rename_directory')
+        %li= t('.it_will_change_web_url_for_access_group')
+        %li= t('.it_will_change_the_git_path_to_repos')
 
   .form-actions
-    = f.submit 'Save changes', class: "btn btn-primary"
-    = link_to  'Cancel', admin_groups_path, class: "btn btn-cancel"
+    = f.submit t('general.save_changes'), class: "btn btn-primary"
+    = link_to  t('general.cancel'), admin_groups_path, class: "btn btn-cancel"

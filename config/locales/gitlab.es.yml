@@ -26,6 +26,14 @@ es:
         users: "Usuarios"
         you_can_manage_projects: "Usted puede manejar proyectos, usuarios y otros datos de GitLab desde aquí"
     groups:
+      edit:
+        changing_group_path_unintended_effects: "Cambiar de ruta del grupo puede tener efectos secundarios no deseados."
+        edit_group: "Editar Grupo"
+        example_group: "Grupo de Ejemplo"
+        example_group_path: "grupo-de-ejemplo"
+        it_will_change_the_git_path_to_repos: "Esto cambiará la ruta de git para los repositorios de este grupo."
+        it_will_change_web_url_for_access_group: "Esto cambiará la url del sitio para acceder al grupo y a los proyectos del grupo."
+        renaming_group_path_will_rename_directory: "Cambiar el nombre de ruta del grupo cambiará el nombre del directorio para todos los proyectos relacionados"
       index:
         group_allows_you_to_keep_projects_organized: "El grupo le permite mantener proyectos organizados."
         member:
@@ -683,6 +691,7 @@ es:
       group:
         details: "Detalles"
         group_name: "Nombre de grupo"
+        group_path: "Ruta del grupo"
         name: "Nombre"
       milestone:
         description: "Descripción"
