@@ -52,6 +52,11 @@ en:
           other: "%{count} projects"
         remove_group_are_you_sure: "REMOVE %{group}? Are you sure?"
         use_groups_for_uniting_related_projects: "Use groups for uniting related projects."
+    hooks:
+      index:
+        add_system_hook: "Add System Hook"
+        system_hooks: "System hooks"
+        system_hooks_can_be_used_for_bindign: "%{link} can be used for binding events when GitLab creates a User or Project."
     logs:
       show:
         scroll_down: "Scroll down"
@@ -763,6 +768,8 @@ en:
         access: "Access"
         file: "File"
         title: "Title"
+      system_hook:
+        url: "URL"
       user:
         admin: "Admin"
         bio: "Bio"

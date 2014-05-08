@@ -1,9 +1,8 @@
 %h3.page-title
-  System hooks
+  = t('.system_hooks')
 
 %p.light
-  #{link_to "System hooks ", help_system_hooks_path, class: "vlink"} can be
-  used for binding events when GitLab creates a User or Project.
+  = raw t('.system_hooks_can_be_used_for_bindign', link: link_to("#{t('.system_hooks')} ", help_system_hooks_path, class: "vlink"))
 
 %hr
 
@@ -14,22 +13,22 @@
       - @hook.errors.full_messages.each do |msg|
         %p= msg
   .form-group
-    = f.label :url, "URL:", class: 'control-label'
+    = f.label :url, "#{SystemHook.human_attribute_name('url')}:", class: 'control-label'
     .col-sm-10
       = f.text_field :url, class: "form-control"
   .form-actions
-    = f.submit "Add System Hook", class: "btn btn-create"
+    = f.submit t('.add_system_hook'), class: "btn btn-create"
 %hr
 
 -if @hooks.any?
   .ui-box
     .title
-      System hooks (#{@hooks.count})
+      #{t('.system_hooks')} (#{@hooks.count})
     %ul.well-list
       - @hooks.each do |hook|
         %li
           .pull-right
-            = link_to 'Test Hook', admin_hook_test_path(hook), class: "btn btn-small"
-            = link_to 'Remove', admin_hook_path(hook), data: { confirm: 'Are you sure?' }, method: :delete, class: "btn btn-remove btn-small"
+            = link_to t('test_hook', scope: 'projects.hooks.index'), admin_hook_test_path(hook), class: "btn btn-small"
+            = link_to t('general.remove'), admin_hook_path(hook), data: { confirm: t('general.are_you_sure') }, method: :delete, class: "btn btn-remove btn-small"
           = link_to admin_hook_path(hook) do
             %strong= hook.url
