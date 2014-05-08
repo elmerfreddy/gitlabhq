@@ -386,6 +386,11 @@ en:
         my_ssh_keys: "My SSH keys"
         ssh_keys_allow_you_to_establish_secure_connection: "SSH keys allow you to establish a secure connection between your computer and GitLab"
         there_are_no_ssh_keys: "There are no SSH keys with access to your account."
+      new:
+        add_an_ssh_key: "Add an SSH Key"
+        cannot_be_generated: "cannot be generated"
+        paste_your_public_key_here: "Paste your public key here. Read more about how to generate a key on %{link}."
+        the_ssh_help_page: "the SSH help page"
     notifications:
       show:
         by_default_all_projects_and_groups: "By default all projects and groups uses notification level set above"
@@ -754,6 +759,10 @@ en:
         group_name: "Group name"
         group_path: "Group path"
         name: "Name"
+      key:
+        fingerprint: "Fingerprint"
+        key: "Key"
+        title: "Title"
       milestone:
         description: "Description"
         due_date: "Due Date"

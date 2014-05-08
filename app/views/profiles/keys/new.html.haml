@@ -1,6 +1,6 @@
-%h3.page-title Add an SSH Key
+%h3.page-title= t('.add_an_ssh_key')
 %p.light
-  Paste your public key here. Read more about how to generate a key on #{link_to "the SSH help page", help_ssh_path}.
+  = raw t('.paste_your_public_key_here', link: link_to(t('.the_ssh_help_page'), help_ssh_path))
 %hr
 = render 'form'
 

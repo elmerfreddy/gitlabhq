@@ -25,7 +25,7 @@ class Key < ActiveRecord::Base
 
   validates :title, presence: true, length: { within: 0..255 }
   validates :key, presence: true, length: { within: 0..5000 }, format: { with: /\A(ssh|ecdsa)-.*\Z/ }, uniqueness: true
-  validates :fingerprint, uniqueness: true, presence: { message: 'cannot be generated' }
+  validates :fingerprint, uniqueness: true, presence: { message: I18n.t('cannot_be_generated', scope: 'profiles.keys.new') }
 
   delegate :name, :email, to: :user, prefix: true
 
