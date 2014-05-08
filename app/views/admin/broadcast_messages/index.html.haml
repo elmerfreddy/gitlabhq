@@ -1,10 +1,10 @@
 %h3.page-title
-  Broadcast Messages
+  = t('.broadcast_messages')
 %p.light
-  Broadcast messages are displayed for every user and can be used to notify users about scheduled maintenance, recent upgrades and more.
+  = t('.broadcast_messages_are_displayed')
 .broadcast-message-preview
   %i.icon-bullhorn
-  %span Your message here
+  %span= t('.your_message_here')
 
 = form_for [:admin, @broadcast_message], html: { class: 'broadcast-message-form form-horizontal'} do |f|
   -if @broadcast_message.errors.any?
@@ -17,17 +17,17 @@
       = f.text_area :message, class: "form-control", rows: 2, required: true
       %div
         = link_to '#', class: 'js-toggle-colors-link' do
-          Customize colors
+          = t('.customize_colors')
   .form-group.js-toggle-colors-container.hide
-    = f.label :color, "Background Color", class: 'control-label'
+    = f.label :color, BroadcastMessage.human_attribute_name('background_color'), class: 'control-label'
     .col-sm-10
       = f.text_field :color, placeholder: "#AA33EE", class: "form-control"
-      .light Hex values as 3 double digit numbers, starting with a # sign.
+      .light= t('.hex_values_as_3_double_digit')
   .form-group.js-toggle-colors-container.hide
-    = f.label :font, "Font Color", class: 'control-label'
+    = f.label :font, BroadcastMessage.human_attribute_name('font_color'), class: 'control-label'
     .col-sm-10
       = f.text_field :font, placeholder: "#224466", class: "form-control"
-      .light Hex values as 3 double digit numbers, starting with a # sign.
+      .light= t('.hex_values_as_3_double_digit')
   .form-group
     = f.label :starts_at, class: 'control-label'
     .col-sm-10.datetime-controls
@@ -37,7 +37,7 @@
     .col-sm-10.datetime-controls
       = f.datetime_select :ends_at
   .form-actions
-    = f.submit "Add broadcast message", class: "btn btn-create"
+    = f.submit t('.add_broadcast_message'), class: "btn btn-create"
 
 -if @broadcast_messages.any?
   %ul.bordered-list.broadcast-messages

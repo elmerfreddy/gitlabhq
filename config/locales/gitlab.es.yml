@@ -1,5 +1,13 @@
 es:
   admin:
+    broadcast_messages:
+      index:
+        add_broadcast_message: "Adicionar mensaje de difusión"
+        broadcast_messages: "Mensajes de Difusión"
+        broadcast_messages_are_displayed: "Los mensajes de difusión se muestran para cada usuario y se puede utilizar para notificar a los usuarios sobre el mantenimiento programado, últimas actualizaciones y más."
+        customize_colors: "Personalizar colores"
+        hex_values_as_3_double_digit: "Los valores hexadecimales como números de 3 dígitos dobles, empiezan por el signo #."
+        your_message_here: "Aquí tu mensaje"
     dashboard:
       index:
         admin_area: "Área de Administración"
@@ -716,6 +724,12 @@ es:
 
   activerecord:
     attributes:
+      broadcast_message:
+        background_color: "Color de Fondo"
+        ends_at: "Termina en"
+        font_color: "Color de Fuente"
+        message: "Mensaje"
+        starts_at: "Comienza en"
       group:
         details: "Detalles"
         group_name: "Nombre de grupo"

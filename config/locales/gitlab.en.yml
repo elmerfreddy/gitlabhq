@@ -1,5 +1,13 @@
 en:
   admin:
+    broadcast_messages:
+      index:
+        add_broadcast_message: "Add broadcast message"
+        broadcast_messages: "Broadcast Messages"
+        broadcast_messages_are_displayed: "Broadcast messages are displayed for every user and can be used to notify users about scheduled maintenance, recent upgrades and more."
+        customize_colors: "Customize colors"
+        hex_values_as_3_double_digit: "Hex values as 3 double digit numbers, starting with a # sign."
+        your_message_here: "Your message here"
     dashboard:
       index:
         admin_area: "Admin Area"
@@ -716,6 +724,12 @@ en:
 
   activerecord:
     attributes:
+      broadcast_message:
+        background_color: "Background Color"
+        ends_at: "Ends at"
+        font_color: "Font Color"
+        message: "Message"
+        starts_at: "Starts at"
       group:
         details: "Details"
         group_name: "Group name"
