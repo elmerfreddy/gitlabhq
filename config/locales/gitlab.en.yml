@@ -44,6 +44,10 @@ en:
           other: "%{count} projects"
         remove_group_are_you_sure: "REMOVE %{group}? Are you sure?"
         use_groups_for_uniting_related_projects: "Use groups for uniting related projects."
+    logs:
+      show:
+        scroll_down: "Scroll down"
+        to_prevent_performance_issues: "To prevent performance issues admin logs output the last 2000 lines"
     projects:
       index:
         0_projects_matches: "0 projects matches"
