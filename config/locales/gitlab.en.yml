@@ -391,6 +391,8 @@ en:
         cannot_be_generated: "cannot be generated"
         paste_your_public_key_here: "Paste your public key here. Read more about how to generate a key on %{link}."
         the_ssh_help_page: "the SSH help page"
+      show:
+        ssh_key: "SSH Key"
     notifications:
       show:
         by_default_all_projects_and_groups: "By default all projects and groups uses notification level set above"
@@ -760,6 +762,7 @@ en:
         group_path: "Group path"
         name: "Name"
       key:
+        created_at: "Created on"
         fingerprint: "Fingerprint"
         key: "Key"
         title: "Title"

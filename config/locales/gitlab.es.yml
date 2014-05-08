@@ -391,6 +391,8 @@ es:
         cannot_be_generated: "no ha sido generado"
         paste_your_public_key_here: "Pegue su clave pública aquí. Lea más sobre cómo generar una llave en %{link}."
         the_ssh_help_page: "la página de ayuda sobre SSH"
+      show:
+        ssh_key: "Llave SSH"
     notifications:
       show:
         by_default_all_projects_and_groups: "Por defecto todos los proyectos y los grupos utilizan el nivel de notificación que figura más arriba"
@@ -760,6 +762,7 @@ es:
         group_path: "Ruta del grupo"
         name: "Nombre"
       key:
+        created_at: "Creado en"
         fingerprint: "Huella Digital"
         key: "Llave"
         title: "Título"

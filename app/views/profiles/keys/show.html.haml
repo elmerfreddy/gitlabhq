@@ -2,21 +2,21 @@
   .col-md-4
     .ui-box
       .title
-        SSH Key
+        = t('.ssh_key')
       %ul.well-list
         %li
-          %span.light Title:
+          %span.light #{Key.human_attribute_name('title')}:
           %strong= @key.title
         %li
-          %span.light Created on:
+          %span.light #{Key.human_attribute_name('created_at')}:
           %strong= @key.created_at.stamp("Aug 21, 2011")
 
   .col-md-8
     %p
-      %span.light Fingerprint:
+      %span.light #{Key.human_attribute_name('fingerprint')}:
       %strong= @key.fingerprint
     %pre.well-pre
       = @key.key
 
 .pull-right
-  = link_to 'Remove', profile_key_path(@key), data: {confirm: 'Are you sure?'}, method: :delete, class: "btn btn-remove delete-key"
+  = link_to t('general.remove'), profile_key_path(@key), data: {confirm: t('general.are_you_sure')}, method: :delete, class: "btn btn-remove delete-key"
