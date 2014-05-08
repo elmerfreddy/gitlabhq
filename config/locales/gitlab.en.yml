@@ -53,6 +53,17 @@ en:
         visibility_level: "Visibility level"
         you_are_going_to_remove_project: "You are going to remove %{project}.\n Removed project CANNOT be restored!\n Are you ABSOLUTELY sure?"
     users:
+      edit:
+        edit_user: 'Edit user'
+      form:
+        a_temporary_password_will_be_generated: "A temporary password will be generated and sent to user."
+        block_user: "Block User"
+        blocked_users_will_be_removed_from_projects: "Blocked users will be removed from all projects &amp; will not be able to login to GitLab."
+        create_user: "Create user"
+        this_user_is_blocked: "This user is blocked and is not able to login to GitLab"
+        unblock_user: "Unblock User"
+        user_will_be_forced_to_change: "User will be forced to change it after first sign in"
+        you_cannot_remove_your_own_admin_rights: "You cannot remove your own admin rights"
       index:
         new_user: "New User"
         user_name_will_be_removed: "USER %{user} WILL BE REMOVED! All tickets linked to this user will also be removed! Maybe block the user instead? Are you sure?"
@@ -109,6 +120,7 @@ en:
         closed_issue: "closed issue"
         closed_milestone: "closed milestone"
         joined_project: "joined project"
+        left_project: "left project"
         opened_issue: "opened issue"
         opened_milestone: "opened milestone"
       note:
@@ -117,7 +129,7 @@ en:
         and_commits_count_more_commits: "... and %{commits_count} more commits."
         compare_commit_from_commit_to: "Compare &rarr; %{commit_from}...%{commit_to}"
     event_last_push:
-      at: "at"
+      at: "en"
       create_merge_request: "Create Merge Request"
       new_merge_request: "New Merge Request"
       you_pushed_to: "You pushed to"
@@ -145,6 +157,7 @@ en:
     commits: "Commits"
     complete: "complete"
     delete: "Delete"
+    deleted: "Deleted"
     destroy: "Destroy"
     disable: "Disable"
     edit: "Edit"
@@ -733,11 +746,15 @@ en:
         file: "File"
         title: "Title"
       user:
+        admin: "Admin"
         bio: "Bio"
+        can_create_group: "Can create group"
         email: "Email"
         name: "Name"
         password: "Password"
         password_confirmation: "Password confirmation"
+        projects_limit: "Projects limit"
+        username: "Nombre de Usuario"
         website_url: "Website"
       wiki_page:
         author: "Author"

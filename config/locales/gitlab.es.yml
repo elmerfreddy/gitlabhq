@@ -53,6 +53,17 @@ es:
         visibility_level: "Nivel de visibilidad"
         you_are_going_to_remove_project: "Usted va a eliminar %{project}.\n ¡Un proyecto eliminado NO puede ser restaurado!\n ¿Está ABSOLUTAMENTE seguro?"
     users:
+      edit:
+        edit_user: 'Editar usuario'
+      form:
+        a_temporary_password_will_be_generated: "Una contraseña temporal será generado y envíado al usuario."
+        block_user: "Bloquear Usuario"
+        blocked_users_will_be_removed_from_projects: "Los usuarios bloqueados serán eliminados de todos los proyectos y no serán capaces de iniciar sesión en GitLab."
+        create_user: "Crear usuario"
+        this_user_is_blocked: "Este usuario está bloqueado y no está habilitado para iniciar sesión en GitLab"
+        unblock_user: "Desbloquear Usuario"
+        user_will_be_forced_to_change: "El usuario será forzado a cambiarlo al iniciar sesión por primera vez"
+        you_cannot_remove_your_own_admin_rights: "No puede eliminar sus propios permisos de administrador"
       index:
         new_user: "Nuevo Usuario"
         user_name_will_be_removed: "EL USUARIO %{user} SERÁ ELIMINADO! Todas las entradas vinculadas a este usuario también serán eliminados! ¿Puede bloquear al usuario en su lugar? ¿Está seguro?"
@@ -109,10 +120,11 @@ es:
         closed_issue: "cerró el problema"
         closed_milestone: "cerró el hito"
         joined_project: "se unió al proyecto"
+        left_project: "salió del proyecto"
         opened_issue: "abrió el problema"
         opened_milestone: "abrió el hito"
       note:
-        commented_on_event_note_at: "comentado %{event_note} en"
+        commented_on_event_note_at: "comentó %{event_note} en"
       push:
         and_commits_count_more_commits: "... and %{commits_count} more commits."
         compare_commit_from_commit_to: "Comparar &rarr; %{commit_from}...%{commit_to}"
@@ -145,6 +157,7 @@ es:
     commits: "Commits"
     complete: "complete"
     delete: "Eliminar"
+    deleted: "Eliminado"
     destroy: "Eliminar"
     disable: "Deshabilitar"
     edit: "Editar"
@@ -733,11 +746,15 @@ es:
         file: "Archivo"
         title: "Título"
       user:
+        admin: "Administrador"
         bio: "Biografía"
+        can_create_group: "Puede crear grupos"
         email: "Correo Electrónico"
         name: "Nombre"
         password: "Contraseña"
         password_confirmation: "Confirmar contraseña"
+        projects_limit: "Límite de proyectos"
+        username: "Nombre de Usuario"
         website_url: "Sitio Web"
       wiki_page:
         author: "Autor"

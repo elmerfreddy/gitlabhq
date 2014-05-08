@@ -7,36 +7,36 @@
             %li= msg
 
     %fieldset
-      %legend Account
+      %legend= t('account', scope: 'layouts.nav.profile')
       .form-group
         = f.label :name, class: 'control-label'
         .col-sm-10
           = f.text_field :name, required: true, autocomplete: "off", class: 'form-control'
-          %span.help-inline * required
+          %span.help-inline * #{t('general.required').downcase}
       .form-group
         = f.label :username, class: 'control-label'
         .col-sm-10
           = f.text_field :username, required: true, autocomplete: "off", class: 'form-control'
-          %span.help-inline * required
+          %span.help-inline * #{t('general.required').downcase}
       .form-group
         = f.label :email, class: 'control-label'
         .col-sm-10
           = f.text_field :email, required: true, autocomplete: "off", class: 'form-control'
-          %span.help-inline * required
+          %span.help-inline * #{t('general.required').downcase}
 
     - if @user.new_record?
       %fieldset
-        %legend Password
+        %legend= t('password', scope: 'devise.sessions.new_base')
         .form-group
           = f.label :password, class: 'control-label'
           .col-sm-10
             %strong
-              A temporary password will be generated and sent to user.
+              = t('.a_temporary_password_will_be_generated')
               %br
-              User will be forced to change it after first sign in
+              = t('.user_will_be_forced_to_change')
     - else
       %fieldset
-        %legend Password
+        %legend= t('password', scope: 'devise.sessions.new_base')
         .form-group
           = f.label :password, class: 'control-label'
           .col-sm-10= f.password_field :password, disabled: f.object.force_random_password, class: 'form-control'
@@ -45,7 +45,7 @@
           .col-sm-10= f.password_field :password_confirmation, disabled: f.object.force_random_password, class: 'form-control'
 
     %fieldset
-      %legend Access
+      %legend= t('access', scope: 'activerecord.attributes.snippet')
       .form-group
         = f.label :projects_limit, class: 'control-label'
         .col-sm-10= f.number_field :projects_limit, class: 'form-control'
@@ -58,19 +58,19 @@
         = f.label :admin, class: 'control-label'
         - if current_user == @user
           .col-sm-10= f.check_box :admin, disabled: true
-          .col-sm-10 You cannot remove your own admin rights
+          .col-sm-10= t('.you_cannot_remove_your_own_admin_rights')
         - else
           .col-sm-10= f.check_box :admin
       - unless @user.new_record? || current_user == @user
         .alert.alert-danger
           - if @user.blocked?
-            %p This user is blocked and is not able to login to GitLab
-            = link_to 'Unblock User', unblock_admin_user_path(@user), method: :put, class: "btn btn-small"
+            %p= t('.this_user_is_blocked')
+            = link_to t('.unblock_user'), unblock_admin_user_path(@user), method: :put, class: "btn btn-small"
           - else
-            %p Blocked users will be removed from all projects &amp; will not be able to login to GitLab.
-            = link_to 'Block User', block_admin_user_path(@user), data: {confirm: 'USER WILL BE BLOCKED! Are you sure?'}, method: :put, class: "btn btn-small btn-remove"
+            %p= t('.blocked_users_will_be_removed_from_projects')
+            = link_to t('.block_user'), block_admin_user_path(@user), data: {confirm: t('user_will_be_blocked', scope: 'admin.users.index')}, method: :put, class: "btn btn-small btn-remove"
     %fieldset
-      %legend Profile
+      %legend= t('profile', scope: 'layouts.profile')
       .form-group
         = f.label :skype, class: 'control-label'
         .col-sm-10= f.text_field :skype, class: 'form-control'
@@ -81,13 +81,13 @@
         = f.label :twitter, class: 'control-label'
         .col-sm-10= f.text_field :twitter, class: 'form-control'
       .form-group
-        = f.label :website_url, 'Website', class: 'control-label'
+        = f.label :website_url, User.human_attribute_name('website_url'), class: 'control-label'
         .col-sm-10= f.text_field :website_url, class: 'form-control'
 
     .form-actions
       - if @user.new_record?
-        = f.submit 'Create user', class: "btn btn-create"
-        = link_to 'Cancel', admin_users_path, class: "btn btn-cancel"
+        = f.submit t('.create_user'), class: "btn btn-create"
+        = link_to t('general.cancel'), admin_users_path, class: "btn btn-cancel"
       - else
-        = f.submit 'Save changes', class: "btn btn-save"
-        = link_to 'Cancel', admin_user_path(@user), class: "btn btn-cancel"
+        = f.submit t('general.save_changes'), class: "btn btn-save"
+        = link_to t('general.cancel'), admin_user_path(@user), class: "btn btn-cancel"
