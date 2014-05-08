@@ -1,25 +1,25 @@
-%h3.page-title Background Jobs
-%p.light GitLab uses #{link_to "sidekiq", "http://sidekiq.org/"} library for async job processing
+%h3.page-title= t('background_jobs', scope: 'admin.dashboard.index')
+%p.light= raw t('.gitlab_uses_sidekiq_library', link: link_to("sidekiq", "http://sidekiq.org/"))
 
 %hr
 
 .ui-box
-  .title Sidekiq running processes
+  .title= t('.sidekiq_running_processes')
   .body
     - if @sidekiq_processes.empty?
       %h4.cred
         %i.icon-warning-sign
-        There are no running sidekiq processes. Please restart GitLab
+        = t('.there_are_no_running_sidekiq_processes')
     - else
       %table.table
         %thead
-          %th USER
-          %th PID
-          %th CPU
-          %th MEM
-          %th STATE
-          %th START
-          %th COMMAND
+          %th= t('.user')
+          %th= t('.pid')
+          %th= t('.cpu')
+          %th= t('.mem')
+          %th= t('.state')
+          %th= t('.start')
+          %th= t('.command')
         %tbody
           - @sidekiq_processes.each do |process|
             - next unless process.match(/(sidekiq \d+\.\d+\.\d+.+$)/)
@@ -33,10 +33,10 @@
       .clearfix
         %p
           %i.icon-exclamation-sign
-          If '[25 of 25 busy]' is shown, restart GitLab with 'sudo service gitlab reload'.
+          = t('.if_25_of_25_busy_is_shown')
         %p
           %i.icon-exclamation-sign
-          If more than one sidekiq process is listed, stop GitLab, kill the remaining sidekiq processes (sudo pkill -u #{Settings.gitlab.user} -f sidekiq) and restart GitLab.
+          = t('.if_more_than_one_sidekiq_process_is_listed', user: Settings.gitlab.user)
 
 
 

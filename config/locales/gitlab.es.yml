@@ -1,5 +1,19 @@
 es:
   admin:
+    background_jobs:
+      show:
+        command: "COMANDO"
+        cpu: "CPU"
+        gitlab_uses_sidekiq_library: "GitLab usa la librería %{link} para el procesamiento de tareas asíncronas"
+        if_25_of_25_busy_is_shown: "Si se muestra '[25 de 25 ocupado]', reinicia GitLab con 'sudo service gitlab reload'."
+        if_more_than_one_sidekiq_process_is_listed: "Si más de un proceso sidekiq aparece, detenga GitLab, mate a los procesos restantes de sidekiq (sudo pkill -u %{user} -f sidekiq) y reinicie GitLab."
+        mem: "MEMORIA"
+        pid: "PID"
+        sidekiq_running_processes: "Procesos Sidekiq en ejecución"
+        start: "INICIO"
+        state: "ESTADO"
+        there_are_no_running_sidekiq_processes: "No hay procesos sidekiq en ejecución. Por favor, reinicia GitLab"
+        user: "USUARIO"
     broadcast_messages:
       index:
         add_broadcast_message: "Adicionar mensaje de difusión"

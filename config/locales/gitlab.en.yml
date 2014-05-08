@@ -1,5 +1,19 @@
 en:
   admin:
+    background_jobs:
+      show:
+        command: "COMMAND"
+        cpu: "CPU"
+        gitlab_uses_sidekiq_library: "GitLab uses %{link} library for async job processing"
+        if_25_of_25_busy_is_shown: "If '[25 of 25 busy]' is shown, restart GitLab with 'sudo service gitlab reload'."
+        if_more_than_one_sidekiq_process_is_listed: "If more than one sidekiq process is listed, stop GitLab, kill the remaining sidekiq processes (sudo pkill -u %{user} -f sidekiq) and restart GitLab."
+        mem: "MEM"
+        pid: "PID"
+        sidekiq_running_processes: "Sidekiq running processes"
+        start: "START"
+        state: "STATE"
+        there_are_no_running_sidekiq_processes: "There are no running sidekiq processes. Please restart GitLab"
+        user: "USER"
     broadcast_messages:
       index:
         add_broadcast_message: "Add broadcast message"
