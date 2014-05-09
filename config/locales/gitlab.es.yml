@@ -83,6 +83,17 @@ es:
         search_for_a_user: "Búsqueda de un usuario"
         visibility_level: "Nivel de visibilidad"
         you_are_going_to_remove_project: "Usted va a eliminar %{project}.\n ¡Un proyecto eliminado NO puede ser restaurado!\n ¿Está ABSOLUTAMENTE seguro?"
+      show:
+        access: "acceso"
+        created_by: "Creado por"
+        created_on: "Creado en"
+        does_not_exist: "no existe"
+        last_commit: "último commit"
+        manage_access: "Gestionar Acceso"
+        owned_by: "Propiedad de"
+        project_info: "Información de proyecto"
+        transfer: "Transferir"
+        transfer_project: "Transferir proyecto"
     users:
       edit:
         edit_user: 'Editar usuario'
@@ -199,6 +210,7 @@ es:
     expired: "Expirado"
     features: "Características"
     files: "Archivos"
+    global: "Global"
     graphs: "Gráficos"
     help: "Ayuda"
     here: "aquí"
@@ -231,6 +243,7 @@ es:
     remove: "Eliminar"
     rename: "Renombrar"
     reopen: "Reabrir"
+    repository: "repositorio"
     required: "Requerido"
     reset: "Reiniciar"
     save: "Guardar"
@@ -239,6 +252,7 @@ es:
     search_in_this_group: "Buscar en éste grupo"
     search: "Buscar"
     settings: "Configuraciones"
+    size: "Tamaño"
     snippets: "Fragmentos"
     transfer: "Transferir"
     unarchive: "Desarchivar"

@@ -11,7 +11,7 @@ $ ->
 
   $('.ajax-namespace-select').each (i, select) ->
     $(select).select2
-      placeholder: "Search for namespace"
+      placeholder: "Buscar en espacio de nombres"
       multiple: $(select).hasClass('multiselect')
       minimumInputLength: 0
       query: (query) ->
