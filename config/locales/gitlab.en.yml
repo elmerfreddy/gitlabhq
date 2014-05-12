@@ -66,6 +66,9 @@ en:
           other: "%{count} projects"
         remove_group_are_you_sure: "REMOVE %{group}? Are you sure?"
         use_groups_for_uniting_related_projects: "Use groups for uniting related projects."
+      show:
+        add_users_to_the_group: "Add user(s) to the group"
+        group_info: "Group info"
     hooks:
       index:
         add_system_hook: "Add System Hook"

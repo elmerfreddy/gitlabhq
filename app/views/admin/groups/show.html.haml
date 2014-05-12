@@ -1,37 +1,37 @@
 %h3.page-title
-  Group: #{@group.name}
+  #{t('group', scope: 'groups.edit')}: #{@group.name}
 
   = link_to edit_admin_group_path(@group), class: "btn btn-small pull-right" do
     %i.icon-edit
-    Edit
+    = t('general.edit')
 %hr
 .row
   .col-md-6
     .ui-box
       .title
-        Group info:
+        #{t('.group_info')}:
       %ul.well-list
         %li
-          %span.light Name:
+          %span.light #{Group.human_attribute_name('name')}:
           %strong= @group.name
         %li
-          %span.light Path:
+          %span.light #{Group.human_attribute_name('path')}:
           %strong
             = @group.path
 
         %li
-          %span.light Description:
+          %span.light #{Group.human_attribute_name('description')}:
           %strong
             = @group.description
 
         %li
-          %span.light Created on:
+          %span.light #{t('created_on', scope: 'admin.projects.show')}:
           %strong
             = @group.created_at.stamp("March 1, 1999")
 
     .ui-box
       .title
-        Projects
+        = t('projects', scope: 'public.projects.index')
         %small
           (#{@group.projects.count})
       %ul.well-list
@@ -47,11 +47,11 @@
   .col-md-6
     .ui-box
       .title
-        Add user(s) to the group:
+        #{t('.add_users_to_the_group')}:
       .body.form-holder
         %p.light
-          Read more about project permissions
-          %strong= link_to "here", help_permissions_path, class: "vlink"
+          = t('read_more_about_project_permissions', scope: 'projects.team_members.index')
+          %strong= link_to t('general.here'), help_permissions_path, class: "vlink"
 
         = form_tag project_teams_update_admin_group_path(@group), id: "new_team_member", class: "bulk_import", method: :put  do
           %div
@@ -59,11 +59,11 @@
           %div.prepend-top-10
             = select_tag :group_access, options_for_select(UsersGroup.group_access_roles), class: "project-access-select select2"
           %hr
-          = submit_tag 'Add users into group', class: "btn btn-create"
+          = submit_tag t('add_users_into_group', scope: 'groups.new_group_member'), class: "btn btn-create"
     .ui-box
       .title
         %strong #{@group.name}
-        Group Members
+        = t('group_members', scope: 'groups.members')
         %small
           (#{@group.users_groups.count})
       %ul.well-list.group-users-list
@@ -74,5 +74,5 @@
               = link_to user.name, admin_user_path(user)
             %span.pull-right.light
               = member.human_access
-              = link_to group_users_group_path(@group, member), data: { confirm: remove_user_from_group_message(@group, user) }, method: :delete, remote: true, class: "btn-tiny btn btn-remove", title: 'Remove user from group' do
+              = link_to group_users_group_path(@group, member), data: { confirm: remove_user_from_group_message(@group, user) }, method: :delete, remote: true, class: "btn-tiny btn btn-remove", title: t('remove_user_from_group', scope: 'projects.team_members.users_group') do
                 %i.icon-minus.icon-white

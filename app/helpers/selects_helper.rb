@@ -4,7 +4,7 @@ module SelectsHelper
     css_class << "multiselect " if opts[:multiple]
     css_class << (opts[:class] || '')
     value = opts[:selected] || ''
-    placeholder = opts[:placeholder] || 'Select user'
+    placeholder = opts[:placeholder] || t('select_user', scope: 'groups.new_group_member')
 
     hidden_field_tag(id, value, class: css_class, 'data-placeholder' => placeholder)
   end
@@ -14,7 +14,7 @@ module SelectsHelper
     css_class << "multiselect " if opts[:multiple]
     css_class << (opts[:class] || '')
     value = opts[:selected] || ''
-    placeholder = opts[:placeholder] || 'Select user'
+    placeholder = opts[:placeholder] || t('select_user', scope: 'groups.new_group_member')
 
     hidden_field_tag(id, value, class: css_class, 'data-placeholder' => placeholder)
   end
