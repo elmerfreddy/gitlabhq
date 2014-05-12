@@ -5,7 +5,7 @@ es:
         command: "COMANDO"
         cpu: "CPU"
         gitlab_uses_sidekiq_library: "GitLab usa la librería %{link} para el procesamiento de tareas asíncronas"
-        if_25_of_25_busy_is_shown: "Si se muestra '[25 de 25 ocupado]', reinicia GitLab con 'sudo service gitlab reload'."
+        if_25_of_25_busy_is_shown: "Si se muestra '[25 of 25 busy]', reinicia GitLab con 'sudo service gitlab reload'."
         if_more_than_one_sidekiq_process_is_listed: "Si más de un proceso sidekiq aparece, detenga GitLab, mate a los procesos restantes de sidekiq (sudo pkill -u %{user} -f sidekiq) y reinicie GitLab."
         mem: "MEMORIA"
         pid: "PID"
@@ -30,7 +30,7 @@ es:
         features: "Características"
         forks: "Bifurcaciones"
         groups: "Grupos"
-        hooks: "Hooks"
+        hooks: "Conexiones"
         issues: "Problemas"
         latest_groups: "Últimos grupos"
         latest_projects: "Últimos proyectos"
@@ -71,8 +71,8 @@ es:
         group_info: "Información de grupo"
     hooks:
       index:
-        add_system_hook: "Adicionar Hook del Sistema"
-        system_hooks: "Hooks del sistema"
+        add_system_hook: "Adicionar Conexión del Sistema"
+        system_hooks: "Conexiones del sistema"
         system_hooks_can_be_used_for_bindign: "%{link} pueden ser utilizados para vincular eventos cuando GitLab crea un Usuario o Proyecto."
     logs:
       show:
@@ -546,19 +546,19 @@ es:
       git_global_setup: "Configuración global de Git"
     hooks:
       index:
-        add_web_hook: "Adicionar Web Hook"
+        add_web_hook: "Adicionar Conexión Web"
         can_be_used_for_binding_events: "puede ser utilizado para eventos de enlace cuando algo está sucediendo dentro del proyecto."
         example_com_trigger_ci: "http://ejemplo.com/trigger-ci.json"
         issues_events: "Eventos de problemas"
         merge_requests_events: "Eventos de Petición de Fusión"
         push_events: "Eventos push"
         tag_push_events: "Eventos tag push"
-        test_hook: "Probar Hook"
+        test_hook: "Probar Conexión"
         this_url_will_be_triggered_by_a_push: "Esta url será accionado por un push al repositorio"
         this_url_will_be_triggered_when_issue_created: "Esta url será accionado cuando un problema es creado"
         this_url_will_be_triggered_when_merge_request_created: "Esta url será accionado cuando una petición de fusión es creado"
         this_url_will_be_triggered_when_new_tag_pushed: "Esta url será accionado cuando un nuevo tag se inserta en el repositorio"
-        web_hooks: "Web hooks"
+        web_hooks: "Conexiones Web"
     issues:
       head:
         browse_issues: "Ver Problemas"
@@ -633,7 +633,7 @@ es:
       members: "Miembros"
       project: "Proyecto"
       services: "Servicios"
-      web_hooks: "Web Hooks"
+      web_hooks: "Conexiones Web"
     team_members:
       form:
         add_users: "Adicionar usuarios"

@@ -108,11 +108,11 @@ header {
 
       h1 {
         margin: 0;
-        background: image-url('logo-black.png') no-repeat center center;
-        background-size: 32px;
+        background: image-url('logo-adsib.png') no-repeat center center;
+        background-size: 82px;
         float: left;
         height: 46px;
-        width: 40px;
+        width: 82px;
         @include header-font;
         text-indent: -9999px;
       }
@@ -221,8 +221,8 @@ header {
     .app_logo {
       a {
         h1 {
-          background: image-url('logo-white.png') no-repeat center center;
-          background-size: 32px;
+          background: image-url('logo-adsib.png') no-repeat center center;
+          background-size: 82px;
           color: #fff;
           text-shadow: 0 1px 1px #444;
         }
