@@ -96,7 +96,7 @@ es:
         transfer_project: "Transferir proyecto"
     users:
       edit:
-        edit_user: 'Editar usuario'
+        edit_user: "Editar usuario"
       form:
         a_temporary_password_will_be_generated: "Una contraseña temporal será generado y envíado al usuario."
         block_user: "Bloquear Usuario"
@@ -110,6 +110,28 @@ es:
         new_user: "Nuevo Usuario"
         user_name_will_be_removed: "EL USUARIO %{user} SERÁ ELIMINADO! Todas las entradas vinculadas a este usuario también serán eliminados! ¿Puede bloquear al usuario en su lugar? ¿Está seguro?"
         user_will_be_blocked: "EL USUARIO SERÁ BLOQUEADO! ¿Está seguro?"
+      show:
+        all_user_content_will_be_removed: "Todo el contenido del usuario, como las problemas registrados, fragmentos, comentarios serán eliminados"
+        block_this_user: "Bloquear éste usuario"
+        blocking_user_has_the_following_effects: "Bloquear un usuario tiene los siguientes efectos"
+        can_create_groups: "Puede crear grupos"
+        confirmed: "Confirmed"
+        deleting_a_user_has_the_following_effects: "Eliminar un usario tiene los siguientes efectos"
+        ldap_uid: "LDAP uid"
+        next_groups_with_all_content_will_be_removed: "Se eliminarán los siguientes grupos con todo el contenido"
+        owned_groups_will_be_left: "Los grupos de su propiedad se dejarán"
+        personal_projects_limit: "Límite de proyectos personales"
+        personal_projects_will_be_left: "Los proyectos personales se dejarán"
+        personal_project_will_be_removed:
+          one: "%{projects} proyecto personal será eliminado y no podrá ser restaurado"
+          other: "%{projects} proyectos personales serán eliminados y no podrán ser restaurados"
+        remove_user: "Eliminar usuario"
+        remove_user_from_project: "Quitar usuario del proyecto"
+        this_user_is_blocked: "Éste usuario está bloqueado"
+        user_name_will_be_removed: "EL USUARIO %{name} SERÁ ELIMINADO! ¿Está seguro?"
+        user_will_be_removed_from_joined_projects: "El usuario será eliminado de proyectos y grupos al que pertenezca"
+        user_will_not_access_git_repos: "El usuario no podrá acceder a los repositorios git"
+        user_will_not_be_able_to_login: "El usuario no podrá iniciar sesión"
   dashboard:
     activities:
       projects_activity_will_be_displayed_here: "La actividad de proyectos se mostrará aquí"
@@ -185,6 +207,7 @@ es:
     abandoned: "Abandonado"
     active: "Activo"
     add: "Adicionar"
+    admin: "Administrador"
     admins: "Administradores"
     all: "Todo"
     any: "Cualquiera"
@@ -224,6 +247,8 @@ es:
     merge_requests: "Fusionar Solicitudes"
     name_email_or_username: "Nombre, email o nombre de usuario"
     network: "Red"
+    never: "nunca"
+    "no": "No"
     not_empty: "No vacío"
     notifications:
       disabled: "deshabilitado"
@@ -262,6 +287,7 @@ es:
     wall: "Wall"
     wiki: "Wiki"
     without_projects: "Sin proyectos"
+    "yes": "Si"
   groups:
     edit:
       group: "Grupo"
@@ -763,6 +789,8 @@ es:
       user_activity: "Actividad del Usuario"
 
   activerecord:
+    models:
+      user: "Usuario"
     attributes:
       broadcast_message:
         background_color: "Color de Fondo"
@@ -814,7 +842,10 @@ es:
         admin: "Administrador"
         bio: "Biografía"
         can_create_group: "Puede crear grupos"
+        confirmed_at: "Confirmado en"
+        created_by: "Creado por"
         email: "Correo Electrónico"
+        last_sign_in_at: "Último inicio de sesión en"
         name: "Nombre"
         password: "Contraseña"
         password_confirmation: "Confirmar contraseña"

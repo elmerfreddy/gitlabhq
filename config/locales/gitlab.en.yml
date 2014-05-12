@@ -96,7 +96,7 @@ en:
         transfer_project: "Transfer project"
     users:
       edit:
-        edit_user: 'Edit user'
+        edit_user: "Edit user"
       form:
         a_temporary_password_will_be_generated: "A temporary password will be generated and sent to user."
         block_user: "Block User"
@@ -110,6 +110,28 @@ en:
         new_user: "New User"
         user_name_will_be_removed: "USER %{user} WILL BE REMOVED! All tickets linked to this user will also be removed! Maybe block the user instead? Are you sure?"
         user_will_be_blocked: "USER WILL BE BLOCKED! Are you sure?"
+      show:
+        all_user_content_will_be_removed: "All user content like authored issues, snippets, comments will be removed"
+        block_this_user: "Block this user"
+        blocking_user_has_the_following_effects: "Blocking user has the following effects"
+        can_create_groups: "Can create groups"
+        confirmed: "Confirmed"
+        deleting_a_user_has_the_following_effects: "Deleting a user has the following effects"
+        ldap_uid: "LDAP uid"
+        next_groups_with_all_content_will_be_removed: "Next groups with all content will be removed"
+        owned_groups_will_be_left: "Owned groups will be left"
+        personal_projects_limit: "Personal projects limit"
+        personal_projects_will_be_left: "Personal projects will be left"
+        personal_project_will_be_removed:
+          one: "%{projects} personal project will be removed and cannot be restored"
+          other: "%{projects} personal projects will be removed and cannot be restored"
+        remove_user: "Remove user"
+        remove_user_from_project: "Remove user from project"
+        this_user_is_blocked: "This user is blocked"
+        user_name_will_be_removed: "USER %{name} WILL BE REMOVED! Are you sure?"
+        user_will_be_removed_from_joined_projects: "User will be removed from joined projects and groups"
+        user_will_not_access_git_repos: "User will not be able to access git repositories"
+        user_will_not_be_able_to_login: "User will not be able to login"
   dashboard:
     activities:
       projects_activity_will_be_displayed_here: "Projects activity will be displayed here"
@@ -185,6 +207,7 @@ en:
     abandoned: "Abandoned"
     active: "Active"
     add: "Add"
+    admin: "Admin"
     admins: "Admins"
     all: "All"
     any: "Any"
@@ -224,6 +247,8 @@ en:
     merge_requests: "Merge Requests"
     name_email_or_username: "Name, email or username"
     network: "Network"
+    never: "never"
+    "no": "No"
     not_empty: "Not empty"
     notifications:
       disabled: "disabled"
@@ -262,6 +287,7 @@ en:
     wall: "Wall"
     wiki: "Wiki"
     without_projects: "Without projects"
+    "yes": "Yes"
   groups:
     edit:
       group: "Group"
@@ -763,6 +789,8 @@ en:
       user_activity: "User Activity"
 
   activerecord:
+    models:
+      user: "User"
     attributes:
       broadcast_message:
         background_color: "Background Color"
@@ -814,12 +842,15 @@ en:
         admin: "Admin"
         bio: "Bio"
         can_create_group: "Can create group"
+        confirmed_at: "Confirmed at"
+        created_by: "Created by"
         email: "Email"
+        last_sign_in_at: "Last sign-in at"
         name: "Name"
         password: "Password"
         password_confirmation: "Password confirmation"
         projects_limit: "Projects limit"
-        username: "Nombre de Usuario"
+        username: "Username"
         website_url: "Website"
       wiki_page:
         author: "Author"

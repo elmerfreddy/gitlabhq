@@ -1,125 +1,125 @@
 %h3.page-title
-  %span.cgray User:
+  %span.cgray #{User.model_name.human}:
   = @user.name
   - if @user.blocked?
-    %span.cred (Blocked)
+    %span.cred (#{t('general.blocked')})
   - if @user.admin
-    %span.cred (Admin)
+    %span.cred (#{t('general.admin')})
 
   .pull-right
     = link_to edit_admin_user_path(@user), class: "btn btn-grouped" do
       %i.icon-edit
-      Edit
+      = t('general.edit')
 %hr
 
 .row
   .col-md-6
     .ui-box
       .title
-        Account:
+        #{t('account', scope: 'layouts.nav.profile')}:
         .pull-right
           = image_tag avatar_icon(@user.email, 32), class: "avatar s32"
       %ul.well-list
         %li
-          %span.light Name:
+          %span.light #{User.human_attribute_name('name')}:
           %strong= @user.name
         %li
-          %span.light Username:
+          %span.light #{User.human_attribute_name('username')}:
           %strong
             = @user.username
         %li
-          %span.light Email:
+          %span.light #{User.human_attribute_name('email')}:
           %strong
             = mail_to @user.email
         %li
-          %span.light Can create groups:
+          %span.light #{t('.can_create_groups')}:
           %strong
-            = @user.can_create_group ? "Yes" : "No"
+            = @user.can_create_group ? t("general.yes") : t('general.no')
         %li
-          %span.light Personal projects limit:
+          %span.light #{t('.personal_projects_limit')}:
           %strong
             = @user.projects_limit
         %li
-          %span.light Member since:
+          %span.light #{t('member_since', scope: 'users.show').capitalize}:
           %strong
             = @user.created_at.stamp("Nov 12, 2031")
         - if @user.confirmed_at
           %li
-            %span.light Confirmed at:
+            %span.light #{User.human_attribute_name('confirmed_at')}:
             %strong
               = @user.confirmed_at.stamp("Nov 12, 2031")
         - else
           %li
-            %span.light Confirmed:
+            %span.light #{t('.confirmed')}:
             %strong.cred
-              No
+              = t('general.no')
 
         %li
-          %span.light Last sign-in at:
+          %span.light #{User.human_attribute_name('last_sign_in_at')}:
           %strong
             - if @user.last_sign_in_at
               = @user.last_sign_in_at.stamp("Nov 12, 2031")
             - else
-              never
+              = t('general.never')
 
         - if @user.ldap_user?
           %li
-            %span.light LDAP uid:
+            %span.light #{t('.ldap_uid')}:
             %strong
               = @user.extern_uid
 
         - if @user.created_by
           %li
-            %span.light Created by:
+            %span.light #{User.human_attribute_name('created_by')}:
             %strong
               = link_to @user.created_by.name, [:admin, @user.created_by]
 
     - unless @user == current_user
       - if @user.blocked?
         .alert.alert-info
-          %h4 This user is blocked
-          %p Blocking user has the following effects:
+          %h4= t('.this_user_is_blocked')
+          %p #{t('.blocking_user_has_the_following_effects')}:
           %ul
-            %li User will not be able to login
-            %li User will not be able to access git repositories
-            %li User will be removed from joined projects and groups
-            %li Personal projects will be left
-            %li Owned groups will be left
+            %li= t('.user_will_not_be_able_to_login')
+            %li= t('.user_will_not_access_git_repos')
+            %li= t('.user_will_be_removed_from_joined_projects')
+            %li= t('.personal_projects_will_be_left')
+            %li= t('.owned_groups_will_be_left')
           %br
-          = link_to 'Unblock user', unblock_admin_user_path(@user), method: :put, class: "btn btn-new", data: { confirm: 'Are you sure?' }
+          = link_to t('unblock_user', scope: 'admin.users.form'), unblock_admin_user_path(@user), method: :put, class: "btn btn-new", data: { confirm: t('general.are_you_sure') }
       - else
         .alert.alert-warning
-          %h4 Block this user
-          %p Blocking user has the following effects:
+          %h4= t('.block_this_user')
+          %p #{t('.blocking_user_has_the_following_effects')}:
           %ul
-            %li User will not be able to login
-            %li User will not be able to access git repositories
-            %li User will be removed from joined projects and groups
-            %li Personal projects will be left
-            %li Owned groups will be left
+            %li= t('.user_will_not_be_able_to_login')
+            %li= t('.user_will_not_access_git_repos')
+            %li= t('.user_will_be_removed_from_joined_projects')
+            %li= t('.personal_projects_will_be_left')
+            %li= t('.owned_groups_will_be_left')
           %br
-          = link_to 'Block user', block_admin_user_path(@user), data: { confirm: 'USER WILL BE BLOCKED! Are you sure?' }, method: :put, class: "btn btn-remove"
+          = link_to t('block_user', scope: 'admin.users.form'), block_admin_user_path(@user), data: { confirm: t('user_will_be_blocked', scope: 'admin.users.index') }, method: :put, class: "btn btn-remove"
 
       .alert.alert-danger
         %h4
-          Remove user
-        %p Deleting a user has the following effects:
+          = t('.remove_user')
+        %p #{t('.deleting_a_user_has_the_following_effects')}:
         %ul
-          %li All user content like authored issues, snippets, comments will be removed
+          %li= t('.all_user_content_will_be_removed')
           - rp = @user.personal_projects.count
           - unless rp.zero?
-            %li #{pluralize rp, 'personal project'} will be removed and cannot be restored
+            %li= t('.personal_project_will_be_removed', projects: rp)
           - if @user.solo_owned_groups.present?
             %li
-              Next groups with all content will be removed:
+              #{t('.next_groups_with_all_content_will_be_removed')}:
               %strong #{@user.solo_owned_groups.map(&:name).join(', ')}
         %br
-        = link_to 'Remove user', [:admin, @user], data: { confirm: "USER #{@user.name} WILL BE REMOVED! Are you sure?" }, method: :delete, class: "btn btn-remove"
+        = link_to t('.remove_user'), [:admin, @user], data: { confirm: t('.user_name_will_be_removed', name: @user.name) }, method: :delete, class: "btn btn-remove"
 
   .col-md-6
     - if @user.users_groups.present?
       .ui-box
-        .title Groups:
+        .title #{t('groups', scope: 'admin.dashboard.index')}:
         %ul.well-list
           - @user.users_groups.each do |user_group|
             - group = user_group.group
@@ -128,11 +128,11 @@
               .pull-right
                 %span.light= user_group.human_access
                 - unless user_group.owner?
-                  = link_to group_users_group_path(group, user_group), data: { confirm: remove_user_from_group_message(group, @user) }, method: :delete, remote: true, class: "btn-tiny btn btn-remove", title: 'Remove user from group' do
+                  = link_to group_users_group_path(group, user_group), data: { confirm: remove_user_from_group_message(group, @user) }, method: :delete, remote: true, class: "btn-tiny btn btn-remove", title: t('remove_user_from_group', scope: 'projects.team_members.users_group') do
                     %i.icon-remove.icon-white
 
     .ui-box
-      .title Projects (#{@projects.count})
+      .title #{t('projects', scope: 'public.projects.index')} (#{@projects.count})
       %ul.well-list
         - @projects.sort_by(&:name_with_namespace).each do |project|
           - tm = project.team.find_tm(@user.id)
@@ -143,10 +143,10 @@
             - if tm
               .pull-right
                 - if tm.owner?
-                  %span.light Owner
+                  %span.light= t('owner', scope: 'general.access')
                 - else
                   %span.light= tm.human_access
 
                   - if tm.respond_to? :project
-                    = link_to project_team_member_path(project, @user), data: { confirm: remove_from_project_team_message(project, @user) }, remote: true, method: :delete, class: "btn-tiny btn btn-remove", title: 'Remove user from project' do
+                    = link_to project_team_member_path(project, @user), data: { confirm: remove_from_project_team_message(project, @user) }, remote: true, method: :delete, class: "btn-tiny btn btn-remove", title: t('.remove_user_from_project') do
                       %i.icon-remove
