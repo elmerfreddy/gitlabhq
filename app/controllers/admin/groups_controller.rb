@@ -23,7 +23,7 @@ class Admin::GroupsController < Admin::ApplicationController
 
     if @group.save
       @group.add_owner(current_user)
-      redirect_to [:admin, @group], notice: 'Group was successfully created.'
+      redirect_to [:admin, @group], notice: t('general.notice.was_successfully_created', model: Group.model_name.human)
     else
       render "new"
     end
@@ -31,7 +31,7 @@ class Admin::GroupsController < Admin::ApplicationController
 
   def update
     if @group.update_attributes(params[:group])
-      redirect_to [:admin, @group], notice: 'Group was successfully updated.'
+      redirect_to [:admin, @group], notice: t('general.notice.was_successfully_updated', model: Group.model_name.human)
     else
       render "edit"
     end
@@ -40,13 +40,13 @@ class Admin::GroupsController < Admin::ApplicationController
   def project_teams_update
     @group.add_users(params[:user_ids].split(','), params[:group_access])
 
-    redirect_to [:admin, @group], notice: 'Users were successfully added.'
+    redirect_to [:admin, @group], notice: t('general.notice.users_were_successfully_added')
   end
 
   def destroy
     @group.destroy
 
-    redirect_to admin_groups_path, notice: 'Group was successfully deleted.'
+    redirect_to admin_groups_path, notice: t('general.notice.was_successfully_deleted', model: Group.model_name.human)
   end
 
   private

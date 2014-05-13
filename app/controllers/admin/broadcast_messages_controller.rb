@@ -9,7 +9,7 @@ class Admin::BroadcastMessagesController < Admin::ApplicationController
     @broadcast_message = BroadcastMessage.new(params[:broadcast_message])
 
     if @broadcast_message.save
-      redirect_to admin_broadcast_messages_path, notice: 'Broadcast Message was successfully created.'
+      redirect_to admin_broadcast_messages_path, notice: t('general.notice.was_successfully_created', model: BroadcastMessage.model_name.human)
     else
       render :index
     end

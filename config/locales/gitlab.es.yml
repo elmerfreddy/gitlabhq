@@ -174,8 +174,10 @@ es:
     sessions:
       new:
         did_not_receive_confirmation_email: "¿No recibió el correo electrónico de confirmación?"
+        dont_have_an_account: "¿No tienes una cuenta?"
         send_again: "Enviar otra vez"
         sign_in: "Iniciar Sesión"
+        sign_up: "Regístrate"
       new_base:
         forgot_your_password: "¿Olvidaste tu contraseña?"
         password: "Contraseña"
@@ -252,6 +254,11 @@ es:
     network: "Red"
     never: "nunca"
     "no": "No"
+    notice:
+      users_were_successfully_added: "Los usuarios se han añadido correctamente."
+      was_successfully_created: "%{model} se creó correctamente."
+      was_successfully_deleted: "%{model} se eliminó correctamente."
+      was_successfully_updated: "%{model} se actualizó correctamente."
     not_empty: "No vacío"
     notifications:
       disabled: "deshabilitado"
@@ -793,6 +800,9 @@ es:
 
   activerecord:
     models:
+      broadcast_message: "Mensaje de Difusión"
+      group: "Grupo"
+      system_hook: "Conexión"
       user: "Usuario"
     attributes:
       broadcast_message:

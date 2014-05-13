@@ -8,7 +8,7 @@ class Admin::HooksController < Admin::ApplicationController
     @hook = SystemHook.new(params[:hook])
 
     if @hook.save
-      redirect_to admin_hooks_path, notice: 'Hook was successfully created.'
+      redirect_to admin_hooks_path, notice: t('general.notice.was_successfully_created', model: SystemHook.model_name.human)
     else
       @hooks = SystemHook.all
       render :index
