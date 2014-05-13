@@ -1,21 +1,21 @@
 %p
-  Hi #{@user['name']}!
+  Hola #{@user['name']}!
 %p
   - if Gitlab.config.gitlab.signup_enabled
-    Your account has been created successfully.
+    Su cuenta ha sido creada con éxito.
   - else
-    The Administrator created an account for you. Now you are a member of the company GitLab application.
+    El Administrador ha creado una cuenta para usted. Ahora eres miembro de la aplicación GitLab de la ADSIB.
 %p
-  login..........................................
+  nombre de usuario..............................
   %code= @user['email']
 
 - if @user.created_by_id
   %p
-    password..................................
+    contraseña..........................................
     %code= @password
 
   %p
-    You will be forced to change this password immediately after login.
+    Usted se verá obligado a cambiar esta contraseña inmediatamente después del inicio de sesión.
 
 %p
-  = link_to "Click here to login", root_url
+  = link_to "Click aquí para iniciar sesión", root_url

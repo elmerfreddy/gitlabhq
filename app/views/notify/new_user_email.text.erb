@@ -1,13 +1,13 @@
-Hi <%= @user.name %>!
+Hola <%= @user.name %>!
 
-The Administrator created an account for you. Now you are a member of the company GitLab application.
+El Administrador ha creado una cuenta para usted. Ahora eres miembro de la aplicación GitLab de la ADSIB.
 
-login.................. <%= @user.email %>
+nombre de usuario...... <%= @user.email %>
 <% if @user.created_by_id %>
-  password............... <%= @password %>
+  contraseña............. <%= @password %>
 
-  You will be forced to change this password immediately after login.
+  Usted se verá obligado a cambiar esta contraseña inmediatamente después del inicio de sesión.
 <% end %>
 
 
-Click here to login: <%= url_for(root_url) %>
+Click aquí para iniciar sesión: <%= url_for(root_url) %>
