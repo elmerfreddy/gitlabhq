@@ -21,17 +21,17 @@ class Admin::UsersController < Admin::ApplicationController
 
   def block
     if user.block
-      redirect_to :back, alert: "Successfully blocked"
+      redirect_to :back, alert: t('general.notice.successfully_blocked')
     else
-      redirect_to :back, alert: "Error occurred. User was not blocked"
+      redirect_to :back, alert: t('general.notice.error_occurred_no_blocked')
     end
   end
 
   def unblock
     if user.activate
-      redirect_to :back, alert: "Successfully unblocked"
+      redirect_to :back, alert: t('general.notice.successfully_unblocked')
     else
-      redirect_to :back, alert: "Error occurred. User was not unblocked"
+      redirect_to :back, alert: t('general.notice.error_occurred_not_unblocked')
     end
   end
 
@@ -51,7 +51,7 @@ class Admin::UsersController < Admin::ApplicationController
 
     respond_to do |format|
       if @user.save
-        format.html { redirect_to [:admin, @user], notice: 'User was successfully created.' }
+        format.html { redirect_to [:admin, @user], notice: t('general.notice.was_successfully_created', model: User.model_name.human) }
         format.json { render json: @user, status: :created, location: @user }
       else
         format.html { render "new" }
@@ -75,7 +75,7 @@ class Admin::UsersController < Admin::ApplicationController
     respond_to do |format|
       if user.update_attributes(params[:user], as: :admin)
         user.confirm!
-        format.html { redirect_to [:admin, user], notice: 'User was successfully updated.' }
+        format.html { redirect_to [:admin, user], notice: t('general.notice.was_successfully_updated', model: User.model_name.human) }
         format.json { head :ok }
       else
         # restore username to keep form action url.

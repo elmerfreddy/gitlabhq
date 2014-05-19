@@ -255,6 +255,10 @@ es:
     never: "nunca"
     "no": "No"
     notice:
+      error_occurred_no_blocked: "Se produjo un error. El usuario no se ha bloqueado"
+      error_occurred_not_unblocked: "Se produjo un error. El usuario no se ha desbloqueado"
+      successfully_blocked: "Bloqueado con éxito"
+      successfully_unblocked: "Desbloqueado con éxito"
       users_were_successfully_added: "Los usuarios se han añadido correctamente."
       was_successfully_created: "%{model} se creó correctamente."
       was_successfully_deleted: "%{model} se eliminó correctamente."
