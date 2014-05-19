@@ -9,7 +9,7 @@ class Profiles::GroupsController < ApplicationController
     @users_group = group.users_groups.where(user_id: current_user.id).first
     if can?(current_user, :destroy, @users_group)
       @users_group.destroy
-      redirect_to(profile_groups_path, info: "You left #{group.name} group.")
+      redirect_to(profile_groups_path, info: t('general.notice.you_left_group', group: group.name))
     else
       return render_403
     end

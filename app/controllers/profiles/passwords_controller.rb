@@ -21,7 +21,7 @@ class Profiles::PasswordsController < ApplicationController
 
     if result
       @user.update_attributes(password_expires_at: nil)
-      redirect_to root_path, notice: 'Password successfully changed'
+      redirect_to root_path, notice: t('general.notice.password_successfully_changed')
     else
       render :new
     end

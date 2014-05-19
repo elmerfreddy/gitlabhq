@@ -255,14 +255,26 @@ es:
     never: "nunca"
     "no": "No"
     notice:
+      could_not_create_wiki_repository: "No se pudo crear el Repositorio de la Wiki en este momento. Por favor, inténtelo de nuevo más tarde."
+      count_issues_updated: "%{count} problemas actualizados"
       error_occurred_no_blocked: "Se produjo un error. El usuario no se ha bloqueado"
       error_occurred_not_unblocked: "Se produjo un error. El usuario no se ha desbloqueado"
+      failed_to_close: "Falla al cerrar %{model}."
+      import_failed: "Importación fallida"
+      page_not_found: "Página no encontrada"
+      password_successfully_changed: "Contraseña se ha cambiado satisfactoriamente"
+      should_have_at_least_one_role: "El %{model} debe tener al menos un rol"
       successfully_blocked: "Bloqueado con éxito"
+      successfully_imported: "Importado con éxito"
       successfully_unblocked: "Desbloqueado con éxito"
+      this_action_is_not_allowed: "Esta acción no está permitida a menos que esté en la parte superior de una rama"
       users_were_successfully_added: "Los usuarios se han añadido correctamente."
+      was_successfully_closed: "%{model} se cerró correctamente."
       was_successfully_created: "%{model} se creó correctamente."
       was_successfully_deleted: "%{model} se eliminó correctamente."
       was_successfully_updated: "%{model} se actualizó correctamente."
+      you_left_group: "Dejaste el grupo %{group}."
+      your_changes_have_been_committed: "Sus cambios se han guardado con éxito"
     not_empty: "No vacío"
     notifications:
       disabled: "deshabilitado"
@@ -806,8 +818,10 @@ es:
     models:
       broadcast_message: "Mensaje de Difusión"
       group: "Grupo"
+      merge_request: "Solicitud de Fusión"
       system_hook: "Conexión"
       user: "Usuario"
+      wiki: "Wiki"
     attributes:
       broadcast_message:
         background_color: "Color de Fondo"

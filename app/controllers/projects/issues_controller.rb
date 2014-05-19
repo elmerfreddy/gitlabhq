@@ -93,7 +93,7 @@ class Projects::IssuesController < Projects::ApplicationController
 
   def bulk_update
     result = Issues::BulkUpdateService.new(project, current_user, params).execute
-    redirect_to :back, notice: "#{result[:count]} issues updated"
+    redirect_to :back, notice: t('general.notice.count_issues_updated', count: result[:count])
   end
 
   protected

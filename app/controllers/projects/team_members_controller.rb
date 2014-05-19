@@ -30,7 +30,7 @@ class Projects::TeamMembersController < Projects::ApplicationController
     @user_project_relation.update_attributes(params[:team_member])
 
     unless @user_project_relation.valid?
-      flash[:alert] = "User should have at least one role"
+      flash[:alert] = t('general.notice.should_have_at_least_one_role', model: User.model_name.human)
     end
     redirect_to project_team_index_path(@project)
   end
@@ -57,7 +57,7 @@ class Projects::TeamMembersController < Projects::ApplicationController
   def apply_import
     giver = Project.find(params[:source_project_id])
     status = @project.team.import(giver)
-    notice = status ? "Successfully imported" : "Import failed"
+    notice = status ? t('general.notice.successfully_imported') : t('general.notice.import_failed')
 
     redirect_to project_team_index_path(project), notice: notice
   end

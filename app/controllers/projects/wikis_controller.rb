@@ -32,7 +32,7 @@ class Projects::WikisController < Projects::ApplicationController
     return render('empty') unless can?(current_user, :write_wiki, @project)
 
     if @wiki.update(content, format, message)
-      redirect_to [@project, @wiki], notice: 'Wiki was successfully updated.'
+      redirect_to [@project, @wiki], notice: t('general.notice.was_successfully_updated', model: WikiPage.model_name.human)
     else
       render 'edit'
     end
@@ -42,7 +42,7 @@ class Projects::WikisController < Projects::ApplicationController
     @wiki = WikiPage.new(@gollum_wiki)
 
     if @wiki.create(wiki_params)
-      redirect_to project_wiki_path(@project, @wiki), notice: 'Wiki was successfully updated.'
+      redirect_to project_wiki_path(@project, @wiki), notice: t('general.notice.was_successfully_updated', model: WikiPage.model_name.human)
     else
       render action: "edit"
     end
@@ -51,13 +51,13 @@ class Projects::WikisController < Projects::ApplicationController
   def history
     @wiki = @gollum_wiki.find_page(params[:id])
 
-    redirect_to(project_wiki_path(@project, :home), notice: "Page not found") unless @wiki
+    redirect_to(project_wiki_path(@project, :home), notice: t('general.notice.page_not_found')) unless @wiki
   end
 
   def destroy
     @wiki = @gollum_wiki.find_page(params[:id])
     @wiki.delete if @wiki
-    redirect_to project_wiki_path(@project, :home), notice: "Page was successfully deleted"
+    redirect_to project_wiki_path(@project, :home), notice: t('general.notice.was_successfully_deleted', model: WikiPage.model_name.human)
   end
 
   def git_access
@@ -71,7 +71,7 @@ class Projects::WikisController < Projects::ApplicationController
     # Call #wiki to make sure the Wiki Repo is initialized
     @gollum_wiki.wiki
   rescue GollumWiki::CouldNotCreateWikiError => ex
-    flash[:notice] = "Could not create Wiki Repository at this time. Please try again later."
+    flash[:notice] = t('general.notice.could_not_create_wiki_repository')
     redirect_to @project
     return false
   end

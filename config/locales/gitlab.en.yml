@@ -255,14 +255,26 @@ en:
     never: "never"
     "no": "No"
     notice:
+      could_not_create_wiki_repository: "Could not create Wiki Repository at this time. Please try again later."
+      count_issues_updated: "%{count} issues updated"
       error_occurred_no_blocked: "Error occurred. User was not blocked"
       error_occurred_not_unblocked: "Error occurred. User was not unblocked"
+      failed_to_close: "Failed to close %{model}."
+      import_failed: "Import failed"
+      page_not_found: "Page not found"
+      password_successfully_changed: "Password successfully changed"
+      should_have_at_least_one_role: "%{model} should have at least one role"
       successfully_blocked: "Successfully blocked"
+      successfully_imported: "Successfully imported"
       successfully_unblocked: "Successfully unblocked"
+      this_action_is_not_allowed: "This action is not allowed unless you are on top of a branch"
       users_were_successfully_added: "Users were successfully added."
+      was_successfully_closed: "%{model} was successfully closed."
       was_successfully_created: "%{model} was successfully created."
       was_successfully_deleted: "%{model} was successfully deleted."
       was_successfully_updated: "%{model} was successfully updated."
+      you_left_group: "You left %{group} group."
+      your_changes_have_been_committed: "Your changes have been successfully committed"
     not_empty: "Not empty"
     notifications:
       disabled: "disabled"
@@ -806,8 +818,10 @@ en:
     models:
       broadcast_message: "Broadcast Message"
       group: "Group"
+      merge_request: "Merge Request"
       system_hook: "Hook"
       user: "User"
+      wiki: "Wiki"
     attributes:
       broadcast_message:
         background_color: "Background Color"
