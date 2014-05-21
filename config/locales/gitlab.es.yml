@@ -255,6 +255,7 @@ es:
     never: "nunca"
     "no": "No"
     notice:
+      access_denied_for_your_ldap_account: "Acceso denegado para su cuenta LDAP."
       could_not_create_wiki_repository: "No se pudo crear el Repositorio de la Wiki en este momento. Por favor, inténtelo de nuevo más tarde."
       count_issues_updated: "%{count} problemas actualizados"
       error_occurred_no_blocked: "Se produjo un error. El usuario no se ha bloqueado"
@@ -269,11 +270,13 @@ es:
       successfully_unblocked: "Desbloqueado con éxito"
       this_action_is_not_allowed: "Esta acción no está permitida a menos que esté en la parte superior de una rama"
       users_were_successfully_added: "Los usuarios se han añadido correctamente."
+      was_removed: "Se eliminó %{model}."
       was_successfully_closed: "%{model} se cerró correctamente."
       was_successfully_created: "%{model} se creó correctamente."
       was_successfully_deleted: "%{model} se eliminó correctamente."
       was_successfully_updated: "%{model} se actualizó correctamente."
       you_left_group: "Dejaste el grupo %{group}."
+      your_account_is_blocked: "Su cuenta está bloqueada. Vuelva a intentarlo cuando un administrador lo haya desbloqueado."
       your_changes_have_been_committed: "Sus cambios se han guardado con éxito"
     not_empty: "No vacío"
     notifications:

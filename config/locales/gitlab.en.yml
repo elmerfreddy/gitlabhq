@@ -255,6 +255,7 @@ en:
     never: "never"
     "no": "No"
     notice:
+      access_denied_for_your_ldap_account: "Access denied for your LDAP account."
       could_not_create_wiki_repository: "Could not create Wiki Repository at this time. Please try again later."
       count_issues_updated: "%{count} issues updated"
       error_occurred_no_blocked: "Error occurred. User was not blocked"
@@ -269,11 +270,13 @@ en:
       successfully_unblocked: "Successfully unblocked"
       this_action_is_not_allowed: "This action is not allowed unless you are on top of a branch"
       users_were_successfully_added: "Users were successfully added."
+      was_removed: "%{model} was removed."
       was_successfully_closed: "%{model} was successfully closed."
       was_successfully_created: "%{model} was successfully created."
       was_successfully_deleted: "%{model} was successfully deleted."
       was_successfully_updated: "%{model} was successfully updated."
       you_left_group: "You left %{group} group."
+      your_account_is_blocked: "Your account is blocked. Retry when an admin has unblocked it."
       your_changes_have_been_committed: "Your changes have been successfully committed"
     not_empty: "Not empty"
     notifications:

@@ -27,7 +27,7 @@ class GroupsController < ApplicationController
 
     if @group.save
       @group.add_owner(current_user)
-      redirect_to @group, notice: 'Group was successfully created.'
+      redirect_to @group, notice: t('general.notice.was_successfully_created', model: Group.model_name.human)
     else
       render action: "new"
     end
@@ -81,7 +81,7 @@ class GroupsController < ApplicationController
 
   def update
     if @group.update_attributes(params[:group])
-      redirect_to @group, notice: 'Group was successfully updated.'
+      redirect_to @group, notice: t('general.notice.was_successfully_updated', model: Group.model_name.human)
     else
       render action: "edit"
     end
@@ -90,7 +90,7 @@ class GroupsController < ApplicationController
   def destroy
     @group.destroy
 
-    redirect_to root_path, notice: 'Group was removed.'
+    redirect_to root_path, notice: t('general.notice.was_removed', model: Group.model_name.human)
   end
 
   protected

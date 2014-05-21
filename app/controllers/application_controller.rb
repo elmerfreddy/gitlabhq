@@ -38,7 +38,7 @@ class ApplicationController < ActionController::Base
   def reject_blocked!
     if current_user && current_user.blocked?
       sign_out current_user
-      flash[:alert] = "Your account is blocked. Retry when an admin has unblocked it."
+      flash[:alert] = t('general.notice.your_account_is_blocked')
       redirect_to new_user_session_path
     end
   end
@@ -46,7 +46,7 @@ class ApplicationController < ActionController::Base
   def after_sign_in_path_for resource
     if resource.is_a?(User) && resource.respond_to?(:blocked?) && resource.blocked?
       sign_out resource
-      flash[:alert] = "Your account is blocked. Retry when an admin has unblocked it."
+      flash[:alert] = t('general.notice.your_account_is_blocked')
       new_user_session_path
     else
       super
@@ -193,7 +193,7 @@ class ApplicationController < ActionController::Base
           current_user.save
         else
           sign_out current_user
-          flash[:alert] = "Access denied for your LDAP account."
+          flash[:alert] = t('general.notice.access_denied_for_your_ldap_account')
           redirect_to new_user_session_path
         end
       end
