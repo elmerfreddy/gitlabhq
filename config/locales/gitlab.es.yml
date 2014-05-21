@@ -363,7 +363,7 @@ es:
       you_will_only_see_events_from_projects_in_this_group: "Sólo verá los eventos de los proyectos de este grupo"
   layouts:
     devise:
-      gitlab_open_source_software: "GitLab es un software de código abierto para colaborar en código."
+      gitlab_open_source_software: "Es un software de código abierto para colaborar en código."
       or_browse_for: "o navega por los"
       public_projects: "proyectos públicos"
       sign_in: "Inicia sesión"
